@@ -1,0 +1,12 @@
+@import './variables';
+
+.dashiLegend {
+    text-align: center;
+}
+
+.dashiLegend-content {
+    display: inline-block;
+    background-color: $color-abbey;
+    color: $color-chamois;
+    padding: $universalPadding $universalPadding*2;
+}

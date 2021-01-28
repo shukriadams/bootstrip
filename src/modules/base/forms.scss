@@ -1,0 +1,42 @@
+@import './variables';
+
+.dashiForm-label {
+    font-weight: bold;
+    
+    &.dashiForm-label--required:after {
+        content : "*";
+        color: $color-burningOrange;
+        padding-left: $universalPadding;
+    }
+}
+
+.dashiForm-warn{
+    color: $color-burningOrange;
+}
+
+.dashiForm-text {
+    padding: $universalPadding $universalPadding*2;
+}
+
+.dashForm-select{
+    padding: $universalPadding $universalPadding*2;
+}
+
+.dashiForm-button {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    white-space: nowrap;
+    background-color: $color-chamois;
+    height: 50px;
+    padding:0 $universalPadding*2;
+    font-weight: bold;
+
+    &.dashiForm-button--important {
+        background-color: $color-burningOrange;
+    }
+}
+

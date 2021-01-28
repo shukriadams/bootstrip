@@ -1,0 +1,28 @@
+@import './variables';
+
+.dashitiles {
+    color: $color-chamois;
+    display:grid;
+    grid-column-gap: $universalGutter;
+    grid-row-gap: $universalGutter;
+    padding: $universalPadding 0;
+    
+
+    &.dashitiles--2tiles {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashitiles-tile {
+        background-color: $color-charade;
+        padding: $universalPadding * 2;
+    }
+
+}
+
+@media all and (max-width: 1024px) {
+    .dashitiles {
+        &.dashitiles--2tiles {
+            grid-template-columns: 1fr;
+        }
+    }
+}
