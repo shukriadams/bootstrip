@@ -3,7 +3,7 @@
     "license": "MIT",
     "description": "A minimalist form and dashboard ui theme",
     "scripts": {
-        "start" :"node index"
+        "start": "node index"
     },
     "devDependencies": {
         "fs-extra": "6.0.1",
@@ -11,9 +11,7 @@
         "chokidar": "2.1.5",
         "express": "4.16.3",
         "madscience-handlebarsloader": "https://github.com/shukriadams/madscience-handlebarsloader.git#0.0.1",
+        "spectr": "https://github.com/shukriadams/spectr.git#0.0.4",
         "node-sass": "4.11.0"
-    },
-    "dependencies": {
     }
-  }
-  
+}
