@@ -2,6 +2,7 @@ let chokidar = require('chokidar'),
     fs = require('fs-extra'),
     fileconcat = require('fileconcat'),
     path = require('path'),
+    port = 8020,
     sass = require('node-sass'),
     _triggerFile = null
 
@@ -106,8 +107,8 @@ function startExpress(){
     })
 
     let server = http.createServer(app)
-    server.listen(8020)
-    console.log('express started')
+    server.listen(port)
+    console.log(`express listening on port ${port}`)
 }
 
 
