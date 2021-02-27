@@ -33,7 +33,8 @@
 // can contain text, images or anything which requires padding around it so as not to colide with adjacent layout sections-
 // use this as first level children in columns for exxample
 .dashiLayout-content {
-    margin-bottom: 1rem!important;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 clamp {
