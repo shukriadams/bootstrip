@@ -1,53 +1,24 @@
-@import './variables';
 
-/* max-width area for page-level structure. Do not give this padding, it's for scaffolding only */
-dashi-margin {
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+.dashiLayout-section {
+ 
 }
 
-.dashi-section {
-    padding: $universalPadding*3 0;
+.dashiLayout-cell {
+ 
 }
 
-.dashi-row {
-    display:grid;
-
-    &.dashi-row--2cells {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    &.dashi-row--4cells {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+.dashiLayout-row {
+ 
 }
 
-.dashi-cell {
-    padding: $universalPadding 0;
+section {
+    @extend .dashiLayout-section !optional;
 }
 
-@media all and (max-width: 1224px) {
-    .dashi-row.dashi-row--4cells {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .dashi-row > .dashi-row--4cells {
-        grid-template-columns: 1fr;
-    }
+cell {
+    @extend .dashiLayout-cell !optional;
 }
 
-@media all and (max-width: 1024px) {
-    .dashi-row.dashi-row--4cells {
-        grid-template-columns: 1fr;
-    }
-
-    .dashi-row.dashi-row--2cells {
-        grid-template-columns: 1fr;
-    }
-
-    .dashi-row > .dashi-rowdashi-row--4cells {
-        grid-template-columns: 1fr;
-    }
+row {
+    @extend .dashiLayout-row !optional;
 }

@@ -1,10 +1,33 @@
 let chokidar = require('chokidar'),
+    Spectr = require('spectr'),
     fs = require('fs-extra'),
     fileconcat = require('fileconcat'),
     path = require('path'),
     port = 8020,
     sass = require('node-sass'),
-    _triggerFile = null
+    _triggerFile = null,
+    Handlebars = require('handlebars')
+
+    Spectr.engines.handlebars({ Handlebars })
+
+    let spectr = new Spectr.Spectr({
+        templates : {
+            views : path.join(__dirname, 'src/hbs/partials/**/*.hbs'),
+            pages : path.join(__dirname, 'src/hbs/pages/**/*.hbs')
+        },
+        models : {
+            pages : { cwd : path.join(__dirname, 'src/data/pages'), src : ['**/*.json'] },
+            functions : path.join(__dirname, 'src/data/functions/**/*.js'),
+            static : path.join(__dirname, 'src/data/static/**/*.json')
+        }
+    })
+
+    Handlebars.registerHelper('stringify', function(data){
+        if (data)
+            return JSON.stringify(data)
+        return ''
+    })
+
 
 /** 
  * Converts a Sass file map to its destination compiled css path in ./tmp folder
@@ -19,10 +42,10 @@ function mapSassToCss(file){
 async function concatenate(){
     return new Promise(async function(resolve, reject){
         try {
-            await fs.ensureDir('./src/css')
+            await fs.ensureDir('./src/web/css')
 
-            fileconcat(['./.tmp/src/modules/base/**/*.css'], './src/css/style.css').then(() => {
-                fileconcat(['./.tmp/src/modules/themes/default/**/*.css'], './src/css/theme-default.css').then(() => {
+            fileconcat(['./.tmp/src/modules/base/**/*.css'], './src/web/css/style.css').then(() => {
+                fileconcat(['./.tmp/src/modules/themes/default/**/*.css'], './src/web/css/theme-default.css').then(() => {
                     resolve()
                 })
             })
@@ -32,6 +55,7 @@ async function concatenate(){
         }
     })
 }
+
 
 /** 
  * Compiles a Sass file to Css. CSS is written to ./tmp/css folder.
@@ -63,6 +87,7 @@ async function compileSassFile(file){
     });
 }
 
+
 /** 
  * Called by SassWatcher when a sass file is added or changed. Compiles the sass that triggered
  * event, then concats all css files in ./tmp and places it in Express public folder. To improve
@@ -86,20 +111,33 @@ async function handleSassEvent(file){
 function startExpress(){
     const http = require('http'),
         Express = require('express'),
-        handlebarsLoader = require('madscience-handlebarsloader'),
         app = Express()
 
-    handlebarsLoader.initialize({ 
-        forceInitialize : true,
-        pages : './src/hbs/pages',
-        partials : './src/hbs/partials'
-    })
 
-    app.use(Express.static('./src'))
-    app.get('/', async function (req, res) {
+    app.use(Express.static('./src/web'))
+    app.get('/render', async function (req, res) {
         try {
-            const view = await handlebarsLoader.getPage('index')
-            res.send(view())
+            spectr.renderAllRoutes({
+                file : function(err, output){
+                    if (err ||output.content === null)
+                        return console.log(err)
+            
+                    var filePath = path.join('./src/web', output.path)
+                    if (!fs.existsSync(path.dirname(filePath)))
+                        fs.mkdirSync(path.dirname(filePath))
+            
+                    fs.writeFile(filePath, output.content, ()=>{
+                        console.log(`rendered ${filePath}`)
+                    })
+                },
+                done : function(){
+                    console.log('rendered')
+                }
+            })
+            
+            res.send('rendered')
+
+
         } catch (ex){
             console.log(ex)
             res.end(ex)
@@ -121,6 +159,7 @@ function startExpress(){
     let sassWatcher = chokidar.watch(['./src/modules/**/*.scss'], {
         persistent: true,
         usePolling: true
+        //ignoreInitial: true
     });
 
     sassWatcher
@@ -139,5 +178,5 @@ function startExpress(){
 
     startExpress();
 
-    console.log('Watching...');
+    console.log('Watching for sass changes...');
 })()

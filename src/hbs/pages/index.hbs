@@ -9,132 +9,86 @@
         each other
      -->
 
-    <body class="dashi-page">
+    <body>
 
-        <div class="dashi-pageMenu">
-            <ul class="dashi-menu">
-                <li class="dashi-menuItem dashi-menuItem--active">
-                    Menu item 1
-                </li>
-                <li class="dashi-menuItem">
-                    Menu item 2
-                </li>
-                <li class="dashi-menuItem">
-                    Menu item 3
-                   
-                </li>
-            </ul>
-        </div>
+        {{>pageMenu menuType="vertical" items=menuItems}}
 
-        <div class="dashi-pageMain">
 
-            <ul class="dashi-menu dashi-menu--horizontal">
-                <li class="dashi-menuItem dashi-menuItem--active">
-                    Menu item 1
-                </li>
-                <li class="dashi-menuItem">
-                    Menu item 2
-                </li>
-                <li class="dashi-menuItem">
-                    Menu item 3
-                </li>
-            </ul>
+        {{>pageMenu menuType="horizontal" items=menuItems}}
 
-            <div class="dashi-section">
-                <h1>Typography</h1>
-                <div class="dashi-row">
-                    <div class="dashi-cell">
-                        <h1>Header 1</h1>
-                        <h2>Header 2</h2>
-                        <h3>Header 3</h3>
-                        <h4>Header 4</h4>
-                        <div>
-                            
-                        </div>
-                        <p>
-                            body text
-                        </p>
-                    </div>
+        <section>
+            <row>
+                <cell>
+                    {{>layout}}
+                </cell>
+            </row>
+        </section>
+
+        <section>
+            <row>
+                <cell>
+                    <h1>Typogpraphy</h1>
+                    {{>typography}}
+                </cell>
+            </row>
+        </section>
+
+        <section>
+            <h1>Graphs</h1>
+            <div class="dashi-row dashi-row--4cells">
+                <div class="dashi-cell">
+                    {{>circlegraph graphId='graph1' percent=14}}
+                </div>
+                <div class="dashi-cell">
+                    {{>circlegraph graphId='graph2' percent=78}}
+                </div>                    
+                <div class="dashi-cell">
+                    {{>circlegraph graphId='graph3' percent=1}}
+                </div>                    
+                <div class="dashi-cell">
+                    {{>circlegraph graphId='graph14' percent=97}}
+                </div>                    
+            </div>
+
+            <div class="dashiLegend">
+                <div class="dashiLegend-content">
+                    TOTALS - out of 4532 views
                 </div>
             </div>
 
+        </section>
 
-            <div class="dashi-section">
-                <h1>Graphs</h1>
-                <div class="dashi-row dashi-row--4cells">
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph1' percent=14}}
-                    </div>
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph2' percent=78}}
-                    </div>                    
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph3' percent=1}}
-                    </div>                    
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph14' percent=97}}
-                    </div>                    
+
+        <section>
+            <h2>list</h2>
+            {{>list items=listItems}}
+        </section>
+
+        <section>
+            <h2>List in table form</h2>
+            {{>table items=tableItems}}
+        </section>
+
+        <section>
+            <h1>Grid</h1>
+            <div class="dashi-row dashi-row--4cells">
+                <div class="dashi-cell">
+                    cell 1
                 </div>
-
-                <div class="dashiLegend">
-                    <div class="dashiLegend-content">
-                        TOTALS - out of 4532 views
-                    </div>
+                <div class="dashi-cell">
+                    cell 2
                 </div>
-
+                <div class="dashi-cell">
+                    cell 3
+                </div>
+                <div class="dashi-cell">
+                    cell 4
+                </div>
             </div>
-
-
-            <div class="dashi-section">
-                <h2>list</h2>
-                <ul class="dashiList">
-                    <li class="dashiList-item dashiList-item--active">
-                        List item 1
-                    </li>
-                    <li class="dashiList-item">
-                        List item 2
-                    </li>
-                    <li class="dashiList-item">
-                        List item 3  <icon> i</icon>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="dashi-section">
-                <h2>List in table form</h2>
-                <ul class="dashiList dashiList--table3">
-                    <li class="dashiList-item">
-                        some data
-                    </li>
-                    <li class="dashiList-item">
-                        some data
-                    </li>
-                    <li class="dashiList-item">
-                        some data
-                    </li>
-                    <li class="dashiList-item">
-                        some data
-                    </li>
-                    <li class="dashiList-item">
-                        some data
-                    </li>
-                    <li class="dashiList-item">
-                        some data
-                    </li>
-                    <li class="dashiList-item">
-                        some data
-                    </li>
-                    <li class="dashiList-item">
-                        
-                    </li>
-                    <li class="dashiList-item">
-                        
-                    </li>
-                </ul>
-            </div>
-
-            <div class="dashi-section">
-                <h1>Grid</h1>
+            <div class="dashi-row dashi-row--2cells">
+                <div>
+                    cell 1
+                </div>
                 <div class="dashi-row dashi-row--4cells">
                     <div class="dashi-cell">
                         cell 1
@@ -149,49 +103,30 @@
                         cell 4
                     </div>
                 </div>
-                <div class="dashi-row dashi-row--2cells">
-                    <div>
-                        cell 1
-                    </div>
-                    <div class="dashi-row dashi-row--4cells">
-                        <div class="dashi-cell">
-                            cell 1
-                        </div>
-                        <div class="dashi-cell">
-                            cell 2
-                        </div>
-                        <div class="dashi-cell">
-                            cell 3
-                        </div>
-                        <div class="dashi-cell">
-                            cell 4
-                        </div>
-                    </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h1>Tiles</h1>
+            <div class="dashitiles dashitiles--2tiles">
+                <div class="dashitiles-tile">
+                    Bacon ipsum dolor amet pork belly landjaeger shankle filet mignon. Pancetta meatball spare ribs pork, corned beef chicken capicola beef chislic. Fatback shankle kevin shoulder strip steak ribeye. Capicola flank corned beef, pancetta pig boudin brisket burgdoggen pork belly. Pork loin kevin pig, landjaeger bresaola tongue meatloaf corned beef leberkas spare ribs. Swine bresaola shankle ball tip pork tail filet mignon sirloin pig sausage brisket hamburger tenderloin spare ribs chislic.
+                </div>
+                <div class="dashitiles-tile">
+                    cell 2
+                </div>
+                <div class="dashitiles-tile">
+                    cell 3
+                </div>
+                <div class="dashitiles-tile">
+                    Bacon ipsum dolor amet pork belly landjaeger shankle filet mignon. Pancetta meatball spare ribs pork, corned beef chicken capicola beef chislic. 
                 </div>
             </div>
+        </section>
 
 
-            <div class="dashi-section">
-                <h1>Tiles</h1>
-                <div class="dashitiles dashitiles--2tiles">
-                    <div class="dashitiles-tile">
-                        Bacon ipsum dolor amet pork belly landjaeger shankle filet mignon. Pancetta meatball spare ribs pork, corned beef chicken capicola beef chislic. Fatback shankle kevin shoulder strip steak ribeye. Capicola flank corned beef, pancetta pig boudin brisket burgdoggen pork belly. Pork loin kevin pig, landjaeger bresaola tongue meatloaf corned beef leberkas spare ribs. Swine bresaola shankle ball tip pork tail filet mignon sirloin pig sausage brisket hamburger tenderloin spare ribs chislic.
-                    </div>
-                    <div class="dashitiles-tile">
-                        cell 2
-                    </div>
-                    <div class="dashitiles-tile">
-                        cell 3
-                    </div>
-                    <div class="dashitiles-tile">
-                        Bacon ipsum dolor amet pork belly landjaeger shankle filet mignon. Pancetta meatball spare ribs pork, corned beef chicken capicola beef chislic. 
-                    </div>
-                </div>
-            </div>
-
-
-
-
+        <section>
             <div class="dashi-row">
                 <div class="dashi-cell">
                     <div class="dashiForm-label dashiForm-label--required">Email</div>
@@ -216,10 +151,7 @@
                     <button class="dashiForm-button">Submit</button>
                 </div>
             </div>
-
-        </div>
-
-
+        </section>
 
         <script src="/js/graph.js"></script>
     </body>
