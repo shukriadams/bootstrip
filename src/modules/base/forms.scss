@@ -4,9 +4,16 @@
     font-size: inherit;
     line-height: inherit;
 }
+@mixin focus{
+    &:focus {
+        outline: none !important;
+        border:2px solid red;
+    }
+}
 
 @mixin inputBase{
     @include reset;
+    @include focus;
     display: block;
     width: 100%;
     padding: .375rem .75rem;
@@ -22,6 +29,8 @@
     appearance: none;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+
 }
 
 label {
@@ -43,6 +52,7 @@ input[type=text] {
 
 input[type=checkbox] {
     @include reset;
+    @include focus;
     border-radius: .25em;
     width: 1em;
     height: 1em;
