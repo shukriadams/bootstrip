@@ -1,0 +1,133 @@
+@mixin baseHeader {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+@mixin baseDisplay {
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+}
+
+.dashiType-h1 {
+    @include baseHeader;
+    font-size: 2.5rem;
+}
+
+.dashiType-h2 {
+    @include baseHeader;
+    font-size: 2rem;
+}
+
+.dashiType-h3 {
+    @include baseHeader;
+    font-size: 1.75rem;
+}
+
+.dashiType-h4 {
+    @include baseHeader;
+    font-size: 1.5rem;
+}
+
+.dashiType-h5 {
+    @include baseHeader;
+    font-size: 1.25rem;
+}
+
+.dashiType-h6 {
+    @include baseHeader;
+    font-size: 1rem;
+}
+
+.dashiType-d1 {
+    @include baseDisplay;
+    font-size: 5rem;
+}
+
+.dashiType-d2 {
+    @include baseDisplay;
+    font-size: 4.5rem;
+}
+
+.dashiType-d3 {
+    @include baseDisplay;
+    font-size: 4rem;
+}
+
+.dashiType-d4 {
+    @include baseDisplay;
+    font-size: 3.5rem;
+}
+
+.dashiType-d5 {
+    @include baseDisplay;
+    font-size: 3rem;
+}
+
+.dashiType-d6 {
+    @include baseDisplay;
+    font-size: 2.5rem;
+}
+
+
+
+h1 {
+    @extend .dashiType-h1;
+}
+
+h2 {
+    @extend .dashiType-h2;
+}
+
+h3 {
+    @extend .dashiType-h3;
+}
+
+h4 {
+    @extend .dashiType-h4;
+}
+
+h5 {
+    @extend .dashiType-h5;
+}
+
+h6 {
+    @extend .dashiType-h6;
+}
+
+d1 {
+    display: block;    
+    @extend .dashiType-d1;
+}
+
+d2 {
+    display: block;    
+    @extend .dashiType-d2;
+}
+
+d3 {
+    display: block;    
+    @extend .dashiType-d3;
+}
+
+d4 {
+    display: block;
+    @extend .dashiType-d4;
+}
+
+d5 {
+    display: block;
+    @extend .dashiType-d5;
+}
+
+d6 {
+    display: block;
+    @extend .dashiType-d6;
+}
