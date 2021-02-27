@@ -25,6 +25,52 @@
         <label for="mycheck">Check me out</label>
     </content>
 
+    <content>
+        <label for="myfile">File select</label>
+        <input type="file" id="myfile">
+    </content>
+
+    <content>
+        <label for="exampleDataList" class="form-label">Datalist example</label>
+        <input list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+        <datalist id="datalistOptions">
+            <option value="San Francisco">
+            <option value="New York">
+            <option value="Seattle">
+            <option value="Los Angeles">
+            <option value="Chicago">
+        </datalist>
+    </content>
+
+    <content>
+        <select>
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </content>
+
+    <content>
+        <select multiple>
+            <option selected>Open this muliple select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </content>
+
+    <content>
+        <select class="dashiForm-input--large">
+            <option selected>Open this large select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </content>
+
+
+
     <h2>Disabled</h2>
     <content>
         <label>Email</label>
@@ -36,4 +82,12 @@
         <textarea id="mytext" class="dashiform-input--disabled" rows="3">Some text</textarea>
     </content>
 
+    <content>
+        <select disabled>
+            <option selected>Open this large select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </content>
 </form>
