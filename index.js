@@ -115,6 +115,7 @@ function startExpress(){
 
 
     app.use(Express.static('./src/web'))
+    app.use(Express.static('./src/images'))
     app.get('/render', async function (req, res) {
         try {
             spectr.renderAllRoutes({

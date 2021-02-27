@@ -1,0 +1,15 @@
+.dashiImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.dashiImage--full {
+    width: 100%;
+}
+
+.dashiImage--rounded {
+    border-radius: .25rem;
+    user-select: none;
+    font-size: 1.125rem;
+    text-anchor: middle;
+}
