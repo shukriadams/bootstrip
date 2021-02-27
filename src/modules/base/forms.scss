@@ -1,0 +1,77 @@
+@mixin reset {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+@mixin inputBase{
+    @include reset;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input[type=password] {
+    @include inputBase;
+}
+
+input[type=email] {
+    @include inputBase;
+}
+
+input[type=text] {
+    @include inputBase;
+}
+
+input[type=checkbox] {
+    @include reset;
+    border-radius: .25em;
+    width: 1em;
+    height: 1em;
+    margin-top: .25em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0,0,0,.25);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+
+    &:checked {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+        background-color: #0d6efd;
+        border-color: #0d6efd;        
+    }
+}
+
+textarea {
+    @include inputBase;
+}
+
+help {
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #6c757d;
+}

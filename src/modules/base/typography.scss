@@ -18,16 +18,19 @@
 
 .dashiType-h1 {
     @include baseHeader;
+    margin-top: 3.5rem;
     font-size: 2.5rem;
 }
 
 .dashiType-h2 {
     @include baseHeader;
+    margin-top: 3rem;
     font-size: 2rem;
 }
 
 .dashiType-h3 {
     @include baseHeader;
+    margin-top: 2rem;
     font-size: 1.75rem;
 }
 
@@ -48,16 +51,19 @@
 
 .dashiType-d1 {
     @include baseDisplay;
+    margin-top: 3.5rem;
     font-size: 5rem;
 }
 
 .dashiType-d2 {
     @include baseDisplay;
+    margin-top: 3rem;
     font-size: 4.5rem;
 }
 
 .dashiType-d3 {
     @include baseDisplay;
+    margin-top: 2.5rem;
     font-size: 4rem;
 }
 

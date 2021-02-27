@@ -27,7 +27,7 @@
 }
 
 .dashiLayout-cell {
-    
+    display: inherit;
 }
 
 clamp {
@@ -39,7 +39,13 @@ section {
 }
 
 cell {
-   // @extend .dashiLayout-cell;
+    @extend .dashiLayout-cell;
+}
+
+// cell, but with visual opinions
+content {
+    @extend .dashiLayout-cell;
+    margin-bottom: 1rem!important;
 }
 
 column {
