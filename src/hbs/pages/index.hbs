@@ -11,22 +11,20 @@
 
     <body>
         <clamp>
-
-
-            <h2>Layout</h2>
-            {{>layout}}
-
-            <h2>Typogpraphy</h2>
-            {{>typography}}
-
-            <h2>Menu - vertical</h2>
-            {{>pageMenu menuType="vertical" items=menuItems}}
-
-            <h2>Menu - horizontal</h2>
-            {{>pageMenu menuType="horizontal" items=menuItems}}
-
-
             <section>
+
+                <h2>Layout</h2>
+                {{>layout}}
+
+                <h2>Typogpraphy</h2>
+                {{>typography}}
+
+                <h2>Menu - vertical</h2>
+                {{>pageMenu menuType="vertical" items=menuItems}}
+
+                <h2>Menu - horizontal</h2>
+                {{>pageMenu menuType="horizontal" items=menuItems}}
+
                 <h1>Graphs</h1>
                 <div class="dashi-row dashi-row--4cells">
                     <div class="dashi-cell">
@@ -49,37 +47,26 @@
                     </div>
                 </div>
 
-            </section>
+                <h2>Image</h2>
+                {{>image}}
 
+                <h2>Figure</h2>
+                {{>figure caption="my caption" src="example.jpg"}}
 
-            <h2>Image</h2>
-            {{>image}}
+                <h2>list</h2>
+                {{>list items=listItems}}
 
-            <h2>Figure</h2>
-            {{>figure caption="my caption" src="example.jpg"}}
-
-            <h2>list</h2>
-            {{>list items=listItems}}
-
-            <section>
                 <h2>Table</h2>
                 {{>table table.items}}
-            </section>
 
-            <section>
                 <h2>Table with modfiers</h2>
                 {{>table tableModifiers.items}}
-            </section>
 
-            <section>
                 <h2>Form</h2>
                 {{>form}}
+
             </section>
-
-
         </clamp>
-       
-
         <script src="/js/graph.js"></script>
     </body>
 </html>

@@ -9,25 +9,31 @@
 
 // sections are to divide a page up into blocks
 .dashiLayout-section {
+    padding: var(--layout-universalMargin);
     display: block;
 }
 
+// divides layout into 1 column. First block child will become cells, divs work fine for this
 .dashiLayout-column {
     display:grid;
 }
 
+// divides layout into 2 column. First block child will become cells, divs work fine for this
 .dashiLayout-columns2 {
     display:grid;
     grid-template-columns: 1fr 1fr;
 }
 
+// divides layout into 4 column. First block child will become cells, divs work fine for this
 .dashiLayout-columns4 {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.dashiLayout-cell {
-    display: inherit;
+// can contain text, images or anything which requires padding around it so as not to colide with adjacent layout sections-
+// use this as first level children in columns for exxample
+.dashiLayout-content {
+    margin-bottom: 1rem!important;
 }
 
 clamp {
@@ -38,14 +44,9 @@ section {
     @extend .dashiLayout-section;
 }
 
-cell {
-    @extend .dashiLayout-cell;
-}
-
 // cell, but with visual opinions
 content {
-    @extend .dashiLayout-cell;
-    margin-bottom: 1rem!important;
+    @extend .dashiLayout-content;
 }
 
 column {

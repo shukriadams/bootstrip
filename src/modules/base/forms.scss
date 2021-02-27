@@ -4,11 +4,25 @@
     font-size: inherit;
     line-height: inherit;
 }
+
 @mixin focus{
     &:focus {
         outline: none !important;
-        border:2px solid red;
+        border:2px solid blue;
     }
+}
+
+@mixin inputLarge {
+    min-height: calc(1.5em + 1rem + 2px);
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: .3rem;    
+}
+
+@mixin disabled {
+    pointer-events: none;
+    background-color: #e9ecef;
+    color: grey;
 }
 
 @mixin inputBase{
@@ -29,8 +43,6 @@
     appearance: none;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
-
 }
 
 label {
@@ -40,10 +52,26 @@ label {
 
 input[type=password] {
     @include inputBase;
+
+    &.dashiForm-input--large {
+        @include inputLarge;
+    }
+
+    &.dashiform-input--disabled {
+        @include disabled;        
+    }
 }
 
 input[type=email] {
     @include inputBase;
+
+    &.dashiForm-input--large {
+        @include inputLarge;
+    }
+
+    &.dashiform-input--disabled {
+        @include disabled;        
+    }
 }
 
 input[type=text] {
@@ -69,6 +97,14 @@ input[type=checkbox] {
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
 
+    &.dashiForm-input--large {
+        @include inputLarge;
+    }
+
+    &.dashiform-input--disabled {
+        @include disabled;        
+    }
+
     &:checked {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
         background-color: #0d6efd;
@@ -78,6 +114,10 @@ input[type=checkbox] {
 
 textarea {
     @include inputBase;
+
+    &.dashiform-input--disabled {
+        @include disabled;        
+    }
 }
 
 help {
@@ -85,3 +125,4 @@ help {
     font-size: .875em;
     color: #6c757d;
 }
+
