@@ -54,8 +54,12 @@
 }
 
 label {
-    display: block;
+    display: inline-block;
     margin-bottom: .5rem;
+
+    &[disabled] {
+        color: grey;     
+    }      
 }
 
 input[type=password] {
@@ -109,6 +113,12 @@ input[type=checkbox] {
     }
 }
 
+radiocontainer {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: .125rem;
+}
 
 select {
     @include focus;

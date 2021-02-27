@@ -31,7 +31,7 @@
     </content>
 
     <content>
-        <label for="exampleDataList" class="form-label">Datalist example</label>
+        <label for="exampleDataList">Datalist example</label>
         <input list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
         <datalist id="datalistOptions">
             <option value="San Francisco">
@@ -69,9 +69,28 @@
         </select>
     </content>
 
+    <content>
+        <radiocontainer>
+            <input type="radio" id="flexRadioDefault1" name="flexRadioDefault">
+            <label for="flexRadioDefault1">
+                Default radio
+            </label>
+        </radiocontainer>
+        <radiocontainer>
+            <input type="radio" id="flexRadioDefault2" name="flexRadioDefault" checked>
+            <label for="flexRadioDefault2">
+                Default checked radio
+            </label>
+        </radiocontainer>
+    </content>
 
+    <content>
+        <input type="checkbox" id="flexSwitchCheckChecked" checked>
+        <label for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+    </content>
 
     <h2>Disabled</h2>
+
     <content>
         <label>Email</label>
         <input type="email" class="dashiform-input--disabled" placeholder="name@example.com">
@@ -90,4 +109,25 @@
             <option value="3">Three</option>
         </select>
     </content>
+
+    <content>
+        <input type="checkbox" id="mycheck" disabled>
+        <label disabled for="mycheck">Check me out</label>
+    </content>
+
+    <content>
+        <radiocontainer>
+            <input type="radio" id="flexRadioDisabled1" name="flexRadioDisabled" disabled>
+            <label for="flexRadioDisabled1">
+                Default radio
+            </label>
+        </radiocontainer>
+        <radiocontainer>
+            <input type="radio" id="flexRadioDisabled2" name="flexRadioDisabled" checked disabled>
+            <label for="flexRadioDisabled2">
+                Default checked radio
+            </label>
+        </radiocontainer>
+    </content>
+
 </form>

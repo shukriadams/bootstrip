@@ -1,3 +1,8 @@
+@mixin columnBase {
+    display: grid;
+    column-gap: var(--layout-universalMargin);
+}
+
 /* max-width area for page-level structure. Do not give this padding, it's for scaffolding only */
 .dashiLayout-clamp {
     display: block;
@@ -15,18 +20,18 @@
 
 // divides layout into 1 column. First block child will become cells, divs work fine for this
 .dashiLayout-column {
-    display:grid;
+    @extend columnBase;
 }
 
 // divides layout into 2 column. First block child will become cells, divs work fine for this
 .dashiLayout-columns2 {
-    display:grid;
+    @extend columnBase;
     grid-template-columns: 1fr 1fr;
 }
 
 // divides layout into 4 column. First block child will become cells, divs work fine for this
 .dashiLayout-columns4 {
-    display:grid;
+    @extend columnBase;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
