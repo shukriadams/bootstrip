@@ -1,24 +1,55 @@
+/* max-width area for page-level structure. Do not give this padding, it's for scaffolding only */
+.dashiLayout-clamp {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--pageClampWidth);
+}
 
+// sections are to divide a page up into blocks
 .dashiLayout-section {
- 
+    display: block;
+}
+
+.dashiLayout-column {
+    display:grid;
+}
+
+.dashiLayout-columns2 {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dashiLayout-columns4 {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .dashiLayout-cell {
- 
+    
 }
 
-.dashiLayout-row {
- 
+clamp {
+    @extend .dashiLayout-clamp;
 }
 
 section {
-    @extend .dashiLayout-section !optional;
+    @extend .dashiLayout-section;
 }
 
 cell {
-    @extend .dashiLayout-cell !optional;
+   // @extend .dashiLayout-cell;
 }
 
-row {
-    @extend .dashiLayout-row !optional;
+column {
+    @extend .dashiLayout-column;
+}
+
+columns2 {
+    @extend .dashiLayout-columns2;
+}
+
+columns4 {
+    @extend .dashiLayout-columns4;
 }
