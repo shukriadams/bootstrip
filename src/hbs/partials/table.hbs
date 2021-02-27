@@ -1,7 +1,24 @@
-<ul class="dashiList dashiList--table">
-    {{#each items}}
-        <li class="dashiList-item">
-           {{this.content}}
-        </li>
-    {{/each}}
-</ul>
+<table class="dashiTable dashiTable--striped">
+    <thead>
+        <tr>
+            {{#each columns}}
+                <th>{{this.text}}</th>
+            {{/each}}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {{#each rows}}
+                <tr class="dashiTable-row--{{this.modifier}}">
+                    {{#each this.cells}}
+                        {{#eq @index 0}}
+                            <th> {{../text}}</th>
+                        {{else}}
+                            <td>{{../text}}</td>
+                        {{/eq}}
+                    {{/each}}        
+                </tr>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>

@@ -22,12 +22,15 @@ let chokidar = require('chokidar'),
         }
     })
 
-    Handlebars.registerHelper('stringify', function(data){
-        if (data)
-            return JSON.stringify(data)
-        return ''
+    Handlebars.registerHelper('stringify', data =>{
+        return data ? JSON.stringify(data) : ''
     })
 
+    Handlebars.registerHelper('eq', (value1, value2, options)=>{
+        return value1 === value2 ? 
+            options.fn(this) :  
+            options.inverse(this)
+    })
 
 /** 
  * Converts a Sass file map to its destination compiled css path in ./tmp folder

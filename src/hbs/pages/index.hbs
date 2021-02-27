@@ -62,9 +62,15 @@
             {{>list items=listItems}}
 
             <section>
-                <h2>List in table form</h2>
-                {{>table items=tableItems}}
+                <h2>Table</h2>
+                {{>table table.items}}
             </section>
+
+            <section>
+                <h2>Table with modfiers</h2>
+                {{>table tableModifiers.items}}
+            </section>
+
 
             <section>
                 <h1>Grid</h1>
