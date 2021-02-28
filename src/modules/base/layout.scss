@@ -1,6 +1,18 @@
 @mixin columnBase {
     display: grid;
     column-gap: var(--layout-universalMargin);
+
+    & > * {
+        // immediate children of columns should always follor grid layout rules
+        display : grid;
+    }
+}
+
+// can contain text, images or anything which requires padding around it so as not to colide with adjacent layout sections-
+// use this as first level children in columns for exxample
+.dashiLayout-content {
+    display: block;
+    margin-bottom: 1rem;
 }
 
 /* max-width area for page-level structure. Do not give this padding, it's for scaffolding only */
@@ -40,12 +52,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-// can contain text, images or anything which requires padding around it so as not to colide with adjacent layout sections-
-// use this as first level children in columns for exxample
-.dashiLayout-content {
-    display: block;
-    margin-bottom: 1rem;
-}
+
 
 clamp {
     @extend .dashiLayout-clamp;

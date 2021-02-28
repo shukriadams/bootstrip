@@ -3,7 +3,8 @@
     "license": "MIT",
     "description": "A minimalist form and dashboard ui theme",
     "scripts": {
-        "start": "node index"
+        "start": "node index",
+        "debug": "node --inspect=0.0.0.0:8021 index"
     },
     "dependencies": {
         "fs-extra": "6.0.1",

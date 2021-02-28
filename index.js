@@ -10,17 +10,7 @@ let chokidar = require('chokidar'),
 
     Spectr.engines.handlebars({ Handlebars })
 
-    let spectr = new Spectr.Spectr({
-        templates : {
-            views : path.join(__dirname, 'src/hbs/partials/**/*.hbs'),
-            pages : path.join(__dirname, 'src/hbs/pages/**/*.hbs')
-        },
-        models : {
-            pages : { cwd : path.join(__dirname, 'src/data/pages'), src : ['**/*.json'] },
-            functions : path.join(__dirname, 'src/data/functions/**/*.js'),
-            static : path.join(__dirname, 'src/data/static/**/*.json')
-        }
-    })
+
 
     Handlebars.registerHelper('stringify', data =>{
         return data ? JSON.stringify(data) : ''
@@ -121,6 +111,18 @@ function startExpress(){
     app.use(Express.static('./src/images'))
     app.get('/render', async function (req, res) {
         try {
+            let spectr = new Spectr.Spectr({
+                templates : {
+                    views : path.join(__dirname, 'src/hbs/partials/**/*.hbs'),
+                    pages : path.join(__dirname, 'src/hbs/pages/**/*.hbs')
+                },
+                models : {
+                    pages : { cwd : path.join(__dirname, 'src/data/pages'), src : ['**/*.json'] },
+                    functions : path.join(__dirname, 'src/data/functions/**/*.js'),
+                    static : path.join(__dirname, 'src/data/static/**/*.json')
+                }
+            })
+            
             spectr.renderAllRoutes({
                 file : function(err, output){
                     if (err ||output.content === null)
