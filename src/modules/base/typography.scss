@@ -16,124 +16,92 @@
 
 }
 
-.dashiType-h1 {
+.header1 {
     @include baseHeader;
     margin-top: 3.5rem;
     font-size: 2.5rem;
 }
 
-.dashiType-h2 {
+.header2 {
     @include baseHeader;
     margin-top: 3rem;
     font-size: 2rem;
 }
 
-.dashiType-h3 {
+.header3 {
     @include baseHeader;
     margin-top: 2rem;
     font-size: 1.75rem;
 }
 
-.dashiType-h4 {
+.header4 {
     @include baseHeader;
     font-size: 1.5rem;
 }
 
-.dashiType-h5 {
+.header5 {
     @include baseHeader;
     font-size: 1.25rem;
 }
 
-.dashiType-h6 {
+.header6 {
     @include baseHeader;
     font-size: 1rem;
 }
 
-.dashiType-d1 {
+.display1 {
     @include baseDisplay;
     margin-top: 3.5rem;
     font-size: 5rem;
 }
 
-.dashiType-d2 {
+.display2 {
     @include baseDisplay;
     margin-top: 3rem;
     font-size: 4.5rem;
 }
 
-.dashiType-d3 {
+.display3 {
     @include baseDisplay;
     margin-top: 2.5rem;
     font-size: 4rem;
 }
 
-.dashiType-d4 {
+.display4 {
     @include baseDisplay;
     font-size: 3.5rem;
 }
 
-.dashiType-d5 {
+.display5 {
     @include baseDisplay;
     font-size: 3rem;
 }
 
-.dashiType-d6 {
+.display6 {
     @include baseDisplay;
     font-size: 2.5rem;
 }
 
-
-
 h1 {
-    @extend .dashiType-h1;
+    @extend .header1;
 }
 
 h2 {
-    @extend .dashiType-h2;
+    @extend .header2;
 }
 
 h3 {
-    @extend .dashiType-h3;
+    @extend .header3;
 }
 
 h4 {
-    @extend .dashiType-h4;
+    @extend .header4;
 }
 
 h5 {
-    @extend .dashiType-h5;
+    @extend .header5;
 }
 
 h6 {
-    @extend .dashiType-h6;
-}
-
-d1 {
-    display: block;    
-    @extend .dashiType-d1;
-}
-
-d2 {
-    display: block;    
-    @extend .dashiType-d2;
-}
-
-d3 {
-    display: block;    
-    @extend .dashiType-d3;
-}
-
-d4 {
-    display: block;
-    @extend .dashiType-d4;
-}
-
-d5 {
-    display: block;
-    @extend .dashiType-d5;
-}
-
-d6 {
-    display: block;
-    @extend .dashiType-d6;
+    @extend .header6;
 }
