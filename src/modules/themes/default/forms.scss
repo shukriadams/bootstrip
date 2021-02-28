@@ -1,0 +1,46 @@
+@mixin focusBehaviour {
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(var(--color-black), .15);        
+    }
+}
+
+textarea {
+    @include focusBehaviour;    
+}
+
+input[type=password] {
+    @include focusBehaviour;
+}
+
+input[type=email] {
+    @include focusBehaviour;
+}
+
+input[type=file] {
+    @include focusBehaviour;
+}
+
+input[list] {
+    @include focusBehaviour;
+}
+
+input[type=text] {
+    @include focusBehaviour;
+}
+
+input[type=checkbox] {
+    @include focusBehaviour;
+}
+
+select {
+    @include focusBehaviour;
+}
+
+.button {
+    @include focusBehaviour;
+}
+
+button {
+    @extend .button;
+ }
