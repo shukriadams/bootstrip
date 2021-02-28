@@ -16,6 +16,19 @@ let chokidar = require('chokidar'),
         return data ? JSON.stringify(data) : ''
     })
 
+    Handlebars.registerHelper('for_n', (n, block) =>{
+        let out = ''
+
+        for (let i = 0 ; i < n ; i ++)
+            out += block.fn(i)
+        
+        return out
+    })
+
+    Handlebars.registerHelper('sum', function(value1, value2){
+        return parseInt(value1.toString()) + parseInt(value2.toString())
+    })
+
     Handlebars.registerHelper('eq', (value1, value2, options)=>{
         return value1 === value2 ? 
             options.fn(this) :  
