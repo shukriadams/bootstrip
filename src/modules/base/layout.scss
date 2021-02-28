@@ -29,6 +29,11 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.dashiLayout-columns3 {
+    @include columnBase;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 // divides layout into 4 column. First block child will become cells, divs work fine for this
 .dashiLayout-columns4 {
     @include columnBase;
@@ -61,6 +66,10 @@ column {
 
 columns2 {
     @extend .dashiLayout-columns2;
+}
+
+columns3 {
+    @extend .dashiLayout-columns3;
 }
 
 columns4 {

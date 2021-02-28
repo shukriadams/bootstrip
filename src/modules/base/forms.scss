@@ -219,6 +219,10 @@ help {
     }
 }
 
+.dashiForm-button {
+    @extend .button;
+}
+
 button {
    @extend .button;
 }
