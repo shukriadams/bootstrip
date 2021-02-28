@@ -1,6 +1,6 @@
 @mixin columnBase {
     display: grid;
-    column-gap: var(--layout-universalMargin);
+    column-gap: var(--layout-gutter);
 
     & > * {
         // immediate children of columns should always follor grid layout rules
@@ -10,75 +10,72 @@
 
 // can contain text, images or anything which requires padding around it so as not to colide with adjacent layout sections-
 // use this as first level children in columns for exxample
-.dashiLayout-content {
+.content {
     display: block;
-    margin-bottom: 1rem;
 }
 
 /* max-width area for page-level structure. Do not give this padding, it's for scaffolding only */
-.dashiLayout-clamp {
+.clamp {
     display: block;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--pageClampWidth);
+    max-width: var(--layout-clampWidth);
 }
 
 // sections are to divide a page up into blocks
-.dashiLayout-section {
-    padding: var(--layout-universalMargin);
+.section {
+    padding: var(--layout-universalMargin);    
     display: block;
 }
 
 // divides layout into 1 column. First block child will become cells, divs work fine for this
-.dashiLayout-column {
+.column {
     @include columnBase;
 }
 
 // divides layout into 2 column. First block child will become cells, divs work fine for this
-.dashiLayout-columns2 {
+.columns2 {
     @include columnBase;
     grid-template-columns: 1fr 1fr;
 }
 
-.dashiLayout-columns3 {
+.columns3 {
     @include columnBase;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 // divides layout into 4 column. First block child will become cells, divs work fine for this
-.dashiLayout-columns4 {
+.columns4 {
     @include columnBase;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-
-
-clamp {
-    @extend .dashiLayout-clamp;
+x-clamp {
+    @extend .clamp;
 }
 
 section {
-    @extend .dashiLayout-section;
+    @extend .section;
 }
 
 // cell, but with visual opinions
-content {
-    @extend .dashiLayout-content;
+x-content {
+    @extend .content;
 }
 
-column {
-    @extend .dashiLayout-column;
+x-column {
+    @extend .column;
 }
 
-columns2 {
-    @extend .dashiLayout-columns2;
+x-columns2 {
+    @extend .columns2;
 }
 
-columns3 {
-    @extend .dashiLayout-columns3;
+x-columns3 {
+    @extend .columns3;
 }
 
-columns4 {
-    @extend .dashiLayout-columns4;
+x-columns4 {
+    @extend .columns4;
 }

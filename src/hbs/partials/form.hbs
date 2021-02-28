@@ -1,35 +1,35 @@
-<content>
+<x-content>
     <label for="myemail">Email address</label>
     <input type="email" id="myemail" placeholder="name@example.com">
-</content>
+</x-content>
 
-<content>
+<x-content>
     <label for="mytext">Example textarea</label>
     <textarea id="mytext" rows="3"></textarea>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <label for="mytext">Email address (large)</label>
     <input type="email" class="dashiForm-input--large" id="myemail" placeholder="name@example.com">
-</content>
+</x-content>
 
-<content>
+<x-content>
     <label for="myemail">Email address</label>
     <input type="email" id="myemail" placeholder="name@example.com">
     <x-tip>Help text for a form element can be added here</x-tip>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <input type="checkbox" id="mycheck">
     <label for="mycheck">Check me out</label>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <label for="myfile">File select</label>
     <input type="file" id="myfile">
-</content>
+</x-content>
 
-<content>
+<x-content>
     <label for="exampleDataList">Datalist example</label>
     <input list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
     <datalist id="datalistOptions">
@@ -39,27 +39,27 @@
         <option value="Los Angeles">
         <option value="Chicago">
     </datalist>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <select>
         <option selected>Select menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
     </select>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <select multiple>
         <option selected>Multiselect menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
     </select>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <x-radiolist>
         <input type="radio" id="flexRadioDefault1" name="flexRadioDefault">
         <label for="flexRadioDefault1">
@@ -72,66 +72,66 @@
             Default checked radio
         </label>
     </x-radiolist>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <input type="checkbox" id="flexSwitchCheckChecked" checked>
     <label for="flexSwitchCheckChecked">Checked switch checkbox input</label>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <button>Vanilla</button>
     <button class="button--danger">Danger</button>
     <button class="button--success">Success</button>
     <button class="button--warning">Warning</button>
     <button class="button--info">Info</button>    
-</content>
+</x-content>
 
 <h2>Disabled</h2>
 
-<content>
+<x-content>
     <label disabled>Email</label>
     <input disabled type="email" placeholder="name@example.com">
-</content>
+</x-content>
 
-<content>
+<x-content>
     <button disabled>Vanilla</button>
     <button class="button--danger" disabled>Danger</button>
     <button class="button--success" disabled>Success</button>
     <button class="button--warning" disabled>Warning</button>
     <button class="button--info" disabled>Info</button>    
-</content>
+</x-content>
 
-<content>
+<x-content>
     <label disabled>Email</label>
     <textarea disabled id="mytext" rows="3">Some text</textarea>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <select disabled>
         <option selected>Select menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
     </select>
-</content>
+</x-content>
 
-<content>
+<x-content>
     <input type="checkbox" id="mydisabledcheck" disabled>
     <label disabled for="mydisabledcheck">Check me out</label>
-</content>
+</x-content>
 
-<content>
-    <radiocontainer>
+<x-content>
+    <x-radiolist>
         <input type="radio" id="flexRadioDisabled1" name="flexRadioDisabled" disabled>
         <label for="flexRadioDisabled1" disabled>
             Default radio
         </label>
-    </radiocontainer>
-    <radiocontainer>
+    </x-radiolist>
+    <x-radiolist>
         <input type="radio" id="flexRadioDisabled2" name="flexRadioDisabled" checked disabled>
         <label for="flexRadioDisabled2" disabled>
             Default checked radio
         </label>
-    </radiocontainer>
-</content>
+    </x-radiolist>
+</x-content>

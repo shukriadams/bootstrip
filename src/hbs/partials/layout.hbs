@@ -1,19 +1,19 @@
 <h2>Layout</h2>
 
-<column>
+<x-column>
     1 column
-</column>
+</x-column>
 
-<columns2>
+<x-columns2>
     <div>
         1/2 columns
     </div>
     <div>
         2/2 columns
     </div>    
-</columns2>
+</x-columns2>
 
-<columns4>
+<x-columns4>
     <div>
         1/4 columns
     </div>
@@ -26,14 +26,14 @@
     <div>
         4/4 columns
     </div>        
-</columns4>
+</x-columns4>
 
-<columns2>
+<x-columns2>
     <div>
         1/2 columns
     </div>
     <div>
-        <columns4>
+        <x-columns4>
             <div>
                 2/4 columns
             </div>
@@ -46,23 +46,23 @@
             <div>
                 4/4 columns
             </div>        
-        </columns4>
+        </x-columns4>
     </div>    
-</columns2>
+</x-columns2>
 
 <h2>Content</h2>
-<content>
+<x-content>
     This is a content block
-</content>
+</x-content>
 
-<content>
-    <content>
-    <content>
-    <content>
-        This is a nested content block
-    </content>
-    </content>
-    </content>
+<x-content>
+    <x-content>
+        <x-content>
+            <x-content>
+                This is a nested content block
+            </x-content>
+        </x-content>
+    </x-content>
 </content>
 
 Page is simplified

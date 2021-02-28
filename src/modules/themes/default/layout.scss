@@ -1,0 +1,7 @@
+.content {
+    margin-bottom: 1rem;
+}
+
+x-content {
+    @extend .content;
+}

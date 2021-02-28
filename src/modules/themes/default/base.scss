@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 :root {
-    --pageClampWidth: 800px;
+    --layout-clampWidth: 800px;
     --layout-radius: .25rem;
+    --layout-universalMargin: 8px;
+    --layout-gutter: 8px;
+    --font-undersize: .875em;
+
     --color-white: #fff;
     --color-barleyWhite: #fff3cd;
     --color-butterMilk: #ffecb5;
@@ -27,8 +31,6 @@
     --color-paleSky: #6c757d;
     --color-woodsmoke: #141619;
     --color-blackRGB: 0,0,0;
-    --layout-universalMargin: 8px;
-    --font-undersize: .875em
 }
 
 body {
