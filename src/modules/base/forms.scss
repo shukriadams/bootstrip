@@ -7,8 +7,9 @@
 
 @mixin focus{
     &:focus {
-        outline: none !important;
-        border:1px solid blue;
+       // border:1px solid blue;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(14,14,14, .3);        
     }
 }
 
@@ -100,10 +101,7 @@ input[type=checkbox] {
     background-position: center;
     background-size: contain;
     border: 1px solid rgba(0,0,0,.25);
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-    -webkit-print-color-adjust: exact;
     color-adjust: exact;
 
     &:checked {
@@ -136,8 +134,6 @@ select {
     background-size: 16px 12px;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;    
 
     &.dashiForm-input--large {
@@ -166,4 +162,63 @@ help {
     margin-top: .25rem;
     font-size: .875em;
     color: #6c757d;
+}
+
+
+.button {
+    @include focus;
+    margin: .25rem .125rem;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    color: #fff;
+    background-color: #0a58ca;
+    border-color: #0a53be;    
+
+
+
+    &.success, 
+    &.button--success {
+        color: #fff;
+        background-color: #198754;
+        border-color: #198754;
+    }
+
+    &.danger, 
+    &.button--danger {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    &.warning, 
+    &.button--warning {
+        color: #000;
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    &.info, 
+    &.button--info {
+        color: #000;
+        background-color: #0dcaf0;
+        border-color: #0dcaf0;
+    }
+}
+
+button {
+   @extend .button;
 }
