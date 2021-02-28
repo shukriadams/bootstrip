@@ -20,18 +20,18 @@
 
 // divides layout into 1 column. First block child will become cells, divs work fine for this
 .dashiLayout-column {
-    @extend columnBase;
+    @include columnBase;
 }
 
 // divides layout into 2 column. First block child will become cells, divs work fine for this
 .dashiLayout-columns2 {
-    @extend columnBase;
+    @include columnBase;
     grid-template-columns: 1fr 1fr;
 }
 
 // divides layout into 4 column. First block child will become cells, divs work fine for this
 .dashiLayout-columns4 {
-    @extend columnBase;
+    @include columnBase;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
