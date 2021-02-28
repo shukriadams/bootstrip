@@ -3,7 +3,10 @@ module.exports = (content = '*')=>{
     content = content.split(',')
     console.log('Generating card model for ', content)
 
-    let model = {}
+    let model = { 
+        align : 'Left'
+    }
+
     if (content.includes('*') || content.includes('image'))
         model.image = "/example.jpg"
 
@@ -15,6 +18,12 @@ module.exports = (content = '*')=>{
 
     if (content.includes('*') || content.includes('link'))
         model.link = "Go somewhere"
+
+    if (content.includes('align=right'))
+        model.align = 'Right'
+
+    if (content.includes('align=center'))
+        model.align = 'Center'
 
     return model
 }

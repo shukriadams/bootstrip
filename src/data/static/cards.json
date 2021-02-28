@@ -1,4 +1,6 @@
 {
     "all" : "<%= cardModel * %>",
-    "noimage" : "<%= cardModel title,text,link %>"
+    "noimage" : "<%= cardModel title,text,link %>",
+    "center" : "<%= cardModel *,align=center %>",
+    "right" : "<%= cardModel *,align=right %>"
 }

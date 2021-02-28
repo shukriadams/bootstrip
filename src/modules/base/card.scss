@@ -13,6 +13,14 @@
         flex: 1 1 auto;
         padding: 1rem 1rem;
     }
+
+    &.card--alignRight {
+        text-align: right;
+    }
+
+    &.card--alignCenter {
+        text-align: center;
+    }
 }
 
 card {
