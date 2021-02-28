@@ -1,0 +1,53 @@
+
+.button {
+    margin: .25rem .125rem;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    color: #fff;
+    background-color: #0a58ca;
+    border-color: #0a53be;    
+
+    .button--success {
+        color: #fff;
+        background-color: #198754;
+        border-color: #198754;
+    }
+
+    .button--danger {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .button--warning {
+        color: #000;
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .button--info {
+        color: #000;
+        background-color: #0dcaf0;
+        border-color: #0dcaf0;
+    }
+}
+
+button {
+    @extend .button;
+}
