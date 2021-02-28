@@ -1,4 +1,4 @@
-<table class="dashiTable dashiTable--striped">
+<table class="table table--striped">
     <thead>
         <tr>
             {{#each columns}}
@@ -9,7 +9,7 @@
     <tbody>
         <tr>
             {{#each rows}}
-                <tr class="dashiTable-row--{{this.modifier}}">
+                <tr class="table-row--{{this.modifier}}">
                     {{#each this.cells}}
                         {{#eq @index 0}}
                             <th> {{../text}}</th>
