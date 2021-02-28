@@ -1,0 +1,37 @@
+.alert {
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    
+
+    &.alert--primary {
+        color: var(--color-congressBlue);
+        background-color: var(--color-onahau);
+        border-color: var(--color-frenchPass);
+    }
+
+    &.alert--success {
+        color: var(--color-jewel);
+        background-color: var(--color-edgewater);
+        border-color: var(--color-edgewaterDark);      
+    }
+
+    &.alert--danger {
+        color: var(--color-crownOfThorns);
+        background-color: var(--color-cherub);
+        border-color: var(--color-azalea);   
+    }
+
+    &.alert--warning {
+        color: var(--color-antiqueBronze);
+        background-color: var(--color-barleyWhite);
+        border-color: var(--color-butterMilk);  
+    }
+
+    &.alert--dark {
+        color: var(--color-woodsmoke);
+        background-color: var(--color-iron);
+        border-color: var(--color-silverSand);
+    }
+}
