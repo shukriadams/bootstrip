@@ -1,0 +1,4 @@
+// need to override the default linehight set by icons generator, we dont want this
+.icon {
+    line-height: unset;
+}

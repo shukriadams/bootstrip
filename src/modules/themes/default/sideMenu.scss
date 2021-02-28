@@ -8,6 +8,13 @@
 
     &.sideMenu-linkItem--active {
         background-color: #151829;
+
+        .sideMenu-link{
+            color: #8069f2
+        }
+        .sideMenu-iconWrapper {
+            color: #8069f2
+        }
     }
 }
 
@@ -22,4 +29,11 @@
     letter-spacing: 0.3px;
     padding: 1.56rem 1.25rem 0.63rem;
     margin-bottom: 0;    
+}
+
+.sideMenu-iconWrapper {
+    margin-right: 1rem;
+    font-size: 1.13rem;
+    color: #8b8e9f;
+    width: 1rem;
 }
