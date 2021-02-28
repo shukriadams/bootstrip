@@ -1,0 +1,16 @@
+.sideMenu {
+    background-color: #1b1f34;
+    padding-left: 0;
+    list-style: none;
+}
+
+.sideMenu-linkItem {
+    position: relative;
+}
+
+.sideMenu-link {
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+}

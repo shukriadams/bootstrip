@@ -4,7 +4,7 @@
     padding: .375rem .75rem;
     background-color: var(--color-white);
     border: 1px solid #dee2e6;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: var(--transition-standard);
     
     &:hover {
         z-index: 2;

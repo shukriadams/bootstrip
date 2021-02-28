@@ -1,0 +1,10 @@
+[
+    { "text": "item 1", "type" : "header" },
+    { "text": "item 1", "type" : "link", "icon" : "icon-add" },
+    { "text": "item 2", "type" : "link" },
+    { "text": "item 3", "type" : "link", "active": true },
+    { "text": "item 1", "type" : "header" },
+    { "text": "item 4", "type" : "link" },
+    { "text": "item 5", "type" : "link" },
+    { "text": "item 6", "type" : "link" }
+]
