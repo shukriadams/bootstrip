@@ -1,5 +1,5 @@
 module.exports = (addModifiers = false)=>{
-    let modifiers =['', 'danger', 'warning'],
+    let modifiers =['', 'danger', 'warning','success'],
         current = 0
 
     function getModifier(){

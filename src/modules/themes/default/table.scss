@@ -30,10 +30,18 @@
     }
 }
 
-.table-row--warning {
-    background-color: var(--color-barleyWhite);
+.table-row {
+    &.table-row--success {
+        background-color: var(--color-edgewater);
+    }
+
+    &.table-row--warning {
+        background-color: var(--color-barleyWhite);
+    }
+    
+    &.table-row--danger {
+        background-color: var(--color-cherub);
+    }
 }
 
-.table-row--danger {
-    background-color: var(--color-cherub);
-}
+
