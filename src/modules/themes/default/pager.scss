@@ -1,0 +1,21 @@
+
+.pager-link {
+    color: var(--color-blueRibbon);
+    padding: .375rem .75rem;
+    background-color: var(--color-white);
+    border: 1px solid #dee2e6;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
+    &:hover {
+        z-index: 2;
+        background-color: var(--color-athensGray);
+        border-color: var(--color-athensGray);
+    }
+
+    &.pager-link--active {
+        color: var(--color-white);
+        background-color: var(--color-blueRibbon);
+        border-color: var(--color-blueRibbon);
+    }
+}
+

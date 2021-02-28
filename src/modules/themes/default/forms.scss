@@ -9,7 +9,13 @@
     &:disabled,
     &[disabled] {
         background-color: var(--color-athensGray);
+        border-color: var(--color-athensGray);
         color: var(--color-paleSky);
+        &:hover {
+            background-color: var(--color-athensGray);
+            border-color: var(--color-athensGray);
+            color: var(--color-paleSky);
+        }
     }
 }
 
@@ -137,29 +143,43 @@ select {
     background-color: var(--color-blueRibbon);
     border-color: var(--color-blueRibbon);    
 
+    &:hover {
+        background-color: var(--color-congressBlue);
+        border-color: var(--color-congressBlue);
+    }
+
     &.button--success {
         color: var(--color-white);
         background-color: var(--color-genoa);
         border-color: var(--color-genoa);
+
+        &:hover {
+            background-color: var(--color-jewel);
+            border-color: var(--color-jewel);
+        }
     }
 
     &.button--danger {
         color: var(--color-white);
         background-color: var(--color-punch);
         border-color: var(--color-punch);
+
+        &:hover {
+            background-color: var(--color-crownOfThorns);
+            border-color: var(--color-crownOfThorns);
+        }
     }
 
     &.button--warning {
         color: var(--color-black);
-        background-color: var(--color-black);
-        border-color: var(--color-black);
+        background-color: var(--color-amber);
+        border-color: var(--color-amber);
+        
+        &:hover {
+            background-color: var(--color-corn);
+            border-color: var(--color-corn);
+        }        
     }
-
-    &.button--info {
-        color: var(--color-white);
-        background-color: var(--color-brightTurquoise);
-        border-color: var(--color-brightTurquoise);
-    }    
 
     // must be applied AFTER custom button type overrides to allow this to win against them
     @include disabledBehaviour;
