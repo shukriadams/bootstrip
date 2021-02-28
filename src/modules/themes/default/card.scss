@@ -1,17 +1,17 @@
 .card {
     background-color: var(--color-white);
-    border: 1px solid rgba(var(--color-black), .125) ;//rgba(0,0,0,.125);
-    border-radius: .25rem;
+    border: 1px solid rgba(var(--color-black), .125);
+    border-radius: var(--layout-radius);
 
-    .cardBody {
+    .cardbody {
         padding: 1rem 1rem;
     }
 }
 
-card {
+x-card {
     @extend .card;
 }
 
-cardBody {
-    @extend .cardBody;
+x-cardbody {
+    @extend .cardbody;
 }

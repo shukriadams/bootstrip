@@ -5,42 +5,166 @@
     }
 }
 
-textarea {
-    @include focusBehaviour;    
+@mixin disabledBehaviour {
+    &:disabled,
+    &[disabled] {
+        background-color: var(--color-athensGray);
+        color: var(--color-paleSky);
+    }
+}
+
+@mixin inputBase {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-woodsmoke);
+    background-color: var(--color-white);
+    background-clip: padding-box;
+    border: 1px solid var(--color-silverSand);
+    border-radius: var(--layout-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+label {
+    margin-bottom: .5rem;
+
+    &[disabled] {
+        color: var(--color-silverSand);     
+    }      
+}
+
+x-tip {
+    margin-top: .25rem;
+    font-size: var(--font-undersize);
+    color: var(--color-paleSky);
 }
 
 input[type=password] {
+    @include inputBase;
     @include focusBehaviour;
+    @include disabledBehaviour;    
 }
 
 input[type=email] {
+    @include inputBase;
     @include focusBehaviour;
+    @include disabledBehaviour;   
 }
 
 input[type=file] {
+    @include inputBase;
     @include focusBehaviour;
+    @include disabledBehaviour;    
 }
 
 input[list] {
+    @include inputBase;
     @include focusBehaviour;
+    @include disabledBehaviour;    
 }
 
 input[type=text] {
+    @include inputBase;
     @include focusBehaviour;
+    @include disabledBehaviour;    
+}
+
+textarea {
+    @include inputBase;
+    @include focusBehaviour;
+    @include disabledBehaviour;
 }
 
 input[type=checkbox] {
     @include focusBehaviour;
+    @include disabledBehaviour;    
+    width: 1em;
+    height: 1em;
+    border-radius: var(--layout-radius);
+    border: 1px solid rgba(var(--color-blackRGB),.25);
+    background-color: var(--color-white);
+    margin-top: .25em;
+
+    &:checked {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+        background-color: var(--color-blueRibbon);
+        border-color: var(--color-blueRibbon);
+    }
+}
+
+// use this wrapper to stack radio buttons
+x-radiolist {
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: .125rem;
 }
 
 select {
     @include focusBehaviour;
+    @include disabledBehaviour;    
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-woodsmoke);
+    background-color: var(--color-white);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid var(--color-silverSand);
+    border-radius: var(--layout-radius);
+
+    &[multiple]{
+        padding-right: .75rem;
+        background-image: none;
+    }    
 }
 
 .button {
     @include focusBehaviour;
+    margin: .25rem .125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: var(--layout-radius);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: var(--color-white);
+    background-color: var(--color-blueRibbon);
+    border-color: var(--color-blueRibbon);    
+
+    &.button--success {
+        color: var(--color-white);
+        background-color: var(--color-genoa);
+        border-color: var(--color-genoa);
+    }
+
+    &.button--danger {
+        color: var(--color-white);
+        background-color: var(--color-punch);
+        border-color: var(--color-punch);
+    }
+
+    &.button--warning {
+        color: var(--color-black);
+        background-color: var(--color-black);
+        border-color: var(--color-black);
+    }
+
+    &.button--info {
+        color: var(--color-white);
+        background-color: var(--color-brightTurquoise);
+        border-color: var(--color-brightTurquoise);
+    }    
+
+    // must be applied AFTER custom button type overrides to allow this to win against them
+    @include disabledBehaviour;
 }
 
 button {
     @extend .button;
- }
+}

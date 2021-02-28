@@ -8,7 +8,7 @@
 }
 
 .dashiImage--rounded {
-    border-radius: .25rem;
+    border-radius: var(--layout-radius);
     user-select: none;
     font-size: 1.125rem;
     text-anchor: middle;

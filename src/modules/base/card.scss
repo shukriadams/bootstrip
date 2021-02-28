@@ -7,7 +7,7 @@
     background-clip: border-box;
     overflow:hidden;
     
-    .cardBody {
+    .cardbody {
         flex: 1 1 auto;
     }
 
@@ -20,10 +20,10 @@
     }
 }
 
-card {
+x-card {
     @extend .card;
 }
 
-cardBody {
-    @extend .cardBody;
+x-cardbody {
+    @extend .cardbody;
 }

@@ -8,16 +8,16 @@
     width: 100%;
     caption-side: bottom;
     border-collapse: collapse;
-    color: #212529;
+    color: var(--color-woodsmoke);
     vertical-align: top;
     border-color: #dee2e6;
 
     --bs-table-bg: transparent;
-    --bs-table-striped-color: #212529;
+    --bs-table-striped-color: var(--color-woodsmoke);
     --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-    --bs-table-active-color: #212529;
+    --bs-table-active-color: var(--color-woodsmoke);
     --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-    --bs-table-hover-color: #212529;
+    --bs-table-hover-color: var(--color-woodsmoke);
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
     
     & > thead {
@@ -32,7 +32,7 @@
 
     // gives header its bottom border color
     & > :not(:last-child) >:last-child > * {
-        border-bottom-color: #212529;
+        border-bottom-color: var(--color-woodsmoke);
     }
 
     & >:not(caption) > * > * {

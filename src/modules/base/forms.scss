@@ -5,40 +5,23 @@
     line-height: inherit;
 }
 
-@mixin disabled {
-    pointer-events: none;
-    background-color: #e9ecef;
-    color: grey;
+@mixin disabledBehaviour {
+    &:disabled,
+    &[disabled] {
+        pointer-events: none;
+    }    
 }
 
-@mixin inputBase{
+@mixin inputBase {
     @include reset;
+    @include disabledBehaviour;
     display: block;
     width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
     appearance: none;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
-    &.dashiform-input--disabled {
-        @include disabled;        
-    }    
 }
 
 label {
     display: inline-block;
-    margin-bottom: .5rem;
-
-    &[disabled] {
-        color: grey;     
-    }      
 }
 
 input[type=password] {
@@ -65,128 +48,39 @@ input[type=text] {
     @include inputBase;
 }
 
+textarea {
+    @include inputBase;
+    @include disabledBehaviour;
+}
+
 input[type=checkbox] {
     @include reset;
-    border-radius: .25em;
-    width: 1em;
-    height: 1em;
-    margin-top: .25em;
     vertical-align: top;
-    background-color: #fff;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    border: 1px solid rgba(0,0,0,.25);
     appearance: none;
     color-adjust: exact;
-
-    &:checked {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
-        background-color: #0d6efd;
-        border-color: #0d6efd;        
-    }
 }
 
-radiocontainer {
+// use this wrapper to stack radio buttons
+x-radiolist {
     display: block;
-    min-height: 1.5rem;
-    padding-left: 1.5em;
-    margin-bottom: .125rem;
 }
 
 select {
+    @include disabledBehaviour;        
     display: block;
-    width: 100%;
-    padding: .375rem 2.25rem .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right .75rem center;
-    background-size: 16px 12px;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
     appearance: none;    
-
-    &[multiple]{
-        padding-right: .75rem;
-        background-image: none;
-    }
-
-    &[disabled] {
-        @include disabled;        
-    }  
 }
-
-textarea {
-    @include inputBase;
-
-    &.dashiform-input--disabled {
-        @include disabled;        
-    }
-}
-
-help {
-    margin-top: .25rem;
-    font-size: var(--font-undersize);
-    color: #6c757d;
-}
-
 
 .button {
-    margin: .25rem .125rem;
     display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
-    color: #fff;
-    background-color: #0a58ca;
-    border-color: #0a53be;    
-
-
-
-    &.success, 
-    &.button--success {
-        color: #fff;
-        background-color: #198754;
-        border-color: #198754;
-    }
-
-    &.danger, 
-    &.button--danger {
-        color: #fff;
-        background-color: #dc3545;
-        border-color: #dc3545;
-    }
-
-    &.warning, 
-    &.button--warning {
-        color: #000;
-        background-color: #ffc107;
-        border-color: #ffc107;
-    }
-
-    &.info, 
-    &.button--info {
-        color: #000;
-        background-color: #0dcaf0;
-        border-color: #0dcaf0;
-    }
 }
 
 .dashiForm-button {

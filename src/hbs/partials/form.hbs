@@ -16,7 +16,7 @@
 <content>
     <label for="myemail">Email address</label>
     <input type="email" id="myemail" placeholder="name@example.com">
-    <help>Help text for a form element can be added here</help>
+    <x-tip>Help text for a form element can be added here</x-tip>
 </content>
 
 <content>
@@ -43,7 +43,7 @@
 
 <content>
     <select>
-        <option selected>Open this select menu</option>
+        <option selected>Select menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
@@ -52,7 +52,7 @@
 
 <content>
     <select multiple>
-        <option selected>Open this muliple select menu</option>
+        <option selected>Multiselect menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
@@ -60,27 +60,18 @@
 </content>
 
 <content>
-    <select class="dashiForm-input--large">
-        <option selected>Open this large select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-</content>
-
-<content>
-    <radiocontainer>
+    <x-radiolist>
         <input type="radio" id="flexRadioDefault1" name="flexRadioDefault">
         <label for="flexRadioDefault1">
             Default radio
         </label>
-    </radiocontainer>
-    <radiocontainer>
+    </x-radiolist>
+    <x-radiolist>
         <input type="radio" id="flexRadioDefault2" name="flexRadioDefault" checked>
         <label for="flexRadioDefault2">
             Default checked radio
         </label>
-    </radiocontainer>
+    </x-radiolist>
 </content>
 
 <content>
@@ -88,21 +79,37 @@
     <label for="flexSwitchCheckChecked">Checked switch checkbox input</label>
 </content>
 
+<content>
+    <button>Vanilla</button>
+    <button class="button--danger">Danger</button>
+    <button class="button--success">Success</button>
+    <button class="button--warning">Warning</button>
+    <button class="button--info">Info</button>    
+</content>
+
 <h2>Disabled</h2>
 
 <content>
-    <label>Email</label>
-    <input type="email" class="dashiform-input--disabled" placeholder="name@example.com">
+    <label disabled>Email</label>
+    <input disabled type="email" placeholder="name@example.com">
 </content>
 
 <content>
-    <label>Email</label>
-    <textarea id="mytext" class="dashiform-input--disabled" rows="3">Some text</textarea>
+    <button disabled>Vanilla</button>
+    <button class="button--danger" disabled>Danger</button>
+    <button class="button--success" disabled>Success</button>
+    <button class="button--warning" disabled>Warning</button>
+    <button class="button--info" disabled>Info</button>    
+</content>
+
+<content>
+    <label disabled>Email</label>
+    <textarea disabled id="mytext" rows="3">Some text</textarea>
 </content>
 
 <content>
     <select disabled>
-        <option selected>Open this large select menu</option>
+        <option selected>Select menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
@@ -110,30 +117,21 @@
 </content>
 
 <content>
-    <input type="checkbox" id="mycheck" disabled>
-    <label disabled for="mycheck">Check me out</label>
+    <input type="checkbox" id="mydisabledcheck" disabled>
+    <label disabled for="mydisabledcheck">Check me out</label>
 </content>
 
 <content>
     <radiocontainer>
         <input type="radio" id="flexRadioDisabled1" name="flexRadioDisabled" disabled>
-        <label for="flexRadioDisabled1">
+        <label for="flexRadioDisabled1" disabled>
             Default radio
         </label>
     </radiocontainer>
     <radiocontainer>
         <input type="radio" id="flexRadioDisabled2" name="flexRadioDisabled" checked disabled>
-        <label for="flexRadioDisabled2">
+        <label for="flexRadioDisabled2" disabled>
             Default checked radio
         </label>
     </radiocontainer>
 </content>
-
-<content>
-    <button>Vanilla</button>
-    <button class="danger">Danger</button>
-    <button class="success">Success</button>
-    <button class="warning">Warning</button>
-    <button class="info">Info</button>    
-</content>
-

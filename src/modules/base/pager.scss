@@ -7,17 +7,17 @@
 .pager-link {
     position: relative;
     display: block;
-    color: #0d6efd;
+    color: var(--color-blueRibbon);
     padding: .375rem .75rem;
     text-decoration: none;
-    background-color: #fff;
+    background-color: var(--color-white);
     border: 1px solid #dee2e6;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
     &.pager-link--active {
         z-index: 3;
-        color: #fff;
-        background-color: #0d6efd;
-        border-color: #0d6efd;
+        color: var(--color-white);
+        background-color: var(--color-blueRibbon);
+        border-color: var(--color-blueRibbon);
     }
 }

@@ -2,24 +2,31 @@
 
 :root {
     --pageClampWidth: 800px;
+    --layout-radius: .25rem;
     --color-white: #fff;
     --color-barleyWhite: #fff3cd;
     --color-butterMilk: #ffecb5;
+    --color-blueRibbon: #0d6efd;
+    --color-brightTurquoise: #0dcaf0;
     --color-congressBlue: #084298;
     --color-onahau: #cfe2ff;
     --color-frenchPass: #b6d4fe;
     --color-cherub: #f8d7da;
     --color-azalea: #f5c2c7;
+    --color-amber: #ffc107;
     --color-jewel: #0f5132;
+    --color-genoa: #198754;
     --color-edgewater: #d1e7dd;
     --color-edgewaterDark: #badbcc;
     --color-crownOfThorns: #842029;
+    --color-punch: #dc3545;
     --color-antiqueBronze: #664d03;
     --color-iron: #d3d3d4;
     --color-silverSand: #bcbebf;
+    --color-athensGray: #e9ecef;
     --color-paleSky: #6c757d;
     --color-woodsmoke: #141619;
-    --color-black: 0,0,0;
+    --color-blackRGB: 0,0,0;
     --layout-universalMargin: 8px;
     --font-undersize: .875em
 }
@@ -29,8 +36,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
+    color: var(--color-woodsmoke);
+    background-color: var(--color-white);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
