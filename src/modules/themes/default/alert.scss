@@ -35,3 +35,7 @@
         border-color: var(--color-silverSand);
     }
 }
+
+alert {
+    @extend .alert;
+}
