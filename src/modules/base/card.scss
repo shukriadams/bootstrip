@@ -8,7 +8,8 @@
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-
+    overflow:hidden;
+    
     .cardBody {
         flex: 1 1 auto;
         padding: 1rem 1rem;

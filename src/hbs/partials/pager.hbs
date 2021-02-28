@@ -1,0 +1,19 @@
+<ul class="pager">
+    <li>
+        <a class="pager-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+
+    {{#for_n 10}}
+        <li>
+            <a class="pager-link {{#eq this 4}}pager-link--active{{/eq}}" href="#">{{sum this 1}}</a>
+        </li>
+    {{/for_n}}
+
+    <li>
+        <a class="pager-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+</ul>
