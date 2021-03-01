@@ -26,26 +26,7 @@
                 {{>pageMenu menuType="horizontal" items=menuItems}}
 
                 <h1>Graphs</h1>
-                <div class="dashi-row dashi-row--4cells">
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph1' percent=14}}
-                    </div>
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph2' percent=78}}
-                    </div>                    
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph3' percent=1}}
-                    </div>                    
-                    <div class="dashi-cell">
-                        {{>circlegraph graphId='graph14' percent=97}}
-                    </div>                    
-                </div>
-
-                <div class="dashiLegend">
-                    <div class="dashiLegend-content">
-                        TOTALS - out of 4532 views
-                    </div>
-                </div>
+                {{>graphs}}
 
                 <h2>Image</h2>
                 {{>image}}
