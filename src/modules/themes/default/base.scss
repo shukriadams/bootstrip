@@ -3,6 +3,7 @@
 :root {
     --layout-clampWidth: 800px;
     --layout-radius: .25rem;
+    --layout-lineheight: 1.5;
     --layout-universalMargin: 8px;
     --layout-gutter: 8px;
     --font-undersize: .875em;
@@ -37,7 +38,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: var(--layout-lineheight);
     color: var(--color-woodsmoke);
     background-color: var(--color-white);
     -webkit-text-size-adjust: 100%;

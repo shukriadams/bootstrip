@@ -6,7 +6,8 @@
     --bs-table-active-bg: rgba(0, 0, 0, 0.1);
     --bs-table-hover-color: var(--color-woodsmoke);
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
-
+    // need to reapply body lineheight here, as it gets overwritten by agent default css
+    line-height: var(--layout-lineheight);
     border-color: var(--color-silverSand);
     color: var(--color-woodsmoke);    
 
