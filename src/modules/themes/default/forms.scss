@@ -1,3 +1,5 @@
+@import './mixins';
+
 @mixin focusBehaviour {
     &:focus {
         outline: 0;
@@ -41,10 +43,9 @@ label {
 }
 
 x-tip {
+    @include muteText;
     display: block;
     margin-top: .25rem;
-    font-size: var(--font-undersize);
-    color: var(--color-paleSky);
 }
 
 input[type=password] {
