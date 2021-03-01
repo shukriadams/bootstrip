@@ -1,7 +1,22 @@
-<ul class="dashiList">
+<ul class="list">
+    <li class="list-header">
+        <h5 class="type-uppercase">Header</h5> 
+    </li>
+
     {{#each items}}
-        <li class="dashiList-item {{#if active}}dashiList-item--active{{/if}}">
-            {{text}}
+        <li class="list-row {{#if active}}list-row--active{{/if}}">
+            <div class="list-cell">
+                {{text}}
+                <x-tip>
+                    This is some help
+                </x-tip>
+            </div>
+            <div class="list-cell">
+                {{text}}
+            </div>
+            <div class="list-cell">
+                {{text}}
+            </div>
         </li>
     {{/each}}
 </ul>

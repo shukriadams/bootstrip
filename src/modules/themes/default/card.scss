@@ -8,6 +8,14 @@
     }
 }
 
+.card-header {
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.125rem 0.125rem 0 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 0 solid var(--color-silverSand);
+}
+
 x-card {
     @extend .card;
 }

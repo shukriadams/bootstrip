@@ -16,6 +16,10 @@
 
 }
 
+.type-uppercase {
+    text-transform: uppercase;
+}
+
 .header1 {
     @include baseHeader;
     margin-top: 3.5rem;

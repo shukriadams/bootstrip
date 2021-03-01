@@ -41,6 +41,7 @@ label {
 }
 
 x-tip {
+    display: block;
     margin-top: .25rem;
     font-size: var(--font-undersize);
     color: var(--color-paleSky);

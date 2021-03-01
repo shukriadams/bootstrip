@@ -1,0 +1,64 @@
+@import './card';
+
+.list {
+    @extend .card;
+    margin-bottom: 1.5rem;
+}
+
+.list-header {
+    @extend .card-header;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+        
+    h1, 
+    .header1 {
+        margin-bottom: 0;
+    }
+
+    h2,
+    .header2 {
+        margin-bottom: 0;
+    } 
+
+    h3, 
+    .header3 {
+        margin-bottom: 0;
+    }
+
+    h4, 
+    .header4 {
+        margin-bottom: 0;
+    }
+
+    h5, 
+    .header5 {
+        margin-bottom: 0;
+    } 
+    
+    h6, 
+    .header6 {
+        margin-bottom: 0;
+    }       
+
+}
+
+.list-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    align-items: center;
+    border-top: 1px solid #eeeef1;
+}
+
+.list-cell {
+    padding-right: 1rem;
+    flex-basis:0;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;    
+}

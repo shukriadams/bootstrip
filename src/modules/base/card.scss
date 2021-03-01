@@ -20,6 +20,11 @@
     }
 }
 
+.card-header {
+    display: default;// placeholder value so class exists
+
+}
+
 x-card {
     @extend .card;
 }

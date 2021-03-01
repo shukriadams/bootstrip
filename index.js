@@ -52,8 +52,9 @@ async function concatenate(){
 
             fileconcat(['./.tmp/src/modules/base/**/*.css'], './src/web/css/style.css').then(() => {
                 fileconcat(['./.tmp/src/modules/themes/default/**/*.css'], './src/web/css/theme-default.css').then(() => {
-                    resolve()
-                })
+                    fileconcat(['./.tmp/src/modules/themes/light-dashboard/**/*.css'], './src/web/css/theme-light-dashboard.css').then(() => {
+                        resolve()
+                    })                })
             })
             
         } catch(ex){
