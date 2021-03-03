@@ -10,8 +10,6 @@ let chokidar = require('chokidar'),
 
     Spectr.engines.handlebars({ Handlebars })
 
-
-
     Handlebars.registerHelper('stringify', data =>{
         return data ? JSON.stringify(data) : ''
     })
@@ -48,11 +46,11 @@ function mapSassToCss(file){
 async function concatenate(){
     return new Promise(async function(resolve, reject){
         try {
-            await fs.ensureDir('./src/web/css')
+            await fs.ensureDir('./web/css')
 
-            fileconcat(['./.tmp/src/modules/base/**/*.css'], './src/web/css/style.css').then(() => {
-                fileconcat(['./.tmp/src/modules/themes/default/**/*.css'], './src/web/css/theme-default.css').then(() => {
-                    fileconcat(['./.tmp/src/modules/themes/light-dashboard/**/*.css'], './src/web/css/theme-light-dashboard.css').then(() => {
+            fileconcat(['./.tmp/modules/base/**/*.css'], './web/css/style.css').then(() => {
+                fileconcat(['./.tmp/modules/themes/default/**/*.css'], './web/css/theme-default.css').then(() => {
+                    fileconcat(['./.tmp/modules/themes/light-dashboard/**/*.css'], './web/css/theme-light-dashboard.css').then(() => {
                         resolve()
                     })                })
             })
@@ -121,19 +119,19 @@ function startExpress(){
         app = Express()
 
 
-    app.use(Express.static('./src/web'))
-    app.use(Express.static('./src/images'))
+    app.use(Express.static('./web'))
+    app.use(Express.static('./images'))
     app.get('/render', async function (req, res) {
         try {
             let spectr = new Spectr.Spectr({
                 templates : {
-                    views : path.join(__dirname, 'src/hbs/partials/**/*.hbs'),
-                    pages : path.join(__dirname, 'src/hbs/pages/**/*.hbs')
+                    views : path.join(__dirname, 'hbs/partials/**/*.hbs'),
+                    pages : path.join(__dirname, 'hbs/pages/**/*.hbs')
                 },
                 models : {
-                    pages : { cwd : path.join(__dirname, 'src/data/pages'), src : ['**/*.json'] },
-                    functions : path.join(__dirname, 'src/data/functions/**/*.js'),
-                    static : path.join(__dirname, 'src/data/static/**/*.json')
+                    pages : { cwd : path.join(__dirname, 'data/pages'), src : ['**/*.json'] },
+                    functions : path.join(__dirname, 'data/functions/**/*.js'),
+                    static : path.join(__dirname, 'data/static/**/*.json')
                 }
             })
             
@@ -142,7 +140,7 @@ function startExpress(){
                     if (err ||output.content === null)
                         return console.log(err)
             
-                    var filePath = path.join('./src/web', output.path)
+                    var filePath = path.join('./web', output.path)
                     if (!fs.existsSync(path.dirname(filePath)))
                         fs.mkdirSync(path.dirname(filePath))
             
@@ -176,7 +174,7 @@ function startExpress(){
     await fs.ensureDir('./.tmp');
 
     // start watching sass files
-    let sassWatcher = chokidar.watch(['./src/modules/**/*.scss'], {
+    let sassWatcher = chokidar.watch(['./modules/**/*.scss'], {
         persistent: true,
         usePolling: true
         //ignoreInitial: true
