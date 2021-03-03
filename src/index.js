@@ -1,37 +1,12 @@
 let chokidar = require('chokidar'),
-    Spectr = require('spectr'),
     fs = require('fs-extra'),
     fileconcat = require('fileconcat'),
+    render = require('./lib/render'),
     path = require('path'),
     port = 8020,
     sass = require('node-sass'),
-    _triggerFile = null,
-    Handlebars = require('handlebars')
+    _triggerFile = null
 
-    Spectr.engines.handlebars({ Handlebars })
-
-    Handlebars.registerHelper('stringify', data =>{
-        return data ? JSON.stringify(data) : ''
-    })
-
-    Handlebars.registerHelper('for_n', (n, block) =>{
-        let out = ''
-
-        for (let i = 0 ; i < n ; i ++)
-            out += block.fn(i)
-        
-        return out
-    })
-
-    Handlebars.registerHelper('sum', function(value1, value2){
-        return parseInt(value1.toString()) + parseInt(value2.toString())
-    })
-
-    Handlebars.registerHelper('eq', (value1, value2, options)=>{
-        return value1 === value2 ? 
-            options.fn(this) :  
-            options.inverse(this)
-    })
 
 /** 
  * Converts a Sass file map to its destination compiled css path in ./tmp folder
@@ -123,38 +98,9 @@ function startExpress(){
     app.use(Express.static('./images'))
     app.get('/render', async function (req, res) {
         try {
-            let spectr = new Spectr.Spectr({
-                templates : {
-                    views : path.join(__dirname, 'hbs/partials/**/*.hbs'),
-                    pages : path.join(__dirname, 'hbs/pages/**/*.hbs')
-                },
-                models : {
-                    pages : { cwd : path.join(__dirname, 'data/pages'), src : ['**/*.json'] },
-                    functions : path.join(__dirname, 'data/functions/**/*.js'),
-                    static : path.join(__dirname, 'data/static/**/*.json')
-                }
-            })
-            
-            spectr.renderAllRoutes({
-                file : function(err, output){
-                    if (err ||output.content === null)
-                        return console.log(err)
-            
-                    var filePath = path.join('./web', output.path)
-                    if (!fs.existsSync(path.dirname(filePath)))
-                        fs.mkdirSync(path.dirname(filePath))
-            
-                    fs.writeFile(filePath, output.content, ()=>{
-                        console.log(`rendered ${filePath}`)
-                    })
-                },
-                done : function(){
-                    console.log('rendered')
-                }
-            })
-            
-            res.send('rendered')
 
+            await render()
+            res.send('rendered')
 
         } catch (ex){
             console.log(ex)
