@@ -1,0 +1,53 @@
+{{#extend "_layout"}}
+    {{#content   "body"}}
+        <x-clamp>
+            <section>
+                {{>layout}}
+
+                {{>typography}}
+
+                <h2>Menu - vertical</h2>
+                {{>pageMenu menuType="vertical" items=menuItems}}
+
+                <h2>Menu - horizontal</h2>
+                {{>pageMenu menuType="horizontal" items=menuItems}}
+
+                <h1>Graphs</h1>
+                {{>graphs}}
+
+                <h2>Image</h2>
+                {{>image}}
+
+                <h2>Figure</h2>
+                {{>figure caption="my caption" src="/images/example.jpg"}}
+
+                <h2>list</h2>
+                {{>list items=listItems}}
+
+                <h2>Table</h2>
+                {{>table table.items}}
+
+                <h2>Table with modfiers</h2>
+                {{>table tableModifiers.items}}
+
+                <h2>Alerts</h2>
+                {{>alerts}}
+
+                <h2>Form</h2>
+                {{>form}}
+
+                <h2>Form Grid</h2>
+                {{>formgrid}}
+
+                <h2>Card</h2>
+                {{>cards}}
+
+                <h2>Pager</h2>
+                {{>pager}}
+
+                <h2>Sidemenu</h2>
+                {{>sideMenu items=sideMenu}}
+            </section>
+        </x-clamp>
+    {{/content}}
+{{/extend}}

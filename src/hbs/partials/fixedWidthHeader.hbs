@@ -1,0 +1,18 @@
+<x-fixedWidthHeader>
+    
+    <x-fixedWidthHeader-logoContainer>
+        <a href="/">
+            <i class="icon icon-view_in_ar"></i>
+            {{title}}
+        </a>
+    </x-fixedWidthHeader-logoContainer>
+
+    <x-fixedWidthHeader-content>
+        {{#each items}}
+            <x-fixedWidthHeader-contentItem>
+                {{text}}
+            </x-fixedWidthHeader-contentItem>
+        {{/each}}
+    </x-fixedWidthHeader-content>    
+
+</x-fixedWidthHeader>

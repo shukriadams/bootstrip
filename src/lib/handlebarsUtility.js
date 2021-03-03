@@ -4,6 +4,7 @@ let chokidar = require('chokidar'),
     cwd = process.cwd(),
     fs = require('fs-extra'),
     Handlebars = require('handlebars'),
+    layouts = require('handlebars-layouts'),
     Spectr = require('spectr')
 
 module.exports = {
@@ -15,7 +16,7 @@ module.exports = {
         fs.ensureDirSync(workPath)
 
         // start watching sass files
-        const watcher = chokidar.watch([path.join('./hbs/**/*.hbs')], {
+        const watcher = chokidar.watch([path.join('./hbs/**/*.hbs'), path.join('./data/**/*')], {
             persistent: true,
             usePolling: true, 
             ignoreInitial: true
@@ -38,6 +39,8 @@ module.exports = {
     async renderAll (){
     
         Spectr.engines.handlebars({ Handlebars })
+
+        Handlebars.registerHelper(layouts(Handlebars))
 
         Handlebars.registerHelper('stringify', data =>{
             return data ? JSON.stringify(data) : ''

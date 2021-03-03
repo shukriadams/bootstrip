@@ -1,0 +1,10 @@
+.fixedWidthHeader-logoContainer {
+    .icon {
+        font-size: 34px;
+    }
+    width: 11rem;
+}
+
+x-fixedWidthHeader-logoContainer {
+    @extend .fixedWidthHeader-logoContainer;
+}
