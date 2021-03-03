@@ -9,8 +9,7 @@ let handlebarsUtility = require('./lib/handlebarsUtility'),
         app = Express()
 
     app.use(Express.static('./web'))
-    app.use(Express.static('./images'))
-    app.use(Express.static('./js'))
+    app.use(Express.static('./static'))
     
     await sassUtility.watch()
     await handlebarsUtility.watch()

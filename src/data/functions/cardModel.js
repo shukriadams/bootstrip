@@ -8,7 +8,7 @@ module.exports = (content = '*')=>{
     }
 
     if (content.includes('*') || content.includes('image'))
-        model.image = "/example.jpg"
+        model.image = "/images/example.jpg"
 
     if (content.includes('*') || content.includes('title'))
         model.title = "Lorem title"
