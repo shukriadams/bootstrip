@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: builds and copies static assets to remote Nginx folder
         run: | 
-            docker run -v $(pwd):/tmp/bootstrip shukriadams/node12build:0.0.1 sh -c "cd /tmp/bootstrip/src && yarn && npm run render"
+            docker run -v $(pwd):/tmp/bootstrip shukriadams/node12build:0.0.1 sh -c "cd /tmp/bootstrip/src && yarn && npm run build"
             docker run -e $HOST -e $USERNAME -e $PASSWORD -v $(pwd):/tmp/bootstrip shukriadams/node12build:0.0.1 sh -c "cd /tmp/bootstrip/src/web && rsync --recursive --times --compress --delete --progress --rsh="\""sshpass -p ${PASSWORD} ssh -o StrictHostKeyChecking=no -l ${USERNAME}"\"" ./*  ${USERNAME}@${HOST}:/srv/boostrip/"
         env:
             HOST: ${{ secrets.HOST }}
