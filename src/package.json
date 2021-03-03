@@ -4,7 +4,8 @@
     "description": "A minimalist form and dashboard ui theme",
     "scripts": {
         "start": "node index",
-        "fonts": "cd src/fonts && node build",
+        "icons": "node build/buildIcons",
+        "render" : "node build/renderAll",
         "debug": "node --inspect=0.0.0.0:8021 index"
     },
     "dependencies": {
