@@ -5,7 +5,7 @@
     "scripts": {
         "start": "node index",
         "icons": "node build/buildIcons",
-        "render" : "node build/renderAll",
+        "build" : "node build/buildSite",
         "debug": "node --inspect=0.0.0.0:8021 index"
     },
     "dependencies": {
