@@ -12,10 +12,12 @@
         <link rel="stylesheet" href="/css/bootstrip-defaultTheme.css" type="text/css">
         <link rel="stylesheet" href="/css/theme-light-dashboard.css" type="text/css">
         <link rel="stylesheet" href="/css/bootstrip-demo.css" type="text/css">
+        <link rel="stylesheet" href="/css/bootstrip-demo-dashboard.css" type="text/css">
+
         {{{block "head"}}}
     </head>
-    <body>
-        {{>fixedWidthHeader title="Bootstrip"}}
+    <body class="demo-body">
+        {{>fixedWidthHeader sticky=true title="Bootstrip"}}
         
         {{{block "body"}}}
         <script src="/js/graph.js"></script>

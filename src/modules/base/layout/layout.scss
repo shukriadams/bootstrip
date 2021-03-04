@@ -1,7 +1,8 @@
 @mixin columnBase {
     display: grid;
     column-gap: var(--layout-gutter);
-
+    margin-bottom:var(--layout-gutter);
+    
     & > * {
         // immediate children of columns should always follor grid layout rules
         display : grid;
@@ -25,7 +26,7 @@
 
 // sections are to divide a page up into blocks
 .section {
-    padding: var(--layout-universalMargin);    
+    padding: var(--layout-gutter);
     display: block;
 }
 

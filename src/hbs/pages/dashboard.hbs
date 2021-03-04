@@ -1,0 +1,32 @@
+{{#extend "_layout"}}
+    {{#content "body"}}
+        <div class="dashboardDemo-page">
+            <div class="dashboardDemo-pageNavLeft">
+                {{>sideMenu items=sideMenu}}
+            </div>
+
+            <div class="dashboardDemo-pageNotNavLeft">
+                <div class="dashboardDemo-pageTopMenu">
+                    
+                </div>
+                <div class="dashboardDemo-pageGeneralContent">
+                    
+                    <x-cards>
+                        <x-columns2>
+                            {{>card cards.all}}
+                            {{>card cards.all}}
+                        </x-columns2>
+                        <x-columns4>
+                            {{>card cards.all}}
+                            {{>card cards.all}}
+                            {{>card cards.all}}
+                            {{>card cards.all}}
+                        </x-columns4>
+                    </x-cards>
+
+                </div>
+            </div>
+
+        </div>
+    {{/content}}
+{{/extend}}

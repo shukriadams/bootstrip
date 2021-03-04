@@ -51,11 +51,17 @@
         Cards can be group on a contrasting background. In this case the x-cards element replaces x-columns
     </x-demo-description>
 
-    <x-cards4 class="cards--dark">
-        {{>card cards.all}}
-        {{>card cards.all}}
-        {{>card cards.all}}
-        {{>card cards.all}}
+    <x-cards>
+        <x-columns2>
+            {{>card cards.all}}
+            {{>card cards.all}}
+        </x-columns2>
+        <x-columns4>
+            {{>card cards.all}}
+            {{>card cards.all}}
+            {{>card cards.all}}
+            {{>card cards.all}}
+        </x-columns4>
     </x-cards>
 
 </x-demo-item>
