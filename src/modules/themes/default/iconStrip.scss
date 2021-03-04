@@ -1,0 +1,44 @@
+.iconStrip {
+    background-color: var(--color-ghost);
+    
+    padding: 4px;
+    column-gap: 4px;  
+    row-gap: 4px;
+    font-size: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+}
+
+.iconStrip-item {
+    border-radius: var(--layout-radius);
+    background-color: var(--color-white);
+    transition: var(--transition-standard);
+    color:var(--color-genoa);
+    height: 72px;
+    padding-top: 8px;
+
+    &:hover {
+        background-color: var(--color-blueRibbon);
+        color: var(--color-white);
+        
+        .iconStrip-text {
+            color: var(--color-white);
+        }
+    }
+}
+
+.iconStrip-text {
+    font-size: 12px;
+    color: var(--color-manatee);
+}
+
+x-iconStrip {
+    @extend .iconStrip;
+}
+
+x-iconStrip-text {
+    @extend .iconStrip-text;
+}
+
+x-iconStrip-item {
+    @extend .iconStrip-item;
+}
