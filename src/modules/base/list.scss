@@ -9,3 +9,9 @@
 .list-header {
     @extend .card-header;
 }
+
+.list-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

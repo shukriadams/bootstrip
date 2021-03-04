@@ -18,7 +18,8 @@ module.exports = {
                     'svgs/rate-star-button.svg',
                     'svgs/searching-magnifying-glass.svg',
                     'svgs/shopping-cart.svg',
-                    'svgs/tick-inside-circle.svg'
+                    'svgs/tick-inside-circle.svg',
+                    'svgs/view_in_ar.svg'
                 ],
                 dest: './web/css/icons/',
                 cssFontsUrl : '/css/icons',
