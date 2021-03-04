@@ -48,6 +48,20 @@ module.exports = {
         await this.concatenate()
     },
 
+
+    async concatFiles(infiles, outFile){
+        return new Promise((resolve, reject)=>{
+            try {
+                fileconcat(infiles, outFile).then(() => {
+                    resolve()
+                }) 
+            } catch(ex){
+                reject(ex)
+            }
+        })
+    },
+
+
     /** 
      * Converts a Sass file map to its destination compiled css path in ./tmp folder
      */
@@ -60,22 +74,13 @@ module.exports = {
     },
 
     async concatenate(){
-        return new Promise(async (resolve, reject)=>{
-            try {
-                await fs.ensureDir(path.join(cwd, 'web/css'))
-
-                fileconcat([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/style.css')).then(() => {
-                    fileconcat([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/theme-default.css')).then(() => {
-                        fileconcat([path.join(cwd, '.tmp/modules/themes/light-dashboard/**/*.css')], path.join(cwd, 'web/css/theme-light-dashboard.css')).then(() => {
-                            resolve()
-                        })                
-                    })
-                })
+        await fs.ensureDir(path.join(cwd, 'web/css'))
                 
-            } catch(ex){
-                resolve(ex)
-            }
-        })
+        await this.concatFiles([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/bootstrip.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-defaultTheme.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/light-dashboard/**/*.css')], path.join(cwd, 'web/css/theme-light-dashboard.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/demo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboardDemo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard.css'))
     },
 
     /** 

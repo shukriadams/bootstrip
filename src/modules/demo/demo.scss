@@ -1,0 +1,21 @@
+.demo-body {
+    padding-top: 64px;
+}
+
+/**
+    These are elements used only on this demo site, they are not part of bootsrip itself, but are rather used to demonstrate bootstrip.
+*/
+x-demo-description {
+    display: block;
+    padding: 1rem;
+    border-radius: var(--layout-radius);
+    background-color: var(--color-iron);
+    border: 2px dotted var(--color-paleSky);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+x-demo-item {
+    display: block;
+    margin-top: 6rem;
+}

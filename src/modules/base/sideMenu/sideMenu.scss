@@ -1,0 +1,27 @@
+.sideMenu {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sideMenu-item {
+    position: relative;
+}
+
+.sideMenu-link {
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.sideMenu-iconWrapper {
+    display: flex;
+}
+
+x-sideMenu {
+    @extend .sideMenu;
+}
+
+x-sideMenu {
+    @extend .sideMenu;
+}

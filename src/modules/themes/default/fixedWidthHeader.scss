@@ -1,3 +1,9 @@
+.fixedWidthHeader {
+    &.fixedWidthHeader--sticky {
+        
+    }
+}
+
 .fixedWidthHeader-logoContainer {
     font-family: var(--font-logoFace);
     .icon {

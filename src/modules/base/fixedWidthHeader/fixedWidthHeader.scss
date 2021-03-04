@@ -1,0 +1,75 @@
+
+
+.fixedWidthHeader {
+    flex-wrap: nowrap;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &.fixedWidthHeader--sticky {
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+}
+
+.fixedWidthHeader-logoContainer {
+    background-color: var(--color-oxfordblue);
+    color: var(--color-white);
+    width: 15.63rem;
+    position: static;
+    z-index: 5;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    width: 8rem;
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem; 
+    height: 4rem;    
+}
+
+.fixedWidthHeader-content {
+    background-color: var(--color-paleSky);
+    padding: 0.5rem 1rem;     
+    position: static;
+    z-index: 5;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    height: 4rem;    
+    display: flex;
+    align-items: center;
+}
+
+.fixedWidthHeader-contentItem {
+    margin-left: 3rem;
+    position: relative;
+}
+
+x-fixedWidthHeader {
+    @extend .fixedWidthHeader;
+}
+
+x-fixedWidthHeader-logoContainer {
+    @extend .fixedWidthHeader-logoContainer;
+}
+
+x-fixedWidthHeader-content {
+    @extend .fixedWidthHeader-content;
+}
+
+x-fixedWidthHeader-contentItem {
+    @extend .fixedWidthHeader-contentItem;
+}

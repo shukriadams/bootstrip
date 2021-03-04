@@ -1,43 +1,44 @@
 .sideMenu {
     padding-bottom: 2rem;
+    background-color: var(--color-mirage);
 }
 
-.sideMenu-linkItem {
+.sideMenu-item {
     font-size: 1rem;
     transition: var(--transition-standard);
 
     &:hover {
-        background-color: #151829;
+        background-color: var(--color-mirageDark);
     }
 
-    &.sideMenu-linkItem--active {
-        background-color: #151829;
+    &.sideMenu-item--active {
+        background-color: var(--color-mirageDark);
 
         .sideMenu-link{
-            color: #8069f2
+            color: var(--color-mediumPurple);
         }
         .sideMenu-iconWrapper {
-            color: #8069f2
+            color: var(--color-mediumPurple);
         }
     }
 }
 
 .sideMenu-link {
-    color: #cdced6;
+    color: var(--color-ghost);
     padding: 0.75rem 1.25rem;
 }
 
-.sideMenu-headerItem {
+.sideMenu-header {
     font-size: 0.75rem;
-    color: #8b8e9f;
+    color: var(--color-manatee);
     letter-spacing: 0.3px;
-    padding: 1.56rem 1.25rem 0.63rem;
+    padding: 1.5rem 1.25rem 0.5rem;
     margin-bottom: 0;    
 }
 
 .sideMenu-iconWrapper {
     margin-right: 1rem;
-    font-size: 1.13rem;
-    color: #8b8e9f;
+    font-size: 1.2rem;
+    color: var(--color-manatee);
     width: 1rem;
 }

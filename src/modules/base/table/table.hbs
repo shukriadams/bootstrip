@@ -1,0 +1,24 @@
+<table class="table table--striped">
+    <thead>
+        <tr>
+            {{#each columns}}
+                <th>{{this.text}}</th>
+            {{/each}}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {{#each rows}}
+                <tr class="table-row table-row--{{this.modifier}}">
+                    {{#each this.cells}}
+                        {{#eq @index 0}}
+                            <th> {{../text}}</th>
+                        {{else}}
+                            <td>{{../text}}</td>
+                        {{/eq}}
+                    {{/each}}        
+                </tr>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>
