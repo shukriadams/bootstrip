@@ -1,5 +1,10 @@
 @import './mixins';
 
+a {
+    color: var(--color-blueRibbon);
+    text-decoration: none;
+}
+
 .type-mute {
     @include muteText;    
 }
