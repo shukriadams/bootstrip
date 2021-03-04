@@ -1,8 +1,17 @@
 .fixedWidthHeader-logoContainer {
+    font-family: var(--font-logoFace);
     .icon {
         font-size: 34px;
     }
     width: 11rem;
+}
+
+.fixedWidthHeader-logo {
+    font-size: 22px;
+}
+
+x-fixedWidthHeader-logo {
+    @extend .fixedWidthHeader-logo;
 }
 
 x-fixedWidthHeader-logoContainer {
