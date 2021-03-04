@@ -1,10 +1,22 @@
-<x-content>
-    {{>card cards.all}}
-</x-content>
+<x-demo-item>
+    <x-demo-description>
+        A card is a visible container that holds a small unit of related elements. This card contains an image, a title, some body text and a link for example.
+    </x-demo-description>
 
-<x-content>
-    {{>card cards.noimage}}
-</x-content>
+    <x-content>
+        {{>card cards.all}}
+    </x-content>
+</x-demo-item>
+
+<x-demo-item>
+    <x-demo-description>
+        Elements within a card are option - this one has no image.
+    </x-demo-description>
+
+    <x-content>
+        {{>card cards.noimage}}
+    </x-content>
+</x-demo-item>
 
 <x-content>
     {{>card cards.center}}
@@ -14,20 +26,39 @@
     {{>card cards.right }}
 </x-content>
 
-<x-columns2>
-    <x-content>{{>card cards.all}}</x-content>
-    <x-content>{{>card cards.all}}</x-content>
-</x-columns2>
+<x-content>
 
-<x-columns3>
-    <x-content>{{>card cards.all}}</x-content>
-    <x-content>{{>card cards.all}}</x-content>
-    <x-content>{{>card cards.all}}</x-content>
-</x-columns3>
+    <x-columns2>
+        {{>card cards.all}}
+        {{>card cards.all}}
+    </x-columns2>
 
-<x-columns4>
-    <x-content>{{>card cards.all}}</x-content>
-    <x-content>{{>card cards.all}}</x-content>
-    <x-content>{{>card cards.all}}</x-content>
-    <x-content>{{>card cards.all}}</x-content>
-</x-columns4>
+</x-content>    
+
+<x-content>
+    <x-columns3>
+        {{>card cards.all}}
+        {{>card cards.all}}
+        {{>card cards.all}}
+    </x-columns3>
+</x-content>
+
+
+
+<x-demo-item>
+
+    <x-demo-description>
+        Cards can be group on a contrasting background. In this case the <x-cards> element replaces <x-columns>
+    </x-demo-description>
+
+    <x-cards4 class="cards--dark">
+        {{>card cards.all}}
+        {{>card cards.all}}
+        {{>card cards.all}}
+        {{>card cards.all}}
+    </x-cards>
+
+</x-demo-item>
+
+
+

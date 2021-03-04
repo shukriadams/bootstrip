@@ -3,7 +3,7 @@
     background-color: var(--color-mirage);
 }
 
-.sideMenu-linkItem {
+.sideMenu-item {
     font-size: 1rem;
     transition: var(--transition-standard);
 
@@ -11,7 +11,7 @@
         background-color: var(--color-mirageDark);
     }
 
-    &.sideMenu-linkItem--active {
+    &.sideMenu-item--active {
         background-color: var(--color-mirageDark);
 
         .sideMenu-link{
@@ -28,7 +28,7 @@
     padding: 0.75rem 1.25rem;
 }
 
-.sideMenu-headerItem {
+.sideMenu-header {
     font-size: 0.75rem;
     color: var(--color-manatee);
     letter-spacing: 0.3px;

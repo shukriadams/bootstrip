@@ -64,10 +64,12 @@ module.exports = {
             try {
                 await fs.ensureDir(path.join(cwd, 'web/css'))
 
-                fileconcat([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/style.css')).then(() => {
-                    fileconcat([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/theme-default.css')).then(() => {
+                fileconcat([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/bootstrip.css')).then(() => {
+                    fileconcat([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-defaultTheme.css')).then(() => {
                         fileconcat([path.join(cwd, '.tmp/modules/themes/light-dashboard/**/*.css')], path.join(cwd, 'web/css/theme-light-dashboard.css')).then(() => {
-                            resolve()
+                            fileconcat([path.join(cwd, '.tmp/modules/demo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo.css')).then(() => {
+                                resolve()
+                            })                
                         })                
                     })
                 })

@@ -1,0 +1,21 @@
+.cards {
+    background-color: grey;
+    padding: 24px;
+    column-gap: 24px;
+}
+
+x-cards {
+    @extend .cards;
+}
+
+x-cards2 {
+    @extend .cards;
+}
+
+x-cards3 {
+    @extend .cards;
+}
+
+x-cards4 {
+    @extend .cards;
+}

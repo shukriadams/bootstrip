@@ -3,7 +3,7 @@
     list-style: none;
 }
 
-.sideMenu-linkItem {
+.sideMenu-item {
     position: relative;
 }
 
@@ -16,4 +16,12 @@
 
 .sideMenu-iconWrapper {
     display: flex;
+}
+
+x-sideMenu {
+    @extend .sideMenu;
+}
+
+x-sideMenu {
+    @extend .sideMenu;
 }

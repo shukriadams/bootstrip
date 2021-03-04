@@ -1,0 +1,43 @@
+/*
+ Cards replaces column elements
+*/
+.cards {
+    display: grid;
+
+    & > * {
+        // immediate children of columns should always follor grid layout rules
+        display : grid;
+    }
+}
+
+.cards2 {
+    @extend .cards;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cards3 {
+    @extend .cards;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+// divides layout into 4 column. First block child will become cells, divs work fine for this
+.cards4 {
+    @extend .cards;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+x-cards {
+    @extend .cards;
+}
+
+x-cards2 {
+    @extend .cards2;
+}
+
+x-cards3 {
+    @extend .cards3;
+}
+
+x-cards4 {
+    @extend .cards4;
+}
