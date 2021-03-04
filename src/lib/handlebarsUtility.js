@@ -16,7 +16,7 @@ module.exports = {
         fs.ensureDirSync(workPath)
 
         // start watching sass files
-        const watcher = chokidar.watch([path.join('./hbs/**/*.hbs'), path.join('./data/**/*')], {
+        const watcher = chokidar.watch([path.join('./hbs/**/*.hbs'), path.join('./modules/**/*.hbs'), path.join('./data/**/*')], {
             persistent: true,
             usePolling: true, 
             ignoreInitial: true
@@ -67,7 +67,7 @@ module.exports = {
 
         const spectr = new Spectr.Spectr({
             templates : {
-                views : path.join(cwd, 'hbs/partials/**/*.hbs'),
+                views :[ path.join(cwd, 'modules/**/*.hbs'), path.join(cwd, 'hbs/partials/**/*.hbs') ],
                 pages : path.join(cwd, 'hbs/pages/**/*.hbs')
             },
             models : {

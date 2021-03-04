@@ -1,0 +1,81 @@
+@mixin columnBase {
+    display: grid;
+    column-gap: var(--layout-gutter);
+
+    & > * {
+        // immediate children of columns should always follor grid layout rules
+        display : grid;
+    }
+}
+
+// can contain text, images or anything which requires padding around it so as not to colide with adjacent layout sections-
+// use this as first level children in columns for exxample
+.content {
+    display: block;
+}
+
+/* max-width area for page-level structure. Do not give this padding, it's for scaffolding only */
+.clamp {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--layout-clampWidth);
+}
+
+// sections are to divide a page up into blocks
+.section {
+    padding: var(--layout-universalMargin);    
+    display: block;
+}
+
+// divides layout into 1 column. First block child will become cells, divs work fine for this
+.column {
+    @include columnBase;
+}
+
+// divides layout into 2 column. First block child will become cells, divs work fine for this
+.columns2 {
+    @include columnBase;
+    grid-template-columns: 1fr 1fr;
+}
+
+.columns3 {
+    @include columnBase;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+// divides layout into 4 column. First block child will become cells, divs work fine for this
+.columns4 {
+    @include columnBase;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+x-clamp {
+    @extend .clamp;
+}
+
+section {
+    @extend .section;
+}
+
+// cell, but with visual opinions
+x-content {
+    @extend .content;
+}
+
+x-column {
+    @extend .column;
+}
+
+x-columns2 {
+    @extend .columns2;
+}
+
+x-columns3 {
+    @extend .columns3;
+}
+
+x-columns4 {
+    @extend .columns4;
+}

@@ -1,0 +1,24 @@
+<ul class="sideMenu">
+    {{#each items}}
+        
+        {{#eq type "header"}}
+            <li class="sideMenu-header">
+                {{../text}}
+            </li>
+        {{/eq}}
+
+        {{#eq type "link"}}
+            <li class="sideMenu-item {{#if ../active}}sideMenu-item--active{{/if}}">
+                <a class="sideMenu-link" href="#">
+                    <span class="sideMenu-iconWrapper">
+                        {{#if ../icon}}
+                            <i class="icon {{../icon}}"></i>
+                        {{/if}}
+                    </span>
+                    {{../text}}
+                </a>
+            </li>
+        {{/eq}}
+
+    {{/each}}
+</ul>

@@ -1,0 +1,26 @@
+@mixin reset {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+.table {
+    width: 100%;
+    caption-side: bottom;
+    border-collapse: collapse;
+    vertical-align: top;
+    
+    & > thead {
+        @include reset;
+        vertical-align: bottom;
+    }
+
+    & th {
+        text-align: inherit;
+        text-align: -webkit-match-parent;
+    }
+
+    & >:not(caption) > * > * {
+        @include reset;
+    }
+}

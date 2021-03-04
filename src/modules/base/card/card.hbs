@@ -1,0 +1,16 @@
+<x-card class="card--align{{align}}">
+    {{#if image}}
+        <img src="{{image}}">
+    {{/if}}
+    <x-cardbody>
+        {{#if title}}
+            <h5>{{title}}</h5>
+        {{/if}}
+        {{#if text}}
+            <p>{{text}}</p>
+        {{/if}}
+        {{#if link}}
+            <a href="#" class="button">{{link}}</a>
+        {{/if}}
+    </x-cardbody>
+</x-card>

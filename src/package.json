@@ -6,7 +6,7 @@
         "start": "node index",
         "icons": "node build/buildIcons",
         "build" : "node build/buildSite",
-        "debug": "node --inspect=0.0.0.0:8021 index"
+        "debug": "node --inspect-brk=0.0.0.0:8021 index"
     },
     "dependencies": {
         "fs-extra": "6.0.1",
@@ -17,6 +17,6 @@
         "handlebars-layouts": "3.1.4",
         "node-sass-runner": "https://github.com/shukriadams/node-sass-runner.git#0.0.5",
         "madscience-handlebarsloader": "https://github.com/shukriadams/madscience-handlebarsloader.git#0.0.1",
-        "spectr": "https://github.com/shukriadams/spectr.git"
+        "spectr": "https://github.com/shukriadams/spectr.git#0.0.6"
     }
 }

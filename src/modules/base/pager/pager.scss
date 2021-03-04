@@ -1,0 +1,15 @@
+.pager {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.pager-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+
+    &.pager-link--active {
+        z-index: 3;
+    }
+}

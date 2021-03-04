@@ -1,0 +1,14 @@
+.image {
+    max-width: 100%;
+    height: auto;
+
+    &.image--full {
+        width: 100%;
+    }
+    
+    &.image--rounded {
+        user-select: none;
+        text-anchor: middle;
+    }
+}
+

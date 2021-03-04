@@ -1,0 +1,21 @@
+<nav>
+    <ul class="pager">
+        <li>
+            <a class="pager-link" href="#">
+                <span >&laquo;</span>
+            </a>
+        </li>
+
+        {{#for_n 10}}
+            <li>
+                <a class="pager-link {{#eq this 4}}pager-link--active{{/eq}}" href="#">{{sum this 1}}</a>
+            </li>
+        {{/for_n}}
+
+        <li>
+            <a class="pager-link" href="#">
+                <span>&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
