@@ -2,5 +2,8 @@
     "all" : "<%= cardModel * %>",
     "noimage" : "<%= cardModel title,text,link %>",
     "center" : "<%= cardModel *,align=center %>",
-    "right" : "<%= cardModel *,align=right %>"
+    "right" : "<%= cardModel *,align=right %>",
+    "multiRed" : "<%= cardModelMulti red %>",
+    "multiOrange" : "<%= cardModelMulti orange %>",
+    "multiGreen" : "<%= cardModelMulti green %>"
 }
