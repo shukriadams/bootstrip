@@ -52,10 +52,24 @@
 
 .list-cell {
     padding-right: 1rem;
-    flex-basis:0;
-    flex-grow: 1;
-    max-width: 100%;
-    position: relative;
     padding-right: 15px;
     padding-left: 15px;    
 }
+
+x-list {
+    @extend .list;
+}
+
+x-list-header {
+    @extend .list-header;
+}
+
+x-list-row {
+    @extend .list-row;
+}
+
+x-list-cell {
+    @extend .list-cell;
+}
+
+
