@@ -2,10 +2,10 @@
     background-color: var(--color-white);
     border: 1px solid rgba(var(--color-blackRGB), .125);
     border-radius: var(--layout-radius);
+}
 
-    .cardbody {
-        padding: 1rem 1rem;
-    }
+.card-content {
+    padding: 1rem 1rem;
 }
 
 .card-header {
@@ -20,6 +20,6 @@ x-card {
     @extend .card;
 }
 
-x-cardbody {
-    @extend .cardbody;
+x-card-content {
+    @extend .card-content;
 }

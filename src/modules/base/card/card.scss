@@ -6,10 +6,6 @@
     word-wrap: break-word;
     background-clip: border-box;
     overflow:hidden;
-    
-    .cardbody {
-        flex: 1 1 auto;
-    }
 
     &.card--alignRight {
         text-align: right;
@@ -20,15 +16,18 @@
     }
 }
 
+.card-content {
+    flex: 1 1 auto;
+}
+
 .card-header {
     display: default;// placeholder value so class exists
-
 }
 
 x-card {
     @extend .card;
 }
 
-x-cardbody {
-    @extend .cardbody;
+x-card-content {
+    @extend .card-content;
 }
