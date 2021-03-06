@@ -3,8 +3,12 @@ body{
 }
 
 .button {
-    background-color: var(--color-ghost);
-    border-color: transparent;
+    background-color: transparent;
+    color: var(--color-blueRibbon);
+    
+    &:hover {
+        color: var(--color-white);
+    }
 }
 
 .dashboardDemo-page {
