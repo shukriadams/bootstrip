@@ -5,6 +5,11 @@ a {
     text-decoration: none;
 }
 
-.type-mute {
-    @include muteText;    
+.type-quiet {
+    @include quietText;    
+}
+
+.type-loud {
+    font-size: 34px;
+    font-weight: 600;
 }

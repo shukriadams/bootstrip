@@ -2,6 +2,11 @@ body{
     color: var(--color-gunPowder);
 }
 
+.button {
+    background-color: var(--color-ghost);
+    border-color: transparent;
+}
+
 .dashboardDemo-page {
     display: flex;
     flex-flow: column;
@@ -29,23 +34,17 @@ body{
 }
 
 .dashboardDemo-strip {
-    font-size: 34px;
-    font-weight: 600;
 
-    > div {
-        margin-right: 20px;
-        width: 25%;
+    > * {
+        padding-right: 20px;
+        width: 33%;
     }
 
     padding-right: 24px; // space for icon
 
     i {
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transform: translateY(-50%);
+        line-height: 1;
         font-size: 58px;
-        margin-right: 8px;
         color: var(--color-punch);
     }
 }
