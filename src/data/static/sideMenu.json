@@ -1,10 +1,10 @@
 [
     { "text": "Departments", "type" : "header" },
     { "text": "Add items", "type" : "link", "icon" : "icon-add" },
-    { "text": "Favorites", "type" : "link", "icon" : "icon-favorite-heart-button"  },
-    { "text": "Check out", "type" : "link", "icon" : "icon-shopping-cart", "active": true },
+    { "text": "Favorites", "type" : "link", "icon" : "icon-heart"  },
+    { "text": "Check out", "type" : "link", "icon" : "icon-cart", "active": true },
     { "text": "About us", "type" : "header" },
-    { "text": "Find things", "type" : "link", "icon" : "icon-menu-button"  },
-    { "text": "Top 10", "type" : "link", "icon" : "icon-rate-star-button"  },
-    { "text": "Approved", "type" : "link", "icon" : "icon-tick-inside-circle"  }
+    { "text": "Find things", "type" : "link", "icon" : "icon-menu"  },
+    { "text": "Top 10", "type" : "link", "icon" : "icon-star"  },
+    { "text": "Approved", "type" : "link", "icon" : "icon-tick"  }
 ]

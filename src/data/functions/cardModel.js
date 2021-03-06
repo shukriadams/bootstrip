@@ -1,29 +1,37 @@
-module.exports = (content = '*')=>{
+module.exports = (content = '*', count = 1)=>{
 
     content = content.split(',')
-    console.log('Generating card model for ', content)
 
     let model = { 
-        align : 'Left'
+        align : 'Left',
+        modifiers : '',
+        content : []
     }
 
     if (content.includes('*') || content.includes('image'))
-        model.image = "/images/example.jpg"
-
-    if (content.includes('*') || content.includes('title'))
-        model.title = "Lorem title"
-
-    if (content.includes('*') || content.includes('text'))
-        model.text = "Some quick example text to build on the card title and make up the bulk of the card's content."
-
-    if (content.includes('*') || content.includes('link'))
-        model.link = "Go somewhere"
+        model.image = 'http://placehold.it/1280x720'
 
     if (content.includes('align=right'))
-        model.align = 'Right'
-
+        model.modifiers += 'card--alignRight '
+    
     if (content.includes('align=center'))
-        model.align = 'Center'
+        model.modifiers += 'card--alignCenter '
 
+    for (let i = 0 ; i < count ; i ++){
+        const item = { }
+
+        if (content.includes('*') || content.includes('title'))
+            item.title = "Lorem title"
+    
+        if (content.includes('*') || content.includes('text'))
+            item.text = "Some quick example text to build on the card title and make up the bulk of the card's content."
+    
+        if (content.includes('*') || content.includes('link'))
+            item.link = "Go somewhere"
+
+    
+        model.content.push(item)
+    }
+    
     return model
 }

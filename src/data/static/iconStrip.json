@@ -1,0 +1,13 @@
+{
+    "all" : [
+        { "iconClass" : "icon-back", "text" : "Shop" },
+        { "iconClass" : "icon-close", "text" : "Admin" },
+        { "iconClass" : "icon-cart" },
+        { "iconClass" : "icon-cart", "text" : "Users" },
+        { "iconClass" : "icon-cart", "text" : "Data" },
+        { "iconClass" : "icon-cart" },
+        { "iconClass" : "icon-cart", "text" : "Reset" },
+        { "iconClass" : "icon-cart" },
+        { "iconClass" : "icon-cube" }
+    ]
+}

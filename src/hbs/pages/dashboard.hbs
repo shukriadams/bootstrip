@@ -12,10 +12,51 @@
                 <div class="dashboardDemo-pageGeneralContent">
                     
                     <x-cards>
+                        <x-columns3>
+                            {{>card cards.multiGreen}}
+                            {{>card cards.multiOrange}}
+                            {{>card cards.multiRed}}
+                        </x-columns3>
+
                         <x-columns2>
                             {{>card cards.all}}
                             {{>card cards.all}}
                         </x-columns2>
+
+                        <x-columns2>
+                            <x-card>
+                                <x-card-pad>
+                                    <div class="util-flowHorizontal dashboardDemo-strip">
+                                        <div>
+                                            <div class="type-loud">Rate 56%</div>
+                                            <div class="type-quiet">Underperforming</div>
+                                        </div>
+                                        <div>
+                                            <div class="type-loud">Items 129</div>
+                                            <div class="type-quiet">Preliminary score</div>
+                                        </div>
+                                        <i class="icon icon-down"></i>
+                                    </div>
+                                </x-card-pad>
+                            </x-card>
+                            <x-card>
+                                <x-card-pad>
+                                    <div class="util-flowHorizontal dashboardDemo-strip">
+                                        <div>
+                                            <div class="type-loud">Some data</div>
+                                        </div>
+                                        <div>
+                                            <div class="type-loud">More stuff</div>
+                                        </div>
+                                        <div>
+                                            <div class="type-loud">Things</div>
+                                            <div class="type-quiet">other</div>
+                                        </div>
+                                    </div>
+                                </x-card-pad>
+                            </x-card>
+                        </x-columns2>
+
                         <x-columns4>
                             {{>card cards.all}}
                             {{>card cards.all}}

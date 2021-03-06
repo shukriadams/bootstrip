@@ -43,7 +43,7 @@ label {
 }
 
 x-tip {
-    @include muteText;
+    @include quietText;
     display: block;
     margin-top: .25rem;
 }

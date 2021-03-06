@@ -3,6 +3,7 @@
 @mixin columnBase {
     display: grid;
     column-gap: var(--layout-gutter);
+    row-gap: var(--layout-gutter);
     margin-bottom:var(--layout-gutter);
     
     & > * {
@@ -51,9 +52,9 @@
     @include columnBase;
     grid-template-columns: 1fr 1fr 1fr;
     
-    @media #{$mediaQuery-belowSmall} {
-        grid-template-columns: 1fr;
-    }    
+    @media #{$mediaQuery-belowMedium} {
+        grid-template-columns: 1fr ;
+    }  
 }
 
 // divides layout into 4 column. First block child will become cells, divs work fine for this

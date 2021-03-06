@@ -15,3 +15,26 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
+.list-cell {
+    flex-basis:0;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+}
+
+x-list {
+    @extend .list;
+}
+
+x-list-header {
+    @extend .list-header;
+}
+
+x-list-row {
+    @extend .list-row;
+}
+
+x-list-cell {
+    @extend .list-cell;
+}
