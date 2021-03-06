@@ -1,6 +1,5 @@
 {{#extend "_layout"}}
     {{#content "head"}}
-        <link rel="stylesheet" href="/css/theme-light-dashboard.css" type="text/css">
         <link rel="stylesheet" href="/css/bootstrip-demo-dashboard.css" type="text/css">
     {{/content}}
     {{#content "body"}}
@@ -15,7 +14,7 @@
                 </div>
                 <div class="dashboardDemo-pageGeneralContent">
                     
-                    <x-cards>
+                    <div class="dashboardDemo-cardsGroup">
                         <x-columns3>
                             {{>card cards.multiGreen}}
                             {{>card cards.multiOrange}}
@@ -67,7 +66,7 @@
                             {{>card cards.all}}
                             {{>card cards.all}}
                         </x-columns4>
-                    </x-cards>
+                    </div>
 
                 </div>
             </div>

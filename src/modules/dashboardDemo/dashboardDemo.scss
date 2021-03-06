@@ -20,6 +20,11 @@ body{
     overflow-x: hidden;
 }
 
+.dashboardDemo-cardsGroup {
+    background-color: var(--color-athensGray);
+    padding: var(--layout-gutter);
+}
+
 .dashboardDemo-pageNavLeft {
     background-color: var(--color-mirage);
     max-height: 100vh;
