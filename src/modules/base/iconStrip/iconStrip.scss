@@ -13,15 +13,3 @@
 .iconStrip-text {
     display: block;
 }
-
-x-iconStrip-text {
-    @extend .iconStrip-text;
-}
-
-x-iconStrip {
-    @extend .iconStrip;
-}
-
-x-iconStrip-item {
-    @extend .iconStrip-item;
-}
