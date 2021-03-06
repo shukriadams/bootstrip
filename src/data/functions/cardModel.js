@@ -9,7 +9,7 @@ module.exports = (content = '*', count = 1)=>{
     }
 
     if (content.includes('*') || content.includes('image'))
-        model.image = "/images/example.jpg"
+        model.image = 'http://placehold.it/1280x720'
 
     if (content.includes('align=right'))
         model.modifiers += 'card--alignRight '
