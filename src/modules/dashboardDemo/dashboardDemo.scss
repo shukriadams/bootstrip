@@ -1,3 +1,7 @@
+body{
+    color: var(--color-gunPowder);
+}
+
 .dashboardDemo-page {
     display: flex;
     flex-flow: column;
@@ -25,8 +29,12 @@
 }
 
 .dashboardDemo-strip {
+    font-size: 34px;
+    font-weight: 600;
+
     > div {
         margin-right: 20px;
+        width: 25%;
     }
 
     padding-right: 24px; // space for icon
@@ -36,7 +44,7 @@
         right: 8px;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 24px;
+        font-size: 58px;
         margin-right: 8px;
         color: var(--color-punch);
     }
