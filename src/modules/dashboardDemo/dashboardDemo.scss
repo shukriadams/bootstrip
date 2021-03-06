@@ -23,3 +23,21 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.dashboardDemo-strip {
+    > div {
+        margin-right: 20px;
+    }
+
+    padding-right: 24px; // space for icon
+
+    i {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        margin-right: 8px;
+        color: var(--color-punch);
+    }
+}

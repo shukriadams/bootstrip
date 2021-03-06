@@ -7,7 +7,7 @@
 
     {{! note that you can stack content blocks if desired - add as many as desired }}
     {{#each content}}
-        <x-card-content>
+        <x-card-pad>
 
             {{#if title}}
                 <h5 class="{{titleModifiers}}">{{title}}</h5>
@@ -23,7 +23,7 @@
                 <a href="#" class="button">{{link}}</a>
             {{/if}}
 
-        </x-card-content>
+        </x-card-pad>
     {{/each}}
 
 </x-card>

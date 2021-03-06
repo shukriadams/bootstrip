@@ -1,4 +1,4 @@
-let handlebarsUtility = require('./lib/handlebarsUtility'),
+const handlebarsUtility = require('./lib/handlebarsUtility'),
     sassUtility = require('./lib/sassUtility'),
     port = 8020;
 
@@ -14,7 +14,7 @@ let handlebarsUtility = require('./lib/handlebarsUtility'),
     await sassUtility.watch()
     await handlebarsUtility.watch()
 
-    let server = http.createServer(app)
+    const server = http.createServer(app)
     server.listen(port)
     console.log(`express listening on port ${port}`)
 

@@ -19,7 +19,9 @@ module.exports = {
                     'svgs/search.svg',
                     'svgs/cart.svg',
                     'svgs/tick.svg',
-                    'svgs/cube.svg'
+                    'svgs/cube.svg',
+                    'svgs/up.svg',
+                    'svgs/down.svg'
                 ],
                 dest: './web/css/icons/',
                 cssFontsUrl : '/css/icons',

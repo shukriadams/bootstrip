@@ -16,7 +16,7 @@
     }
 }
 
-.card-content {
+.card-pad {
     flex: 1 1 auto;
 }
 
@@ -28,6 +28,6 @@ x-card {
     @extend .card;
 }
 
-x-card-content {
-    @extend .card-content;
+x-card-pad {
+    @extend .card-pad;
 }

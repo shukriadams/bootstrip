@@ -4,7 +4,7 @@
     border-radius: var(--layout-radius);
 }
 
-.card-content {
+.card-pad {
     padding: 0 1rem;
 
     &:first-of-type {
@@ -28,6 +28,6 @@ x-card {
     @extend .card;
 }
 
-x-card-content {
-    @extend .card-content;
+x-card-pad {
+    @extend .card-pad;
 }

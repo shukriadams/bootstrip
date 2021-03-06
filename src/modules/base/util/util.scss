@@ -5,3 +5,20 @@
 .util-bold {
     font-weight: 700;
 }
+
+/*
+Causes all children to align horizontally
+*/
+.util-flowHorizontal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/**
+ * Aligns an element vertically centered
+ */
+.util-alignVerticallyCentered {
+    top: 50%;
+    transform: translateY(-50%);
+}
