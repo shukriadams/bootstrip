@@ -42,7 +42,7 @@ label {
     }      
 }
 
-x-tip {
+.form-tip {
     @include quietText;
     display: block;
     margin-top: .25rem;
@@ -102,7 +102,7 @@ input[type=checkbox] {
 }
 
 // use this wrapper to stack radio buttons
-x-radiolist {
+.form-radiolist {
     min-height: 1.5rem;
     padding-left: 1.5em;
     margin-bottom: .125rem;
