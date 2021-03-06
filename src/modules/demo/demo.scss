@@ -19,3 +19,21 @@ x-demo-item {
     display: block;
     margin-top: 6rem;
 }
+
+.demo-kitchenSinkItem {
+    margin-top: 5rem;
+}
+
+.demo-kitchenSinkText {
+    h2 {
+        margin: 0;
+        background-color: var(--color-punch);
+        color: var(--color-white);
+        display: inline-block;
+        padding: 12px;
+    }
+
+    margin-bottom: 2rem;
+    border-bottom: 1px var(--color-punch) dashed;
+    color: var(--color-punch);
+}
