@@ -16,7 +16,14 @@ jobs:
             cd src/build && sh ./writeHash.sh && cd -
             docker run -v $(pwd):/tmp/bootstrip shukriadams/node12build:0.0.2 sh -c "cd /tmp/bootstrip/src && yarn && npm run build"
             docker run -e $HOST -e $USERNAME -e $PASSWORD -v $(pwd):/tmp/bootstrip shukriadams/node12build:0.0.2 sh -c "cd /tmp/bootstrip/src/web && rsync --recursive --ignore-times --times --compress --delete --progress --rsh="\""sshpass -p ${PASSWORD} ssh -o StrictHostKeyChecking=no -l ${USERNAME}"\"" ./*  ${USERNAME}@${HOST}:/srv/bootstrip/"
+            curl -X POST "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0c353/purge_cache" \
+                -H "X-Auth-Email: ${CLOUDFLARE_EMAIL}" \
+                -H "X-Auth-Key: ${CLOUDFLARE_KEY}"" \
+                -H "Content-Type: application/json" \
+                --data '{"purge_everything":true}'
         env:
             HOST: ${{ secrets.HOST }}
             USERNAME: ${{ secrets.USERNAME }}
             PASSWORD: ${{ secrets.PASSWORD }}
+            CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }} 
+            CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}             
