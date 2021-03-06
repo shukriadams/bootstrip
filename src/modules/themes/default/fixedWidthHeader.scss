@@ -15,11 +15,3 @@
 .fixedWidthHeader-logo {
     font-size: 22px;
 }
-
-x-fixedWidthHeader-logo {
-    @extend .fixedWidthHeader-logo;
-}
-
-x-fixedWidthHeader-logoContainer {
-    @extend .fixedWidthHeader-logoContainer;
-}
