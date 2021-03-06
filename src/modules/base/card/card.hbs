@@ -1,4 +1,4 @@
-<x-card class="{{modifiers}}">
+<div class="card {{modifiers}}">
 
     {{! content placed directly in the card with be flush with its edges }}
     {{#if image}}
@@ -7,10 +7,10 @@
 
     {{! note that you can stack content blocks if desired - add as many as desired }}
     {{#each content}}
-        <x-card-pad>
+        <div class="card-pad">
 
             {{#if title}}
-                <h5 class="{{titleModifiers}}">{{title}}</h5>
+                <h5 class="card-header {{titleModifiers}}">{{title}}</h5>
             {{/if}}
 
             {{#if text}}
@@ -23,7 +23,7 @@
                 <a href="#" class="button">{{link}}</a>
             {{/if}}
 
-        </x-card-pad>
+        </div>
     {{/each}}
 
-</x-card>
+</div>

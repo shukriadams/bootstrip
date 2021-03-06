@@ -1,4 +1,8 @@
 {{#extend "_layout"}}
+    {{#content "head"}}
+        <link rel="stylesheet" href="/css/theme-light-dashboard.css" type="text/css">
+        <link rel="stylesheet" href="/css/bootstrip-demo-dashboard.css" type="text/css">
+    {{/content}}
     {{#content "body"}}
         <div class="dashboardDemo-page">
             <div class="dashboardDemo-pageNavLeft">
@@ -24,8 +28,8 @@
                         </x-columns2>
 
                         <x-columns2>
-                            <x-card>
-                                <x-card-pad>
+                            <div class="card">
+                                <div class="card-pad">
                                     <div class="util-flowHorizontal dashboardDemo-strip">
                                         <div>
                                             <div class="type-loud">Rate 56%</div>
@@ -37,10 +41,10 @@
                                         </div>
                                         <i class="icon icon-down"></i>
                                     </div>
-                                </x-card-pad>
-                            </x-card>
-                            <x-card>
-                                <x-card-pad>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-pad">
                                     <div class="util-flowHorizontal dashboardDemo-strip">
                                         <div>
                                             <div class="type-loud">Some data</div>
@@ -53,8 +57,8 @@
                                             <div class="type-quiet">other</div>
                                         </div>
                                     </div>
-                                </x-card-pad>
-                            </x-card>
+                                </div>
+                            </div>
                         </x-columns2>
 
                         <x-columns4>
