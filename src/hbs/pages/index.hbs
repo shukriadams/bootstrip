@@ -36,7 +36,7 @@
     ...
 &lt;/x-columns&gt;</code>
 
-                    instead of
+                    or
 
 <code>&lt;div class=&quot;columns columns--two&quot;&gt;
     ...
@@ -44,22 +44,7 @@
 <xmp></xmp>
 
 
-                    The main reason for this is readability, and the benefits become more apparent as markup complexity increases. Reading and understanding markup is more tedious when you have
-                    to read to a class declaration <x-codeInline>class="..."</x-codeInline> to understand what the unit of markup is doing. Also, the typical end tag of an element
-                    <x-codeInline>&lt;/div&gt;</x-codeInline> says nothing about the element it closes, and to work around this code often gets cluttered with HTML 
-                    comments to make element boundaries easier to identify, f.ex
-
-<code>&lt;!-- 2 columns start --&gt;
-&lt;div class=&quot;columns columns--two&quot;&gt; 
-    ... 
-&lt;/div&gt;
-&lt;!-- 2 columns ends --&gt;</code>
-                    
-                    There is of course a strong cultural
-                    movement in web development that aims to keep HTML and CSS clearly separated as data/styling, but in my opinion, this concept is largely moot in practice
-                    as CSS includes functionality/data aspects anyway. I would equate clear separation of data and style as akin
-                    to the model-view-controller (MVC) design pattern - it worked well for the time it was invented, and in principal it is still a fine idea, but 
-                    modern applications are too complex to easily scale with MVC, which has been superceded by f.ex MVVC or React's Redux system.
+                    The main reason for the former is readability, and the benefits become more apparent as markup complexity increases. 
                 </p>
                 <h3>Block-Element-Modifier</h3>
                 <p>
