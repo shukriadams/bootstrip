@@ -186,7 +186,3 @@ select {
     // must be applied AFTER custom button type overrides to allow this to win against them
     @include disabledBehaviour;
 }
-
-button {
-    @extend .button;
-}
