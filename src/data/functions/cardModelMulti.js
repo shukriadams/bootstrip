@@ -1,7 +1,7 @@
 module.exports = (color)=>{
 
     let model = { 
-        modifiers : `card--${color}`,
+        modifiers : color,
         content : []
     }
     

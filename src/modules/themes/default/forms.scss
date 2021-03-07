@@ -150,7 +150,7 @@ select {
         border-color: var(--color-congressBlue);
     }
 
-    &.button--success {
+    &.success {
         color: var(--color-white);
         background-color: var(--color-genoa);
         border-color: var(--color-genoa);
@@ -161,7 +161,7 @@ select {
         }
     }
 
-    &.button--danger {
+    &.danger {
         color: var(--color-white);
         background-color: var(--color-punch);
         border-color: var(--color-punch);
@@ -172,7 +172,7 @@ select {
         }
     }
 
-    &.button--warning {
+    &.warning {
         color: var(--color-black);
         background-color: var(--color-amber);
         border-color: var(--color-amber);

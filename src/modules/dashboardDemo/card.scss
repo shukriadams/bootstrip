@@ -1,17 +1,17 @@
 x-card {
     border: none;
     
-    &.card--green {
+    &.green {
         background-color: var(--color-genoa);
         color: var(--color-white);
     }
 
-    &.card--red {
+    &.red {
         background-color: var(--color-crownOfThorns);
         color: var(--color-white);
     }
 
-    &.card--orange {
+    &.orange {
         background-color: var(--color-corn);
         color: var(--color-white);
     }
