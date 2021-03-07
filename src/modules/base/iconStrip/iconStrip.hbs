@@ -1,10 +1,10 @@
-<div class="iconStrip">
+<x-iconStrip>
     {{#each items}}
         <a class="iconStrip-item" href="#" title="{{text}}">
             <i class="icon {{iconClass}}"></i>
             {{#if text}}
-                <span class="iconStrip-text">{{text}}</span>
+                <x-iconStrip-text>{{text}}</x-iconStrip-text>
             {{/if}}
         </a>
     {{/each}}
-</div>
+</x-iconStrip>

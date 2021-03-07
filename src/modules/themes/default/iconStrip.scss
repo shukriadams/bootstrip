@@ -30,3 +30,15 @@
     font-size: 12px;
     color: var(--color-manatee);
 }
+
+x-iconStrip {
+    @extend .iconStrip;
+}
+
+x-iconStrip-text {
+    @extend .iconStrip-text;
+}
+
+x-iconStrip-item {
+    @extend .iconStrip-item;
+}

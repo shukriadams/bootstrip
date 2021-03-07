@@ -6,6 +6,7 @@
 }
 
 .list-header {
+    @extend .card-header;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
         

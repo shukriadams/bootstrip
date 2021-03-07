@@ -78,6 +78,7 @@ module.exports = {
                 
         await this.concatFiles([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/bootstrip.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-defaultTheme.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/light-dashboard/**/*.css')], path.join(cwd, 'web/css/theme-light-dashboard.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/demo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/dashboardDemo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard.css'))
     },

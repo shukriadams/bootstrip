@@ -57,3 +57,19 @@
     margin-left: 3rem;
     position: relative;
 }
+
+x-fixedWidthHeader {
+    @extend .fixedWidthHeader;
+}
+
+x-fixedWidthHeader-logoContainer {
+    @extend .fixedWidthHeader-logoContainer;
+}
+
+x-fixedWidthHeader-content {
+    @extend .fixedWidthHeader-content;
+}
+
+x-fixedWidthHeader-contentItem {
+    @extend .fixedWidthHeader-contentItem;
+}
