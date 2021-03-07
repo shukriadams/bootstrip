@@ -1,0 +1,8 @@
+.button {
+    background-color: transparent;
+    color: var(--color-blueRibbon);
+    
+    &:hover {
+        color: var(--color-white);
+    }
+}

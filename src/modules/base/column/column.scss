@@ -1,0 +1,67 @@
+@import './../sass_variables.scss';
+
+@mixin columnBase {
+    display: grid;
+    column-gap: var(--layout-gutter);
+    row-gap: var(--layout-gutter);
+    margin-bottom:var(--layout-gutter);
+    
+    & > * {
+        // immediate children of columns should always follor grid layout rules
+        display : grid;
+    }
+}
+
+// divides layout into 1 column. First block child will become cells, divs work fine for this
+@mixin column {
+    @include columnBase;
+}
+
+// divides layout into 2 column. First block child will become cells, divs work fine for this
+@mixin columns2 {
+    @include columnBase;
+    grid-template-columns: 1fr 1fr;
+
+    @media #{$mediaQuery-belowSmall} {
+        grid-template-columns: 1fr;
+    }
+}
+
+@mixin columns3 {
+    @include columnBase;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    @media #{$mediaQuery-belowMedium} {
+        grid-template-columns: 1fr ;
+    }  
+}
+
+// divides layout into 4 column. First block child will become cells, divs work fine for this
+@mixin columns4 {
+    @include columnBase;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media #{$mediaQuery-belowMedium} {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media #{$mediaQuery-belowSmall} {
+        grid-template-columns: 1fr;
+    }    
+}
+
+x-column {
+    @include column;
+}
+
+x-columns2 {
+    @include columns2;
+}
+
+x-columns3 {
+    @include columns3;
+}
+
+x-columns4 {
+    @include columns4;
+}
