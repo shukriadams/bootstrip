@@ -21,6 +21,14 @@
     transform: translate(-50%, -50%);
 }
 
+.circleGraph {
+    @include circleGraph;
+}
+
+.circleGraph-value {
+    @include circleGraph-value;
+}
+
 x-circleGraph {
     @include circleGraph;
 }

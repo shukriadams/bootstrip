@@ -36,6 +36,18 @@
     color: var(--color-manatee);
 }
 
+.iconStrip {
+    @include iconStrip;
+}
+
+.iconStrip-text {
+    @include iconStrip-text;
+}
+
+.iconStrip-item {
+    @include iconStrip-item;
+}
+
 x-iconStrip {
     @include iconStrip;
 }

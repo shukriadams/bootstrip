@@ -58,6 +58,24 @@
     position: relative;
 }
 
+
+
+.fixedWidthHeader {
+    @include fixedWidthHeader;
+}
+
+.fixedWidthHeader-logoContainer {
+    @include fixedWidthHeader-logoContainer;
+}
+
+.fixedWidthHeader-content {
+    @include fixedWidthHeader-content;
+}
+
+.fixedWidthHeader-contentItem {
+    @include fixedWidthHeader-contentItem;
+}
+
 x-fixedWidthHeader {
     @include fixedWidthHeader;
 }

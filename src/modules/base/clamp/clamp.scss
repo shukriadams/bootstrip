@@ -7,6 +7,10 @@
     max-width: var(--layout-clampWidth);
 }
 
+.clamp {
+    @include clamp;
+}
+
 x-clamp {
     @include clamp;
 }

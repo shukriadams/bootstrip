@@ -3,6 +3,11 @@
     display: block;
 }
 
+.alert {
+    @include alert;
+}
+
 x-alert {
     @include alert;
 }
+

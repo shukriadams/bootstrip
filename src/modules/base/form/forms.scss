@@ -64,7 +64,7 @@ input[type=checkbox] {
 }
 
 // use this wrapper to stack radio buttons
-x-radiolist {
+@mixin radiolist {
     display: block;
 }
 
@@ -74,12 +74,10 @@ select {
     appearance: none;    
 }
 
-// note that button is not implemented at the <button>, this is because the class has to exist as a class, to be applied to <a> elements
-.button {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
+.radiolist {
+    @include radiolist;
+}
+
+x-radiolist {
+    @include radiolist;
 }

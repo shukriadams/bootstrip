@@ -13,13 +13,13 @@
 
 <x-columns class="three">
     <div>
-        1/2 columns
+        1/3 columns
     </div>
     <div>
         2/3 columns
     </div>    
     <div>
-        3/2 columns
+        3/3 columns
     </div>    
 </x-columns>
 
@@ -43,9 +43,10 @@
         1/2 columns
     </div>
     <div>
+        2/2 columns
         <x-columns class="four">
             <div>
-                2/4 columns
+                1/4 columns
             </div>
             <div>
                 2/4 columns
@@ -60,27 +61,3 @@
     </div>    
 </x-columns>
 
-<x-content>
-    This is a content block
-</x-content>
-
-<x-content>
-    <x-content>
-        <x-content>
-            <x-content>
-                This is a nested content block with stacking margins
-            </x-content>
-        </x-content>
-    </x-content>
-</content>
-
-Page is simplified
-- body element is automatically taken over
-- section is used to divide page visually into blocks
-- row is applied within a section to stack child elements horizontally
-- cells are the child content of rows which are stacked horizontally
-
-Layout is for scaffolding only! in which case it arranges elements in a grid but has
-not visual opinionating. Stylingwill be applied by whatever elements we put in the scaffold.
-
-To get a layout that we can add content to directly, use a text or media element.

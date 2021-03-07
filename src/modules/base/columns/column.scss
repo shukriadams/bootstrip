@@ -41,6 +41,10 @@
     }
 }
 
+.columns {
+    @include columns;
+}
+
 x-columns {
     @include columns;
 }

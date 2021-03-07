@@ -19,11 +19,21 @@
     position: relative;
 }
 
-x-list {
+
+
+.list {
     @include list;
 }
 
-.list {
+.list-row {
+    @include list-row;
+}
+
+.list-cell {
+    @include list-cell;
+}
+
+x-list {
     @include list;
 }
 
@@ -31,14 +41,6 @@ x-list-row {
     @include list-row;
 }
 
-.list-row {
-    @include list-row;
-}
-
 x-list-cell {
-    @include list-cell;
-}
-
-.list-cell {
     @include list-cell;
 }

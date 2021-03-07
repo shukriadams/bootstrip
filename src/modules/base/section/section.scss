@@ -1,0 +1,9 @@
+// sections are to divide a page up into blocks
+@mixin section {
+    padding: var(--layout-gutter);
+    display: block;
+}
+
+section {
+    @include section;
+}

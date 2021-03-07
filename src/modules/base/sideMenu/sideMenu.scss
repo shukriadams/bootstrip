@@ -1,27 +1,39 @@
-.sideMenu {
+@mixin sideMenu {
     padding-left: 0;
     list-style: none;
 }
 
-.sideMenu-item {
+@mixin sideMenu-item {
     position: relative;
 }
 
-.sideMenu-anchor {
+@mixin sideMenu-anchor {
     display: flex;
     white-space: nowrap;
     text-decoration: none;
     overflow: hidden;
 }
 
-.sideMenu-iconWrapper {
+@mixin sideMenu-iconWrapper {
     display: flex;
 }
 
-x-sideMenu {
-    @extend .sideMenu;
+/*
+Side menu is meant to be implemented as <ul> or <ol> element, so has only a class export
+*/
+
+.sideMenu {
+    @include sideMenu;
 }
 
-x-sideMenu {
-    @extend .sideMenu;
+.sideMenu-item {
+    @include sideMenu-item;
+}
+
+.sideMenu-anchor {
+    @include sideMenu-anchor;
+}
+
+.sideMenu-iconWrapper {
+    @include sideMenu-iconWrapper;
 }

@@ -20,6 +20,14 @@
     flex: 1 1 auto;
 }
 
+.card {
+    @include card;
+}
+
+.card-pad {
+    @include card-pad;
+}
+
 x-card {
     @include card;
 }
@@ -27,3 +35,4 @@ x-card {
 x-card-pad {
     @include card-pad;
 }
+

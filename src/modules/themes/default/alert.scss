@@ -35,6 +35,10 @@
     }
 }
 
+.alert {
+    @include alert;
+}
+
 x-alert {
     @include alert;
 }

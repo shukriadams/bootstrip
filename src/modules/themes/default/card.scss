@@ -24,6 +24,18 @@
     border-bottom: 0 solid var(--color-silverSand);
 }
 
+.card {
+    @include card;
+}
+
+.card-header {
+    @include card-header;
+}
+
+.card-pad {
+    @include card-pad;
+}
+
 x-card {
     @include card;
 }

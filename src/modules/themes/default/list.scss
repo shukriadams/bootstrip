@@ -1,11 +1,11 @@
 @import './card';
 
-.list {
+@mixin list {
     @include card;
     margin-bottom: 1.5rem;
 }
 
-.list-header {
+@mixin list-header {
     @include card-header;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -38,11 +38,10 @@
     h6, 
     .header6 {
         margin-bottom: 0;
-    }       
-
+    }
 }
 
-.list-row {
+@mixin list-row {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 1rem;
@@ -50,26 +49,40 @@
     border-top: 1px solid #eeeef1;
 }
 
-.list-cell {
+@mixin list-cell {
     padding-right: 1rem;
     padding-right: 15px;
     padding-left: 15px;    
 }
 
+.list {
+    @include list;
+}
+
+.list-header {
+    @include list-header;
+}
+
+.list-row {
+    @include list-row;
+}
+
+.list-cell {
+    @include list-cell;
+}
+
 x-list {
-    @extend .list;
+    @include list;
 }
 
 x-list-header {
-    @extend .list-header;
+    @include list-header;
 }
 
 x-list-row {
-    @extend .list-row;
+    @include list-row;
 }
 
 x-list-cell {
-    @extend .list-cell;
+    @include list-cell;
 }
-
-

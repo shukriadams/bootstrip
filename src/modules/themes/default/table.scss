@@ -1,4 +1,4 @@
-.table {
+@mixin table {
     --bs-table-bg: transparent;
     --bs-table-striped-color: var(--color-gunPowder);
     --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
@@ -31,7 +31,7 @@
     }
 }
 
-.table-row {
+@mixin table-row {
     &.success {
         background-color: var(--color-edgewater);
     }
@@ -45,4 +45,10 @@
     }
 }
 
+.table {
+    @include table;
+}
 
+.table-row {
+    @include table;
+}

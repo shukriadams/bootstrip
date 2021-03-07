@@ -1,7 +1,19 @@
-.util-borderedRight {
+@import './mixins';
+
+.borderedRight {
     border-right: 1px solid var(--color-iron);
 }
 
-.util-bold {
+.bold {
     font-weight: 600;
 }
+
+.loud {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.quiet {
+    @include quietText;    
+}
+

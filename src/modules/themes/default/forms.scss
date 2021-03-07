@@ -1,26 +1,5 @@
 @import './mixins';
 
-@mixin focusBehaviour {
-    &:focus {
-        outline: 0;
-        box-shadow: 0 0 0 0.25rem rgba(var(--color-blackRGB), .15);        
-    }
-}
-
-@mixin disabledBehaviour {
-    &:disabled,
-    &[disabled] {
-        background-color: var(--color-athensGray);
-        border-color: var(--color-athensGray);
-        color: var(--color-paleSky);
-        &:hover {
-            background-color: var(--color-athensGray);
-            border-color: var(--color-athensGray);
-            color: var(--color-paleSky);
-        }
-    }
-}
-
 @mixin inputBase {
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -42,11 +21,6 @@ label {
     }      
 }
 
-x-tip {
-    @include quietText;
-    display: block;
-    margin-top: .25rem;
-}
 
 input[type=password] {
     @include inputBase;
@@ -101,13 +75,6 @@ input[type=checkbox] {
     }
 }
 
-// use this wrapper to stack radio buttons
-x-radiolist {
-    min-height: 1.5rem;
-    padding-left: 1.5em;
-    margin-bottom: .125rem;
-}
-
 select {
     @include focusBehaviour;
     @include disabledBehaviour;    
@@ -131,58 +98,32 @@ select {
     }    
 }
 
-.button {
-    @include focusBehaviour;
-    margin: .25rem .125rem;
-    font-weight: 400;
-    line-height: 1.5;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    border-radius: var(--layout-radius);
-    transition: var(--transition-standard);
-    color: var(--color-white);
-    background-color: var(--color-blueRibbon);
-    border-color: var(--color-blueRibbon);    
+@mixin tip {
+    @include quietText;
+    display: block;
+    margin-top: .25rem;
+}
 
-    &:hover {
-        background-color: var(--color-congressBlue);
-        border-color: var(--color-congressBlue);
-    }
+@mixin radiolist {
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: .125rem;
+}
 
-    &.success {
-        color: var(--color-white);
-        background-color: var(--color-genoa);
-        border-color: var(--color-genoa);
+.tip {
+    @include tip;
+}
 
-        &:hover {
-            background-color: var(--color-jewel);
-            border-color: var(--color-jewel);
-        }
-    }
+x-tip {
+    @include tip;
+}
 
-    &.danger {
-        color: var(--color-white);
-        background-color: var(--color-punch);
-        border-color: var(--color-punch);
+// use this wrapper to stack radio buttons
+.radiolist {
+    @include radiolist;
+}
 
-        &:hover {
-            background-color: var(--color-crownOfThorns);
-            border-color: var(--color-crownOfThorns);
-        }
-    }
-
-    &.warning {
-        color: var(--color-black);
-        background-color: var(--color-amber);
-        border-color: var(--color-amber);
-        
-        &:hover {
-            background-color: var(--color-corn);
-            border-color: var(--color-corn);
-        }        
-    }
-
-    // must be applied AFTER custom button type overrides to allow this to win against them
-    @include disabledBehaviour;
+// use this wrapper to stack radio buttons
+x-radiolist {
+    @include radiolist;
 }
