@@ -11,6 +11,11 @@ body{
     }
 }
 
+.dashboardDemo-cards {
+    background-color: var(--color-athensGray);
+    padding: var(--layout-gutter);
+}
+
 .dashboardDemo-page {
     display: flex;
     flex-flow: column;
