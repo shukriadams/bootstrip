@@ -1,27 +1,28 @@
-.iconStrip {
+@mixin iconStrip {
     display: grid;
 }
 
-.iconStrip-item {
+@mixin iconStrip-item {
     text-align: center;
+    
     a {
         display: block;
         object-fit: cover;
     }
 }
 
-.iconStrip-text {
+@mixin iconStrip-text {
     display: block;
 }
 
-x-iconStrip-text {
-    @extend .iconStrip-text;
+x-iconStrip {
+    @include iconStrip;
 }
 
-x-iconStrip {
-    @extend .iconStrip;
+x-iconStrip-text {
+    @include iconStrip-text;
 }
 
 x-iconStrip-item {
-    @extend .iconStrip-item;
+    @include iconStrip-item;
 }
