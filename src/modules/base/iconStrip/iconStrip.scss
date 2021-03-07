@@ -1,27 +1,40 @@
-.iconStrip {
+@mixin iconStrip {
     display: grid;
 }
 
-.iconStrip-item {
+@mixin iconStrip-item {
     text-align: center;
+    
     a {
         display: block;
         object-fit: cover;
     }
 }
 
-.iconStrip-text {
+@mixin iconStrip-text {
     display: block;
 }
 
-x-iconStrip-text {
-    @extend .iconStrip-text;
+.iconStrip {
+    @include iconStrip;
+}
+
+.iconStrip-text {
+    @include iconStrip-text;
+}
+
+.iconStrip-item {
+    @include iconStrip-item;
 }
 
 x-iconStrip {
-    @extend .iconStrip;
+    @include iconStrip;
+}
+
+x-iconStrip-text {
+    @include iconStrip-text;
 }
 
 x-iconStrip-item {
-    @extend .iconStrip-item;
+    @include iconStrip-item;
 }

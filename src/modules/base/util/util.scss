@@ -1,14 +1,14 @@
 /**
  Utility class do one thing only. Their name is always a clear indication of their function.
 */
-.util-uppercase {
+.uppercase {
     text-transform: uppercase;
 }
 
 /*
 Causes all children to align horizontally
 */
-.util-flowHorizontal {
+.flowHorizontal {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -17,16 +17,12 @@ Causes all children to align horizontally
     > * {
         flex-grow: 1;
     }
-
-    > i {
-        text-align: center;
-    }
 }
 
 /**
  * Aligns an element vertically centered
  */
-.util-alignVerticallyCentered {
+.alignVerticallyCentered {
     top: 50%;
     transform: translateY(-50%);
 }

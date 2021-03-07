@@ -1,0 +1,38 @@
+@mixin circleGraph {
+    display: inline-block;
+    position: relative;
+
+    canvas {
+        max-width: 100%;
+    }
+}
+    
+@mixin circleGraph-value {
+    color:#555;
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circleGraph {
+    @include circleGraph;
+}
+
+.circleGraph-value {
+    @include circleGraph-value;
+}
+
+x-circleGraph {
+    @include circleGraph;
+}
+
+x-circleGraph-value {
+    @include circleGraph-value;
+}

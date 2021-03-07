@@ -39,5 +39,5 @@ function renderCircleGraph(el){
     drawCircle(options.color, options.lineWidth -2, options.percent / 100)
 }
 
-for (const element of document.querySelectorAll('.circleGraph'))
+for (const element of document.querySelectorAll('x-circleGraph, .circleGraph'))
     renderCircleGraph(element) 

@@ -1,10 +1,12 @@
 <x-iconStrip>
     {{#each items}}
-        <a class="iconStrip-item" href="#" title="{{text}}">
-            <i class="icon {{iconClass}}"></i>
-            {{#if text}}
-                <x-iconStrip-text>{{text}}</x-iconStrip-text>
-            {{/if}}
-        </a>
+        <x-iconStrip-item title="{{text}}">
+            <a href="#">
+                <i class="icon {{iconClass}}"></i>
+                {{#if text}}
+                    <x-iconStrip-text>{{text}}</x-iconStrip-text>
+                {{/if}}
+            </a>
+        </x-iconStrip-item>
     {{/each}}
 </x-iconStrip>

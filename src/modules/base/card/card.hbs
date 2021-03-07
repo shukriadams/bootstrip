@@ -5,11 +5,12 @@
         <img src="{{image}}">
     {{/if}}
 
-    {{! note that you can stack content blocks if desired - add as many as desired }}
+    {{! you can stack <x-card-pad> blocks }}
     {{#each content}}
         <x-card-pad>
 
             {{#if title}}
+                {{! any header type can be used here}}
                 <h5 class="{{titleModifiers}}">{{title}}</h5>
             {{/if}}
 

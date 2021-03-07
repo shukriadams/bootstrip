@@ -1,15 +1,6 @@
-@import './mixins';
+
 
 a {
     color: var(--color-blueRibbon);
     text-decoration: none;
-}
-
-.type-quiet {
-    @include quietText;    
-}
-
-.type-loud {
-    font-size: 34px;
-    font-weight: 600;
 }

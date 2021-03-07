@@ -8,16 +8,17 @@
                     A single page with every Bootstrip component.
                 </p>
 
-                {{#>kitchenSinkItem title="Layout" description="Column and cell elements can be used to create a responsive grid" }}
-                    {{>layout}}
+                {{#>kitchenSinkItem title="Columns" description="Column can be used to create a responsive grid" }}
+                    {{>columns}}
                 {{/kitchenSinkItem}}
+
 
                 {{#>kitchenSinkItem title="Typography" }}
                     {{>typography}}
                 {{/kitchenSinkItem}}
 
-                {{#>kitchenSinkItem title="Graphs"}}
-                    {{>graphs}}
+                {{#>kitchenSinkItem title="Circle graphs"}}
+                    {{>circleGraphs}}
                 {{/kitchenSinkItem}}
 
                 {{#>kitchenSinkItem title="Image"}}
@@ -33,12 +34,20 @@
                 {{/kitchenSinkItem}}
 
                 {{#>kitchenSinkItem title="Table" description="Use tables for more fine-tuned control of data layout"}}
-                    {{>table table.items}}
-                    {{>table tableModifiers.items}}
+                    <x-content>
+                        {{>table table.items}}
+                    </x-content>
+                    <x-content>
+                        {{>table tableModifiers.items}}
+                    </x-content>
                 {{/kitchenSinkItem}}
 
                 {{#>kitchenSinkItem title="Alerts"}}
                     {{>alerts}}
+                {{/kitchenSinkItem}}
+
+                {{#>kitchenSinkItem title="Buttons"}}
+                    {{>buttons}}
                 {{/kitchenSinkItem}}
 
                 {{#>kitchenSinkItem title="Form"}}

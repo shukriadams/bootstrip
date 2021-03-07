@@ -1,0 +1,11 @@
+@mixin content {
+    margin-bottom: 1rem;
+}
+
+.content {
+    @include content;
+}
+
+x-content {
+    @include content;
+}

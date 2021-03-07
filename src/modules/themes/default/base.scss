@@ -4,8 +4,8 @@
     --layout-lineheight: 1.5;
     --layout-gutter: 16px;
     --font-undersize: .875em;
-    --font-headerFace: 'Open Sans', sans-serif;
-    --font-bodyFace: 'Roboto', sans-serif;
+    --font-headerFace: 'Roboto', sans-serif;
+    --font-bodyFace: 'Open Sans', sans-serif;
     --font-logoFace: 'Righteous', sans-serif;
     --transition-standard: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     --color-white: #fff;
@@ -15,7 +15,7 @@
     --color-congressBlue: #084298;
     --color-mirage: #1A1C28;
     --color-mirageDark: #151830;
-
+    --color-oxfordblue: #373f50;
     // merge
     --color-onahau: #cfe2ff;
     --color-edgewater: #d1e7dd;
@@ -48,7 +48,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: var(--layout-lineheight);
-    color: var(--color-woodsmoke);
+    color: var(--color-gunPowder);
     background-color: var(--color-white);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;

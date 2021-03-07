@@ -4,7 +4,7 @@
     border-width: 0;
 }
 
-.table {
+@mixin table {
     width: 100%;
     caption-side: bottom;
     border-collapse: collapse;
@@ -23,4 +23,8 @@
     & >:not(caption) > * > * {
         @include reset;
     }
+}
+
+.table {
+    @include table;
 }

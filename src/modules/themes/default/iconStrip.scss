@@ -1,44 +1,61 @@
-.iconStrip {
+@mixin iconStrip {
     background-color: var(--color-ghost);
-    
-    padding: 4px;
     column-gap: 4px;  
-    row-gap: 4px;
     font-size: 24px;
     grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+    padding: 4px;
+    row-gap: 4px;
 }
 
-.iconStrip-item {
+@mixin iconStrip-item {
     border-radius: var(--layout-radius);
     background-color: var(--color-white);
     transition: var(--transition-standard);
-    color:var(--color-genoa);
+    color: var(--color-genoa);
     height: 72px;
     padding-top: 8px;
 
-    &:hover {
-        background-color: var(--color-blueRibbon);
+    a {
+        color:inherit;
+    }
+
+    &:hover,
+    &.active {
+        background-color: var(--color-genoa);
         color: var(--color-white);
-        
+       
+        x-iconStrip-text, 
         .iconStrip-text {
             color: var(--color-white);
         }
     }
 }
 
-.iconStrip-text {
+@mixin iconStrip-text {
     font-size: 12px;
     color: var(--color-manatee);
 }
 
+.iconStrip {
+    @include iconStrip;
+}
+
+.iconStrip-text {
+    @include iconStrip-text;
+}
+
+.iconStrip-item {
+    @include iconStrip-item;
+}
+
 x-iconStrip {
-    @extend .iconStrip;
+    @include iconStrip;
 }
 
 x-iconStrip-text {
-    @extend .iconStrip-text;
+    @include iconStrip-text;
 }
 
 x-iconStrip-item {
-    @extend .iconStrip-item;
+    @include iconStrip-item;
 }

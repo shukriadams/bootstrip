@@ -64,7 +64,7 @@ input[type=checkbox] {
 }
 
 // use this wrapper to stack radio buttons
-x-radiolist {
+@mixin radiolist {
     display: block;
 }
 
@@ -74,15 +74,10 @@ select {
     appearance: none;    
 }
 
-.button {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
+.radiolist {
+    @include radiolist;
 }
 
-button {
-   @extend .button;
+x-radiolist {
+    @include radiolist;
 }

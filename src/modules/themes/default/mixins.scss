@@ -2,3 +2,24 @@
     font-size: var(--font-undersize);
     color: var(--color-paleSky);
 }
+
+@mixin disabledBehaviour {
+    &:disabled,
+    &[disabled] {
+        background-color: var(--color-athensGray);
+        border-color: var(--color-athensGray);
+        color: var(--color-paleSky);
+        &:hover {
+            background-color: var(--color-athensGray);
+            border-color: var(--color-athensGray);
+            color: var(--color-paleSky);
+        }
+    }
+}
+
+@mixin focusBehaviour {
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(var(--color-blackRGB), .15);        
+    }
+}

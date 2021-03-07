@@ -1,0 +1,51 @@
+@import './../sass_variables.scss';
+
+// divides layout into 1 column. First block child will become cells, divs work fine for this
+@mixin columns {
+    display: grid;
+    column-gap: var(--layout-gutter);
+    row-gap: var(--layout-gutter);
+    margin-bottom:var(--layout-gutter);
+    
+    & > * {
+        // immediate children of columns should always follor grid layout rules
+        display : grid;
+    }
+
+    &.two {
+        grid-template-columns: 1fr 1fr;
+
+        @media #{$mediaQuery-belowSmall} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.three {
+        grid-template-columns: 1fr 1fr 1fr;
+    
+        @media #{$mediaQuery-belowMedium} {
+            grid-template-columns: 1fr ;
+        }  
+    }
+
+    &.four {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @media #{$mediaQuery-belowMedium} {
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        @media #{$mediaQuery-belowSmall} {
+            grid-template-columns: 1fr;
+        }  
+    }
+}
+
+.columns {
+    @include columns;
+}
+
+x-columns {
+    @include columns;
+}
+

@@ -1,4 +1,7 @@
 {{#extend "_layout"}}
+    {{#content "head"}}
+        <link rel="stylesheet" href="/css/bootstrip-demo-dashboard.css" type="text/css">
+    {{/content}}
     {{#content "body"}}
         <div class="dashboardDemo-page">
             <div class="dashboardDemo-pageNavLeft">
@@ -11,29 +14,29 @@
                 </div>
                 <div class="dashboardDemo-pageGeneralContent">
                     
-                    <x-cards>
-                        <x-columns3>
+                    <div class="dashboardDemo-cards">
+                        <x-columns class="three">
                             {{>card cards.multiGreen}}
                             {{>card cards.multiOrange}}
                             {{>card cards.multiRed}}
-                        </x-columns3>
+                        </x-columns>
 
-                        <x-columns2>
+                        <x-columns class="two">
                             {{>card cards.all}}
                             {{>card cards.all}}
-                        </x-columns2>
+                        </x-columns>
 
-                        <x-columns2>
+                        <x-columns class="two">
                             <x-card>
                                 <x-card-pad>
-                                    <div class="util-flowHorizontal dashboardDemo-strip">
+                                    <div class="flowHorizontal dashboardDemo-strip">
                                         <div>
-                                            <div class="type-loud">Rate 56%</div>
-                                            <div class="type-quiet">Underperforming</div>
+                                            <div class="loud">Rate 56%</div>
+                                            <div class="quiet">Underperforming</div>
                                         </div>
                                         <div>
-                                            <div class="type-loud">Items 129</div>
-                                            <div class="type-quiet">Preliminary score</div>
+                                            <div class="loud">Items 129</div>
+                                            <div class="quiet">Preliminary score</div>
                                         </div>
                                         <i class="icon icon-down"></i>
                                     </div>
@@ -41,29 +44,29 @@
                             </x-card>
                             <x-card>
                                 <x-card-pad>
-                                    <div class="util-flowHorizontal dashboardDemo-strip">
+                                    <div class="flowHorizontal dashboardDemo-strip">
                                         <div>
-                                            <div class="type-loud">Some data</div>
+                                            <div class="loud">Some data</div>
                                         </div>
                                         <div>
-                                            <div class="type-loud">More stuff</div>
+                                            <div class="loud">More stuff</div>
                                         </div>
                                         <div>
-                                            <div class="type-loud">Things</div>
-                                            <div class="type-quiet">other</div>
+                                            <div class="loud">Things</div>
+                                            <div class="quiet">other</div>
                                         </div>
                                     </div>
                                 </x-card-pad>
                             </x-card>
-                        </x-columns2>
+                        </x-columns>
 
-                        <x-columns4>
+                        <x-columns class="four">
                             {{>card cards.all}}
                             {{>card cards.all}}
                             {{>card cards.all}}
                             {{>card cards.all}}
-                        </x-columns4>
-                    </x-cards>
+                        </x-columns>
+                    </div>
 
                 </div>
             </div>

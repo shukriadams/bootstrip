@@ -1,13 +1,13 @@
 <ul class="list">
     <li class="list-header">
-        <h5 class="util-uppercase">Header</h5> 
+        <h5 class="uppercase">Header</h5> 
     </li>
 
     {{#each items}}
-        <li class="list-row {{#if active}}list-row--active{{/if}}">
+        <li class="list-row {{#if active}}active{{/if}}">
             <div class="list-cell">
                 {{text}}
-                <div class="type-quiet">
+                <div class="quiet">
                     This is some help
                 </div>
             </div>

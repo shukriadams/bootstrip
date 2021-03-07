@@ -1,8 +1,13 @@
-.alert {
+@mixin alert {
     position: relative;
     display: block;
 }
 
-x-alert {
-    @extend .alert;
+.alert {
+    @include alert;
 }
+
+x-alert {
+    @include alert;
+}
+

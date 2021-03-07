@@ -1,21 +1,19 @@
-.card {
+x-card {
     border: none;
+    
+    &.green {
+        background-color: var(--color-genoa);
+        color: var(--color-white);
+    }
+
+    &.red {
+        background-color: var(--color-crownOfThorns);
+        color: var(--color-white);
+    }
+
+    &.orange {
+        background-color: var(--color-corn);
+        color: var(--color-white);
+    }
 }
 
-.card--green {
-    background-color: var(--color-genoa);
-    color: var(--color-white);
-}
-
-.card--red {
-    //background-color: var(--color-crownOfThorns);
-    color: var(--color-white);
-
-background: rgb(222,95,95);
-background: linear-gradient(147deg, rgba(222,95,95,1) 0%, rgba(159,54,54,1) 100%);
-}
-
-.card--orange {
-    background-color: var(--color-corn);
-    color: var(--color-white);
-}

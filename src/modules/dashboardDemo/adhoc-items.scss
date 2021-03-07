@@ -1,0 +1,47 @@
+.dashboardDemo-cards {
+    background-color: var(--color-athensGray);
+    padding: var(--layout-gutter);
+}
+
+.dashboardDemo-page {
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.dashboardDemo-pageNavLeft {
+    background-color: var(--color-mirage);
+    max-height: 100vh;
+    min-height: 100vh;       
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    width: 176px;
+}
+
+.dashboardDemo-pageNotNavLeft {
+    padding-left: 176px; // left padding must accomadate left menu
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.dashboardDemo-strip {
+
+    > * {
+        padding-right: 20px;
+        width: 33%;
+    }
+
+    padding-right: 24px; // space for icon
+
+    i {
+        line-height: 1;
+        font-size: 58px;
+        color: var(--color-punch);
+    }
+}
+

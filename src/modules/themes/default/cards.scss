@@ -1,8 +1,0 @@
-.cards {
-    background-color: var(--color-athensGray);
-    padding: var(--layout-gutter);
-}
-
-x-cards {
-    @extend .cards;
-}
