@@ -1,5 +1,4 @@
-
-.pager-link {
+@mixin pager-anchor {
     color: var(--color-blueRibbon);
     padding: .375rem .75rem;
     background-color: var(--color-white);
@@ -12,10 +11,13 @@
         border-color: var(--color-athensGray);
     }
 
-    &.pager-link--active {
+    &.active {
         color: var(--color-white);
         background-color: var(--color-blueRibbon);
         border-color: var(--color-blueRibbon);
     }
 }
 
+.pager-anchor {
+    @include pager-anchor;
+}

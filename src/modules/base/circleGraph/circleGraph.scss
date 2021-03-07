@@ -1,5 +1,7 @@
 @mixin circleGraph {
+    display: inline-block;
     position: relative;
+
     canvas {
         max-width: 100%;
     }

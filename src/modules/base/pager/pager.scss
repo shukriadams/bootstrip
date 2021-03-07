@@ -1,15 +1,23 @@
-.pager {
+@mixin pager {
     display: flex;
     padding-left: 0;
     list-style: none;
 }
 
-.pager-link {
+@mixin pager-anchor {
     position: relative;
     display: block;
     text-decoration: none;
 
-    &.pager-link--active {
+    &.active {
         z-index: 3;
     }
+}
+
+.pager {
+    @include pager;
+}
+
+.pager-anchor {
+    @include pager-anchor;
 }

@@ -33,8 +33,12 @@
                 {{/kitchenSinkItem}}
 
                 {{#>kitchenSinkItem title="Table" description="Use tables for more fine-tuned control of data layout"}}
-                    {{>table table.items}}
-                    {{>table tableModifiers.items}}
+                    <x-content>
+                        {{>table table.items}}
+                    </x-content>
+                    <x-content>
+                        {{>table tableModifiers.items}}
+                    </x-content>
                 {{/kitchenSinkItem}}
 
                 {{#>kitchenSinkItem title="Alerts"}}

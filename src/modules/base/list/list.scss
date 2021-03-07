@@ -1,18 +1,18 @@
 @import './../card/card';
 
-.list {
+@mixin list {
     @include card;
     list-style: none;
     padding-left: 0;    
 }
 
-.list-row {
+@mixin list-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.list-cell {
+@mixin list-cell {
     flex-basis:0;
     flex-grow: 1;
     max-width: 100%;
@@ -20,13 +20,25 @@
 }
 
 x-list {
-    @extend .list;
+    @include list;
+}
+
+.list {
+    @include list;
 }
 
 x-list-row {
-    @extend .list-row;
+    @include list-row;
+}
+
+.list-row {
+    @include list-row;
 }
 
 x-list-cell {
-    @extend .list-cell;
+    @include list-cell;
+}
+
+.list-cell {
+    @include list-cell;
 }

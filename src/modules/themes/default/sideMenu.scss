@@ -11,7 +11,7 @@
         background-color: var(--color-mirageDark);
     }
 
-    &.sideMenu-item--active {
+    &.active {
         background-color: var(--color-mirageDark);
 
         .sideMenu-link{
@@ -23,7 +23,7 @@
     }
 }
 
-.sideMenu-link {
+.sideMenu-anchor {
     color: var(--color-ghost);
     padding: 0.75rem 1.25rem;
 }

@@ -19,7 +19,8 @@
         color:inherit;
     }
 
-    &:hover {
+    &:hover,
+    &.active {
         background-color: var(--color-genoa);
         color: var(--color-white);
        
