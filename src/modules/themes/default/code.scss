@@ -1,0 +1,17 @@
+@mixin codeInline {
+    color: var(--color-ghost);
+    background-color: var(--color-gunPowder);
+    padding: 0 4px;
+    border-radius: 2px;
+}
+
+code {
+    margin: 16px 0;
+    padding: 16px;
+    color: var(--color-ghost);
+    background-color: var(--color-gunPowder);
+}
+
+x-codeInline {
+    @include codeInline;
+}
