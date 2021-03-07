@@ -1,13 +1,9 @@
 @import './../card/card';
 
 .list {
-    @extend .card;
+    @include card;
     list-style: none;
     padding-left: 0;    
-}
-
-.list-header {
-    @extend .card-header;
 }
 
 .list-row {
@@ -25,10 +21,6 @@
 
 x-list {
     @extend .list;
-}
-
-x-list-header {
-    @extend .list-header;
 }
 
 x-list-row {

@@ -1,4 +1,4 @@
-.card {
+@mixin card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,18 +16,14 @@
     }
 }
 
-.card-pad {
+@mixin card-pad {
     flex: 1 1 auto;
 }
 
-.card-header {
-    display: default;// placeholder value so class exists
-}
-
 x-card {
-    @extend .card;
+    @include card;
 }
 
 x-card-pad {
-    @extend .card-pad;
+    @include card-pad;
 }

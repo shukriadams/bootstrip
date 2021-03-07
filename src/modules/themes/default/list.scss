@@ -1,12 +1,12 @@
 @import './card';
 
 .list {
-    @extend .card;
+    @include card;
     margin-bottom: 1.5rem;
 }
 
 .list-header {
-    @extend .card-header;
+    @include card-header;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
         
