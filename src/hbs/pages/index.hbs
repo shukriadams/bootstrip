@@ -1,6 +1,7 @@
 {{#extend "_layout"}}
     {{#content "body"}}
         <x-clamp>
+            
             <section>
                 <h1 class="display1">Bootstrip</h1>
 
@@ -20,37 +21,36 @@
                     </li>
                 </ul>
             </section>
+
             <section>
-
-
                 <h2>Concept</h2>
                 <p>
-                    Bootstrip is a stripped down version of Bootstrap 5, with some extra components thrown in. Bootstrip places strong emphasis on
-                    minimal code and readability, and is written for programmers instead of frontenders. Names are short, and markup and CSS are minimal. 
+                    Bootstrip is a frontend component library based on stripped-down Bootstrap 5. It has a strong emphasis on
+                    minimal code and readability, and is aimed at programmers who want clean, functional, and easy-to-maintain frontend components in their projects. 
                     In many cases deliberate design compromises were made to achieve this.
                 </p>
                 <p>
-                    Bootstrip is also implemented as custom HTML elements, so one writes
+                    Bootstrip is implemented as custom HTML elements, so one writes
 
-<code>&lt;x-columns2&gt;
+<code>&lt;x-columns class=&quot;two&quot;&gt;
     ...
-&lt;/x-columns2&gt;</code>
+&lt;/x-columns&gt;</code>
 
                     instead of
 
-<code>&lt;div class=&quot;columns2&quot;&gt;
+<code>&lt;div class=&quot;columns columns--two&quot;&gt;
     ...
 &lt;/div&gt;</code>
 <xmp></xmp>
 
 
-                    The main reason for this is readability. Reading and understanding markup is more tedious when you have
+                    The main reason for this is readability, and the benefits become more apparent as markup complexity increases. Reading and understanding markup is more tedious when you have
                     to read to a class declaration <x-codeInline>class="..."</x-codeInline> to understand what the unit of markup is doing. Also, the typical end tag of an element
                     <x-codeInline>&lt;/div&gt;</x-codeInline> says nothing about the element it closes, and to work around this code often gets cluttered with HTML 
                     comments to make element boundaries easier to identify, f.ex
 
 <code>&lt;!-- 2 columns start --&gt;
-&lt;div class=&quot;columns2&quot;&gt; 
+&lt;div class=&quot;columns columns--two&quot;&gt; 
     ... 
 &lt;/div&gt;
 &lt;!-- 2 columns ends --&gt;</code>
@@ -61,7 +61,10 @@
                     to the model-view-controller (MVC) design pattern - it worked well for the time it was invented, and in principal it is still a fine idea, but 
                     modern applications are too complex to easily scale with MVC, which has been superceded by f.ex MVVC or React's Redux system.
                 </p>
-
+                <h3>Block-Element-Modifier</h3>
+                <p>
+                    At its heart Bootstrip adheres to the spririt of BEM, with short/specific selectors and tight scoping of overrides, but the naming convention has been modified for brevity.
+                </p>
                 <p>
                     The <a href="https://github.com/shukriadams/bootstrip">source code</a> for Bootstrip can be found on Github.
                 </p>

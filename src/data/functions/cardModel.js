@@ -12,10 +12,10 @@ module.exports = (content = '*', count = 1)=>{
         model.image = 'http://placehold.it/1280x720'
 
     if (content.includes('align=right'))
-        model.modifiers += 'card--alignRight '
+        model.modifiers += 'right '
     
     if (content.includes('align=center'))
-        model.modifiers += 'card--alignCenter '
+        model.modifiers += 'center '
 
     for (let i = 0 ; i < count ; i ++){
         const item = { }

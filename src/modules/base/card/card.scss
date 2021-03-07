@@ -7,11 +7,11 @@
     background-clip: border-box;
     overflow:hidden;
 
-    &.card--alignRight {
+    &.right {
         text-align: right;
     }
 
-    &.card--alignCenter {
+    &.center {
         text-align: center;
     }
 }
