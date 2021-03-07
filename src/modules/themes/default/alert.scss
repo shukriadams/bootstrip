@@ -1,4 +1,4 @@
-.alert {
+@mixin alert {
     padding: 1rem 1rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
@@ -36,5 +36,5 @@
 }
 
 x-alert {
-    @extend .alert;
+    @include alert;
 }
