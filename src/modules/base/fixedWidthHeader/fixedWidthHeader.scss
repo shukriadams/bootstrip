@@ -1,6 +1,6 @@
 
 
-.fixedWidthHeader {
+@mixin fixedWidthHeader {
     flex-wrap: nowrap;
     position: relative;
     display: flex;
@@ -22,7 +22,7 @@
     }
 }
 
-.fixedWidthHeader-logoContainer {
+@mixin fixedWidthHeader-logoContainer {
     background-color: var(--color-oxfordblue);
     color: var(--color-white);
     width: 15.63rem;
@@ -37,7 +37,7 @@
     height: 4rem;    
 }
 
-.fixedWidthHeader-content {
+@mixin fixedWidthHeader-content {
     background-color: var(--color-paleSky);
     padding: 0.5rem 1rem;     
     position: static;
@@ -53,23 +53,23 @@
     align-items: center;
 }
 
-.fixedWidthHeader-contentItem {
+@mixin fixedWidthHeader-contentItem {
     margin-left: 3rem;
     position: relative;
 }
 
 x-fixedWidthHeader {
-    @extend .fixedWidthHeader;
+    @include fixedWidthHeader;
 }
 
 x-fixedWidthHeader-logoContainer {
-    @extend .fixedWidthHeader-logoContainer;
+    @include fixedWidthHeader-logoContainer;
 }
 
 x-fixedWidthHeader-content {
-    @extend .fixedWidthHeader-content;
+    @include fixedWidthHeader-content;
 }
 
 x-fixedWidthHeader-contentItem {
-    @extend .fixedWidthHeader-contentItem;
+    @include fixedWidthHeader-contentItem;
 }
