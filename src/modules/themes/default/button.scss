@@ -52,6 +52,16 @@
         }        
     }
 
+    &.dark {
+        background-color: var(--color-woodsmoke);
+        border-color: var(--color-woodsmoke);
+        
+        &:hover {
+            background-color: var(--color-gunPowder);
+            border-color: var(--color-woodsmoke);
+        }        
+    }
+
     // must be applied AFTER custom button type overrides to allow this to win against them
     @include disabledBehaviour;
 }
