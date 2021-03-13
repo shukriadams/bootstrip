@@ -4,6 +4,7 @@
     {{/content}}
     {{#content "body"}}
         <div class="dashboardDemo-page">
+
             <div class="dashboardDemo-pageNavLeft">
                 {{>sideMenu items=sideMenu}}
             </div>
@@ -15,6 +16,7 @@
                 <div class="dashboardDemo-pageGeneralContent">
                     
                     <div class="dashboardDemo-cards">
+
                         <x-columns class="three">
                             {{>card cards.multiGreen}}
                             {{>card cards.multiOrange}}
@@ -66,8 +68,29 @@
                             {{>card cards.all}}
                             {{>card cards.all}}
                         </x-columns>
-                    </div>
+                        
+                        <x-columns>
+                            <x-list>
+                                <x-list-row>
+                                    {{#for_n 6}}
+                                        <x-list-cell class="header">
+                                            Title
+                                        </x-list-cell>
+                                    {{/for_n}}
+                                </x-list-row>
+                                {{#for_n 20}}
+                                    <x-list-row>
+                                        {{#for_n 6}}
+                                            <x-list-cell>
+                                                data
+                                            </x-list-cell>
+                                        {{/for_n}}
+                                    </x-list-row>
+                                {{/for_n}}
+                            </x-list>
+                        </x-columns>
 
+                    </div>
                 </div>
             </div>
 

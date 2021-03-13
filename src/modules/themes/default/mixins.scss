@@ -23,3 +23,9 @@
         box-shadow: 0 0 0 0.25rem rgba(var(--color-blackRGB), .15);        
     }
 }
+
+
+@mixin typography-smallHeader {
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+}
