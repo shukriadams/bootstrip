@@ -5,6 +5,7 @@ let chokidar = require('chokidar'),
     sass = require('node-sass'),
     process = require('process'),
     cwd = process.cwd(),
+    exec = require('madscience-node-exec'),
     runner = require('node-sass-runner'),
     _triggerFile = null
 
@@ -74,10 +75,16 @@ module.exports = {
     },
 
     async concatenate(){
+        const hash = (await exec.sh({ cmd : 'git rev-parse --short HEAD' })).result,
+            tag = (await exec.sh({ cmd : 'git describe --abbrev=0 --tags' })).result,
+            header = `/* tag: ${tag}     hash: ${hash} */`
+
         await fs.ensureDir(path.join(cwd, 'web/css'))
-                
+        await fs.outputFile(path.join(cwd,'.tmp/modules/base/_header.css'), header)
+        await fs.outputFile(path.join(cwd,'.tmp/modules/themes/default/_header.css'), header)
+
         await this.concatFiles([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/bootstrip.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-defaultTheme.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-theme-default.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/demo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/dashboardDemo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard.css'))
     },
