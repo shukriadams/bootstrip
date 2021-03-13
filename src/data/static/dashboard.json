@@ -1,0 +1,3 @@
+{
+    "complex_list" : "<%= dashboard_list 20 6 %>"
+}

@@ -11,6 +11,7 @@
     "dependencies": {
         "fs-extra": "6.0.1",
         "webfonts-generator": "0.4.0",
+        "lodash.sample": "4.2.1",
         "fileconcat": "2.0.1",
         "chokidar": "2.1.5",
         "express": "4.16.3",

@@ -78,15 +78,18 @@
                                         </x-list-cell>
                                     {{/for_n}}
                                 </x-list-row>
-                                {{#for_n 20}}
+                                {{#each dashboard.complex_list}}
                                     <x-list-row>
-                                        {{#for_n 6}}
+                                        {{#each cells}}
                                             <x-list-cell>
-                                                data
+                                                {{#if this.icon}}
+                                                    <i style="color:{{this.color}}" class="icon icon-{{icon}}"></i>
+                                                {{/if}}
+                                                {{this.text}}
                                             </x-list-cell>
-                                        {{/for_n}}
+                                        {{/each}}
                                     </x-list-row>
-                                {{/for_n}}
+                                {{/each}}
                             </x-list>
                         </x-columns>
 

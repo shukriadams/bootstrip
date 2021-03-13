@@ -2,19 +2,22 @@
 
 @mixin list {
     @include card;
+    display: grid; // grid allows column+cell layout to preserve layout with greater ease
+    overflow-x: auto; // allow horizontal scrolling on overflow, this will happen when list contains many columns
     list-style: none;
     padding-left: 0;    
 }
 
 @mixin list-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
 }
 
 @mixin list-cell {
     flex-basis:0;
     flex-grow: 1;
+    white-space: nowrap;
     max-width: 100%;
     position: relative;
 }
