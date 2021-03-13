@@ -1,0 +1,14 @@
+@mixin badge{
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+x-badge {
+    @include badge;
+}
+
+.badge {
+    @include badge;
+}
