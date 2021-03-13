@@ -23,6 +23,9 @@ module.exports = (rows, cells)=>{
                 cell_counter === 3 ? sample(['Amazin', 'Microshift', 'Goggles', 'Applied']) : 
                     sample(['Automative', 'Hospitality', 'Media', 'Entertainment', 'Aggritech', 'Pharma'])
 
+            if (cell_counter === 2)
+                cell_model.badgeType = sample(['default', 'warning', 'success', 'danger'])
+
             row_model.cells.push(cell_model)
         }
         data.push(row_model)

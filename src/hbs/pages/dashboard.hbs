@@ -85,7 +85,11 @@
                                                 {{#if this.icon}}
                                                     <i style="color:{{this.color}}" class="icon icon-{{icon}}"></i>
                                                 {{/if}}
-                                                {{this.text}}
+                                                {{#if this.badgeType}}
+                                                    <x-badge class="{{this.badgeType}}">{{this.text}}</x-badge>
+                                                {{else}}
+                                                    {{this.text}}
+                                                {{/if}}
                                             </x-list-cell>
                                         {{/each}}
                                     </x-list-row>
