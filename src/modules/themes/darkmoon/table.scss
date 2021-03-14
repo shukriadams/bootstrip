@@ -1,10 +1,9 @@
 @mixin table {
     border-color: var(--bootstrip-color-black);
     color: var(--bootstrip-color-white);
-    
 
     // give alternating row color
-    &.striped > tbody > tr:nth-of-type(odd) {
+    &.--striped > tbody > tr:nth-of-type(odd) {
         color: var(--bootstrip-color-white);
         background-color: var(--bootstrip-color-abbey);
     }
@@ -20,15 +19,15 @@
 }
 
 @mixin table-row {
-    &.success {
+    &.--success {
         color: var(--bootstrip-color-abbey);
     }
 
-    &.warning {
+    &.--warning {
         color: var(--bootstrip-color-abbey);
     }
     
-    &.danger {
+    &.--danger {
         color: var(--bootstrip-color-abbey);
     }
 }

@@ -26,22 +26,22 @@
     }
 
     // give alternating row color
-    &.striped > tbody > tr:nth-of-type(odd) {
+    &.--striped > tbody > tr:nth-of-type(odd) {
         --bs-table-accent-bg: var(--bs-table-striped-bg);
         color: var(--bs-table-striped-color);
     }
 }
 
 @mixin table-row {
-    &.success {
+    &.--success {
         background-color: var(--bootstrip-color-edgewater);
     }
 
-    &.warning {
+    &.--warning {
         background-color: var(--bootstrip-color-barleyWhite);
     }
     
-    &.danger {
+    &.--danger {
         background-color: var(--bootstrip-color-cherub);
     }
 }
