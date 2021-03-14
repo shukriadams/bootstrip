@@ -88,7 +88,9 @@ module.exports = {
         await this.concatFiles([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-theme-default.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/themes/darkmoon/**/*.css')], path.join(cwd, 'web/css/bootstrip-theme-darkmoon.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/demo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboardDemo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboard-common/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard-common.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboard-default/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard-default.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboard-darkmoon/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard-darkmoon.css'))
     },
 
     /** 

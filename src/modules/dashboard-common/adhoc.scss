@@ -1,5 +1,4 @@
 .dashboardDemo-cards {
-    background-color: var(--bootstrip-color-athensGray);
     padding: var(--bootstrip-layout-gutter);
 }
 
@@ -47,7 +46,7 @@
 
 .dashboardDemo-complexList {
     // lock width to keep list structure
-    x-badge{
+    x-badge {
         width: 108px;
     }
 

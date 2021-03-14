@@ -1,0 +1,8 @@
+.button {
+    background-color: transparent;
+    color: var(--bootstrip-color-blueRibbon);
+    
+    &:hover {
+        color: var(--bootstrip-color-white);
+    }
+}

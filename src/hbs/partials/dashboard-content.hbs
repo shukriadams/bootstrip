@@ -1,0 +1,98 @@
+{{>header sticky=true title="Bootstrip"}}
+
+<div class="dashboardDemo-page">
+
+    <div class="dashboardDemo-pageNavLeft">
+        {{>sideMenu items=sideMenu}}
+    </div>
+
+    <div class="dashboardDemo-pageNotNavLeft">
+        <div class="dashboardDemo-pageGeneralContent">
+            <div class="dashboardDemo-cards">
+
+                <x-columns class="three">
+                    {{>card cards.multiGreen}}
+                    {{>card cards.multiOrange}}
+                    {{>card cards.multiRed}}
+                </x-columns>
+
+                <x-columns class="two">
+                    {{>card cards.all}}
+                    {{>card cards.all}}
+                </x-columns>
+
+                <x-columns class="two">
+                    <x-card class="stroke">
+                        <x-card-stroke class="danger"></x-card-stroke>
+                        <x-card-pad>
+                            <div class="flowHorizontal dashboardDemo-strip">
+                                <div>
+                                    <div class="loud">Rate 56%</div>
+                                    <div class="quiet">Underperforming</div>
+                                </div>
+                                <div>
+                                    <div class="loud">Items 129</div>
+                                    <div class="quiet">Preliminary score</div>
+                                </div>
+                                <i class="icon icon-down"></i>
+                            </div>
+                        </x-card-pad>
+                    </x-card>
+                    <x-card class="stroke">
+                        <x-card-stroke class="success"></x-card-stroke>
+                        <x-card-pad>
+                            <div class="flowHorizontal dashboardDemo-strip">
+                                <div>
+                                    <div class="loud">Some data</div>
+                                </div>
+                                <div>
+                                    <div class="loud">More stuff</div>
+                                </div>
+                                <div>
+                                    <div class="loud">Things</div>
+                                    <div class="quiet">other</div>
+                                </div>
+                            </div>
+                        </x-card-pad>
+                    </x-card>
+                </x-columns>
+
+                <x-columns class="four">
+                    {{>card cards.all}}
+                    {{>card cards.all}}
+                    {{>card cards.all}}
+                    {{>card cards.all}}
+                </x-columns>
+                
+                <x-columns>
+                    <x-list class="dashboardDemo-complexList">
+                        <x-list-row>
+                            {{#for_n 6}}
+                                <x-list-cell class="heading">
+                                    Title
+                                </x-list-cell>
+                            {{/for_n}}
+                        </x-list-row>
+                        {{#each dashboard.complex_list}}
+                            <x-list-row>
+                                {{#each cells}}
+                                    <x-list-cell>
+                                        {{#if this.icon}}
+                                            <i style="color:{{this.color}}" class="icon icon-{{icon}}"></i>
+                                        {{/if}}
+                                        {{#if this.badgeType}}
+                                            <x-badge class="{{this.badgeType}}">{{this.text}}</x-badge>
+                                        {{else}}
+                                            {{this.text}}
+                                        {{/if}}
+                                    </x-list-cell>
+                                {{/each}}
+                            </x-list-row>
+                        {{/each}}
+                    </x-list>
+                </x-columns>
+
+            </div>
+        </div>
+    </div>
+</div>
