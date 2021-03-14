@@ -9,7 +9,7 @@
     display: block;
     text-decoration: none;
 
-    &.active {
+    &.--active {
         z-index: 3;
     }
 }

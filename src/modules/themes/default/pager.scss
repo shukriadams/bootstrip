@@ -11,7 +11,7 @@
         border-color: var(--bootstrip-color-athensGray);
     }
 
-    &.active {
+    &.--active {
         color: var(--bootstrip-color-white);
         background-color: var(--bootstrip-color-blueRibbon);
         border-color: var(--bootstrip-color-blueRibbon);

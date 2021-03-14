@@ -25,6 +25,7 @@
                     <x-card class="--stroke">
                         <x-card-stroke class="--danger"></x-card-stroke>
                         <x-card-pad>
+                            <!-- CARD CONTENT -->
                             <div class="flowHorizontal dashboardDemo-strip">
                                 <div>
                                     <div class="loud">Rate 56%</div>
@@ -36,11 +37,13 @@
                                 </div>
                                 <i class="icon icon-down"></i>
                             </div>
+                            <!-- CARD CONTENT -->
                         </x-card-pad>
                     </x-card>
                     <x-card class="--stroke">
                         <x-card-stroke class="--success"></x-card-stroke>
                         <x-card-pad>
+                            <!-- CARD CONTENT -->
                             <div class="flowHorizontal dashboardDemo-strip">
                                 <div>
                                     <div class="loud">Some data</div>
@@ -53,6 +56,7 @@
                                     <div class="quiet">other</div>
                                 </div>
                             </div>
+                            <!-- CARD CONTENT -->
                         </x-card-pad>
                     </x-card>
                 </x-columns>
@@ -68,7 +72,7 @@
                     <x-list class="dashboardDemo-complexList">
                         <x-list-row>
                             {{#for_n 6}}
-                                <x-list-cell class="heading">
+                                <x-list-cell class="--header">
                                     Title
                                 </x-list-cell>
                             {{/for_n}}
