@@ -1,6 +1,6 @@
 @mixin codeInline {
     color: var(--bootstrip-color-ghost);
-    background-color: var(--bootstrip-color-woodsmoke);
+    background-color: var(--bootstrip-color-oxfordblue);
     padding: 0 4px;
     border-radius: 2px;
 }
@@ -10,7 +10,7 @@
     margin: 16px 0;
     padding: 16px;
     color: var(--bootstrip-color-ghost);
-    background-color: var(--bootstrip-color-woodsmoke);
+    background-color: var(--bootstrip-color-oxfordblue);
 }
 
 .codeInline {

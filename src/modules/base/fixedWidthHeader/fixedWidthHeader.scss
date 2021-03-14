@@ -20,11 +20,14 @@
         right: 0;
         z-index: 1;
     }
+
+    // any clamp in the header is acting for header only, so can override its display property to allow it to maintain header structure
+    x-clamp, .clamp {
+        display: flex;
+    }
 }
 
 @mixin fixedWidthHeader-logoContainer {
-    background-color: var(--bootstrip-color-oxfordblue);
-    color: var(--bootstrip-color-white);
     width: 15.63rem;
     position: static;
     z-index: 5;
@@ -38,17 +41,11 @@
 }
 
 @mixin fixedWidthHeader-content {
-    background-color: var(--bootstrip-color-paleSky);
-    padding: 0.5rem 1rem;     
     position: static;
     z-index: 5;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
-    height: 4rem;    
     display: flex;
     align-items: center;
 }

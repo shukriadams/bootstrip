@@ -3,23 +3,30 @@
     Logo box contains an icon and text
 }}
 
-<x-fixedWidthHeader class="{{#if sticky}}sticky{{/if}}">
-    
-    <x-fixedWidthHeader-logoContainer>
-        <a href="/">
-            <i class="icon icon-cube"></i>
-            <x-fixedWidthHeader-logo>
-                {{title}}
-            </x-fixedWidthHeader-logo>
-        </a>
-    </x-fixedWidthHeader-logoContainer>
+<x-fixedWidthHeader class="{{#if sticky}}sticky{{/if}} {{#if clamped}}clamped{{/if}}">
+    {{#if clamped}}
+        <x-clamp>
+    {{/if}}
 
-    <x-fixedWidthHeader-content>
-        {{#each items}}
-            <x-fixedWidthHeader-contentItem>
-                {{text}}
-            </x-fixedWidthHeader-contentItem>
-        {{/each}}
-    </x-fixedWidthHeader-content>    
+        <x-fixedWidthHeader-logoContainer>
+            <a href="/">
+                <i class="icon icon-cube"></i>
+                <x-fixedWidthHeader-logo>
+                    {{title}}
+                </x-fixedWidthHeader-logo>
+            </a>
+        </x-fixedWidthHeader-logoContainer>
+
+        <x-fixedWidthHeader-content>
+            {{#each items}}
+                <x-fixedWidthHeader-contentItem>
+                    {{text}}
+                </x-fixedWidthHeader-contentItem>
+            {{/each}}
+        </x-fixedWidthHeader-content>    
+        
+    {{#if clamped}}
+        </x-clamp>
+    {{/if}}
 
 </x-fixedWidthHeader>

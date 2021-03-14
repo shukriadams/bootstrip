@@ -1,4 +1,10 @@
+@mixin fixedWidthHeader {
+    background-color: var(--bootstrip-color-oxfordblue);
+}
+
 @mixin fixedWidthHeader-logoContainer {
+    color: var(--bootstrip-color-white);
+
     font-family: var(--bootstrip-font-logoFace);
     width: 11rem;
 
@@ -7,8 +13,30 @@
     }
 }
 
+@mixin fixedWidthHeader-content {
+    background-color: var(--bootstrip-color-paleSky);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 0.5rem 1rem;     
+    height: 4rem;    
+
+    x-fixedWidthHeader.clamped &,
+    .fixedWidthHeader.clamped & {
+        background-color: transparent;
+    }
+
+}
+
 @mixin fixedWidthHeader-logo {
     font-size: 22px;
+}
+
+.fixedWidthHeader {
+    @include fixedWidthHeader;
+}
+
+.fixedWidthHeader-content {
+    @include fixedWidthHeader-content;
 }
 
 .fixedWidthHeader-logo {
@@ -17,6 +45,14 @@
 
 .fixedWidthHeader-logoContainer {
     @include fixedWidthHeader-logoContainer;
+}
+
+x-fixedWidthHeader {
+    @include fixedWidthHeader;
+}
+
+x-fixedWidthHeader-content {
+    @include fixedWidthHeader-content;
 }
 
 x-fixedWidthHeader-logo {

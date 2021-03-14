@@ -1,12 +1,9 @@
-{{#extend "_layout"}}
-    {{#content "body"}}
+{{#extend "_layoutClampedHeader"}}
+    {{#content "_layoutClampedHeader.body"}}
         <x-clamp>
             <section>
-
                 <h1 class="display1">Fixed Width Header</h1>
-
                 {{>fixedWidthHeader title="MySite"}}
-
             </section>
         </x-clamp>
     {{/content}}
