@@ -45,3 +45,14 @@
     }
 }
 
+.dashboardDemo-complexList {
+    // lock width to keep list structure
+    x-badge{
+        width: 108px;
+    }
+
+    // lock width to keep list structure
+    x-list-cell {
+        min-width: 124px;
+    }
+}
