@@ -13,7 +13,7 @@
         background-color: var(--bootstrip-color-mirageDark);
     }
 
-    &.active {
+    &.--active {
         background-color: var(--bootstrip-color-mirageDark);
 
         .sideMenu-link{
