@@ -1,15 +1,16 @@
 @mixin codeInline {
     color: var(--bootstrip-color-ghost);
-    background-color: var(--bootstrip-color-gunPowder);
+    background-color: var(--bootstrip-color-woodsmoke);
     padding: 0 4px;
     border-radius: 2px;
 }
 
-code {
+.code {
+    border-radius: var(--bootstrip-layout-radius);    
     margin: 16px 0;
     padding: 16px;
     color: var(--bootstrip-color-ghost);
-    background-color: var(--bootstrip-color-gunPowder);
+    background-color: var(--bootstrip-color-woodsmoke);
 }
 
 .codeInline {

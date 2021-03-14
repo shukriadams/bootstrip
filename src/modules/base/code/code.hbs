@@ -1,0 +1,31 @@
+<pre class="code">
+module.exports = {
+
+    async watch(){
+
+        // wipe and set up required paths
+        const workPath = path.join(cwd, 'web')
+        fs.ensureDirSync(workPath)
+
+        // start watching sass files
+        const watcher = chokidar.watch([path.join('./hbs/**/*.hbs'), path.join('./modules/**/*.hbs'), path.join('./data/**/*')], {
+            persistent: true,
+            usePolling: true, 
+            ignoreInitial: true
+        })
+
+        watcher
+            .on('add', async file => {
+                await this.renderAll(file)
+            })
+            .on('change', async file =>{
+                await this.renderAll(file)
+            })
+            .on('unlink', async file =>{
+                await this.renderAll(file)
+            })
+
+        await this.renderAll()
+    }
+}
+</pre>
