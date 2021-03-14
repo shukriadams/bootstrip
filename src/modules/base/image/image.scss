@@ -2,11 +2,11 @@
     max-width: 100%;
     height: auto;
 
-    &.full {
+    &.--full {
         width: 100%;
     }
     
-    &.rounded {
+    &.--rounded {
         user-select: none;
         text-anchor: middle;
     }
