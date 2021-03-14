@@ -1,0 +1,16 @@
+{{#extend "_layout"}}
+    {{#content "head"}}
+        <link rel="stylesheet" href="/css/bootstrip-theme-darkmoon.css" type="text/css">
+    {{/content}}
+    {{#content "body"}}
+        <x-clamp>
+            <section>
+                <h1 class="display1">Kitchen Sink Darkmoon</h1>
+                <p>
+                    A single page with every Bootstrip component, with the Darkmoon theme applied.
+                </p>
+                {{>kitchensink-content}}
+            </section>
+        </x-clamp>
+    {{/content}}
+{{/extend}}

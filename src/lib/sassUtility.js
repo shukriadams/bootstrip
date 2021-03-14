@@ -82,9 +82,11 @@ module.exports = {
         await fs.ensureDir(path.join(cwd, 'web/css'))
         await fs.outputFile(path.join(cwd,'.tmp/modules/base/_header.css'), header)
         await fs.outputFile(path.join(cwd,'.tmp/modules/themes/default/_header.css'), header)
+        await fs.outputFile(path.join(cwd,'.tmp/modules/themes/darkmoon/_header.css'), header)
 
         await this.concatFiles([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/bootstrip.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-theme-default.css'))
+        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/darkmoon/**/*.css')], path.join(cwd, 'web/css/bootstrip-theme-darkmoon.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/demo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo.css'))
         await this.concatFiles([path.join(cwd, '.tmp/modules/dashboardDemo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard.css'))
     },

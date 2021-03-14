@@ -1,81 +1,12 @@
 {{#extend "_layout"}}
-    {{#content   "body"}}
+    {{#content "body"}}
         <x-clamp>
             <section>
-
                 <h1 class="display1">Kitchen Sink</h1>
                 <p>
                     A single page with every Bootstrip component.
                 </p>
-
-                {{#>kitchenSinkItem title="Columns" description="Column can be used to create a responsive grid" }}
-                    {{>columns}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Typography" }}
-                    {{>typography}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Circle graphs"}}
-                    {{>circleGraphs}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Image"}}
-                    {{>image}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Figure"}}
-                    {{>figure caption="my caption" src="http://placehold.it/1280x720"}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="List" description="Lists are ideal for simple collections of data"}}
-                    {{>list items=listItems}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Table" description="Use tables for more fine-tuned control of data layout"}}
-                    <x-content>
-                        {{>table table.items}}
-                    </x-content>
-                    <x-content>
-                        {{>table tableModifiers.items}}
-                    </x-content>
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Alerts"}}
-                    {{>alerts}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Steenking Badgers"}}
-                    {{>badges}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Buttons"}}
-                    {{>buttons}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Form"}}
-                    {{>form}}
-
-                    <h2>Form Grid</h2>
-                    {{>formgrid}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Cards"}}
-                    {{>cards}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Pager"}}
-                    {{>pager}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Side Menu"}}
-                    {{>sideMenu items=sideMenu}}
-                {{/kitchenSinkItem}}
-
-                {{#>kitchenSinkItem title="Icon strip"}}
-                    {{>iconStrip items=iconStrip.all}}
-                {{/kitchenSinkItem}}
-                
+                {{>kitchensink-content}}
             </section>
         </x-clamp>
     {{/content}}

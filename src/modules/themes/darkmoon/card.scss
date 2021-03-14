@@ -1,0 +1,12 @@
+@mixin card {
+    background-color: var(--bootstrip-color-outerSpace);
+    border: 1px solid var(--bootstrip-color-black);
+}
+
+.card {
+    @include card;
+}
+
+x-card {
+    @include card;
+}

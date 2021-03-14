@@ -1,0 +1,24 @@
+@mixin list {
+    background-color: var(--bootstrip-color-outerSpace);
+    border: 1px solid var(--bootstrip-color-black);
+}
+
+@mixin list-row {
+    border-top: 1px solid var(--bootstrip-color-black);
+}
+
+.list {
+    @include list;
+}
+
+x-list {
+    @include list;
+}
+
+.list-row {
+    @include list-row;
+}
+
+x-list-row {
+    @include list-row;
+}

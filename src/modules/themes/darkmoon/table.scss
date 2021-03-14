@@ -1,0 +1,42 @@
+@mixin table {
+    border-color: var(--bootstrip-color-black);
+    color: var(--bootstrip-color-white);
+    
+
+    // give alternating row color
+    &.striped > tbody > tr:nth-of-type(odd) {
+        color: var(--bootstrip-color-white);
+        background-color: var(--bootstrip-color-abbey);
+    }
+
+    // gives header its bottom border color
+    & > :not(:last-child) >:last-child > * {
+        border-bottom-color: var(--bootstrip-color-black);
+    }
+
+    & >:not(caption) > * > * {
+        border-bottom-color: var(--bootstrip-color-black);
+    }
+}
+
+@mixin table-row {
+    &.success {
+        color: var(--bootstrip-color-abbey);
+    }
+
+    &.warning {
+        color: var(--bootstrip-color-abbey);
+    }
+    
+    &.danger {
+        color: var(--bootstrip-color-abbey);
+    }
+}
+
+.table {
+    @include table;
+}
+
+.table-row {
+    @include table-row;
+}

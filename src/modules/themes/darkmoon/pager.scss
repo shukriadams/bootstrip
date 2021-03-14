@@ -1,0 +1,19 @@
+@mixin pager-anchor {
+    color: var(--bootstrip-color-white);
+    background-color: var(--bootstrip-color-abbey);
+    border: 1px solid var(--bootstrip-color-black);
+
+    &:hover {
+        background-color: var(--bootstrip-color-shark);
+        border-color: var(--bootstrip-color-black);
+    }
+
+    &.active {
+        background-color: var(--bootstrip-color-shark);
+        border-color: var(--bootstrip-color-black);
+    }
+}
+
+.pager-anchor {
+    @include pager-anchor;
+}
