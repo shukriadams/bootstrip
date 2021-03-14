@@ -16,6 +16,12 @@
     }
 }
 
+@mixin card-stroke {
+    position: absolute;
+    display: block;
+    height: 100%;
+}
+
 @mixin card-pad {
     flex: 1 1 auto;
 }
@@ -24,12 +30,20 @@
     @include card;
 }
 
+.card-stroke {
+    @include card-stroke;
+}
+
 .card-pad {
     @include card-pad;
 }
 
 x-card {
     @include card;
+}
+
+x-card-stroke {
+    @include card-stroke;
 }
 
 x-card-pad {

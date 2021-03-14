@@ -3,6 +3,7 @@
     "noimage" : "<%= cardModel title,text,link %>",
     "center" : "<%= cardModel *,align=center %>",
     "right" : "<%= cardModel *,align=right %>",
+    "stroke" : "<%= cardModel title,text,link,stroke %>",
     "multiRed" : "<%= cardModelMulti red %>",
     "multiOrange" : "<%= cardModelMulti orange %>",
     "multiGreen" : "<%= cardModelMulti green %>"

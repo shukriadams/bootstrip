@@ -7,12 +7,34 @@
 @mixin card-pad {
     padding: 0 1rem;
 
+    x-card.stroke &,
+    .card.stroke & {
+        margin-left: var(--bootstrip-card-strokeWidth);
+    }
+
     &:first-of-type {
         padding-top: 1rem;      
     }
 
     &:last-of-type {
         padding-bottom: 1rem;      
+    }
+}
+
+@mixin card-stroke {
+    width: var(--bootstrip-card-strokeWidth);
+    background-color: var(--bootstrip-color-blueRibbon);
+    
+    &.success {
+        background-color: var(--bootstrip-color-genoa);
+    }
+
+    &.danger {
+        background-color: var(--bootstrip-color-punch);
+    }
+
+    &.warning {
+        background-color: var(--bootstrip-color-amber);
     }
 }
 
@@ -32,6 +54,10 @@
     @include card-header;
 }
 
+.card-stroke {
+    @include card-stroke;
+}
+
 .card-pad {
     @include card-pad;
 }
@@ -42,6 +68,10 @@ x-card {
 
 x-card-header {
     @include card-header;
+}
+
+x-card-stroke {
+    @include card-stroke;
 }
 
 x-card-pad {

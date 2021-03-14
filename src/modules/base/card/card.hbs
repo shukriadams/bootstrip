@@ -5,6 +5,10 @@
         <img src="{{image}}">
     {{/if}}
 
+    {{#if stroke}}
+        <x-card-stroke class="{{stroke}}"></x-card-stroke>
+    {{/if}}
+
     {{! you can stack <x-card-pad> blocks }}
     {{#each content}}
         <x-card-pad>

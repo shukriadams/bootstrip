@@ -4,6 +4,7 @@ module.exports = (content = '*', count = 1)=>{
 
     let model = { 
         align : 'Left',
+        stroke : null,
         modifiers : '',
         content : []
     }
@@ -14,6 +15,11 @@ module.exports = (content = '*', count = 1)=>{
     if (content.includes('align=right'))
         model.modifiers += 'right '
     
+    if (content.includes('stroke')){
+        model.stroke = 'warning'
+        model.modifiers += ' stroke '
+    }
+
     if (content.includes('align=center'))
         model.modifiers += 'center '
 
