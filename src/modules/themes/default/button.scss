@@ -19,7 +19,7 @@
         border-color: var(--bootstrip-color-congressBlue);
     }
 
-    &.success {
+    &.--success {
         color: var(--bootstrip-color-white);
         background-color: var(--bootstrip-color-genoa);
         border-color: var(--bootstrip-color-genoa);
@@ -30,7 +30,7 @@
         }
     }
 
-    &.danger {
+    &.--danger {
         color: var(--bootstrip-color-white);
         background-color: var(--bootstrip-color-punch);
         border-color: var(--bootstrip-color-punch);
@@ -41,7 +41,7 @@
         }
     }
 
-    &.warning {
+    &.--warning {
         color: var(--bootstrip-color-black);
         background-color: var(--bootstrip-color-amber);
         border-color: var(--bootstrip-color-amber);
@@ -52,7 +52,7 @@
         }        
     }
 
-    &.dark {
+    &.--dark {
         background-color: var(--bootstrip-color-woodsmoke);
         border-color: var(--bootstrip-color-woodsmoke);
         
