@@ -1,0 +1,64 @@
+@mixin header {
+    background-color: var(--bootstrip-color-oxfordblue);
+}
+
+@mixin header-logoContainer {
+    color: var(--bootstrip-color-white);
+
+    font-family: var(--bootstrip-font-logoFace);
+    width: 11rem;
+
+    i {
+        font-size: 34px;
+    }
+}
+
+@mixin header-content {
+    background-color: var(--bootstrip-color-paleSky);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 0.5rem 1rem;     
+    height: 4rem;    
+
+    x-header.clamped &,
+    .header.clamped & {
+        background-color: transparent;
+    }
+
+}
+
+@mixin header-logo {
+    font-size: 22px;
+}
+
+.header {
+    @include header;
+}
+
+.header-content {
+    @include header-content;
+}
+
+.header-logo {
+    @include header-logo;
+}
+
+.header-logoContainer {
+    @include header-logoContainer;
+}
+
+x-header {
+    @include header;
+}
+
+x-header-content {
+    @include header-content;
+}
+
+x-header-logo {
+    @include header-logo;
+}
+
+x-header-logoContainer {
+    @include header-logoContainer;
+}

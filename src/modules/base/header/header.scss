@@ -1,0 +1,90 @@
+
+
+@mixin header {
+    flex-wrap: nowrap;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &.sticky {
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    // any clamp in the header is acting for header only, so can override its display property to allow it to maintain header structure
+    x-clamp, .clamp {
+        display: flex;
+    }
+}
+
+@mixin header-logoContainer {
+    width: 15.63rem;
+    position: static;
+    z-index: 5;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    width: 8rem;
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem; 
+    height: 4rem;    
+}
+
+@mixin header-content {
+    position: static;
+    z-index: 5;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@mixin header-contentItem {
+    margin-left: 3rem;
+    position: relative;
+}
+
+
+
+.header {
+    @include header;
+}
+
+.header-logoContainer {
+    @include header-logoContainer;
+}
+
+.header-content {
+    @include header-content;
+}
+
+.header-contentItem {
+    @include header-contentItem;
+}
+
+x-header {
+    @include header;
+}
+
+x-header-logoContainer {
+    @include header-logoContainer;
+}
+
+x-header-content {
+    @include header-content;
+}
+
+x-header-contentItem {
+    @include header-contentItem;
+}

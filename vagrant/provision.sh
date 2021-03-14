@@ -13,5 +13,5 @@ sudo chmod 777 -R ~/.config
 echo "cd /vagrant/src" >> /home/vagrant/.bashrc
 
 # set hostname, makes console easier to identify
-sudo echo "dashi" > /etc/hostname
-sudo echo "127.0.0.1 dashi" >> /etc/hosts
+sudo echo "bootstrip" > /etc/hostname
+sudo echo "127.0.0.1 bootstrip" >> /etc/hosts

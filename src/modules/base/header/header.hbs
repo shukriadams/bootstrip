@@ -1,0 +1,32 @@
+{{!
+    Simple header bar with a side aligned logo box, this box has a fixed width.
+    Logo box contains an icon and text
+}}
+
+<x-header class="{{#if sticky}}sticky{{/if}} {{#if clamped}}clamped{{/if}}">
+    {{#if clamped}}
+        <x-clamp>
+    {{/if}}
+
+        <x-header-logoContainer>
+            <a href="/">
+                <i class="icon icon-cube"></i>
+                <x-header-logo>
+                    {{title}}
+                </x-header-logo>
+            </a>
+        </x-header-logoContainer>
+
+        <x-header-content>
+            {{#each items}}
+                <x-header-contentItem>
+                    {{text}}
+                </x-header-contentItem>
+            {{/each}}
+        </x-header-content>    
+        
+    {{#if clamped}}
+        </x-clamp>
+    {{/if}}
+
+</x-header>
