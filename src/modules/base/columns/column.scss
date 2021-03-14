@@ -12,7 +12,7 @@
         display : grid;
     }
 
-    &.two {
+    &.--two {
         grid-template-columns: 1fr 1fr;
 
         @media #{$mediaQuery-belowSmall} {
@@ -20,7 +20,7 @@
         }
     }
 
-    &.three {
+    &.--three {
         grid-template-columns: 1fr 1fr 1fr;
     
         @media #{$mediaQuery-belowMedium} {
@@ -28,7 +28,7 @@
         }  
     }
 
-    &.four {
+    &.--four {
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
         @media #{$mediaQuery-belowMedium} {
