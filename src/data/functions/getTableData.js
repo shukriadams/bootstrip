@@ -12,40 +12,23 @@ module.exports = (addModifiers = false)=>{
         return modifiers[current]
         
     }
-
-    return {
-        "columns" : [
-            { "text" : "#" },
-            { "text" : "First!!" },
-            { "text" : "Last" },
-            { "text" : "Handle" }
+    const model = {
+        columns : [
+            { text : '#' },
+            { text : 'First' },
+            { text : 'Last' },
+            { text : 'Handle' }
         ],
-    
-        "rows" : [
-            
-            { "cells" : [
-                { "text" : "1" },
-                { "text" : "Bob22" },
-                { "text" : "Jacob" },
-                { "text" : "Larry" }
-            ], "modifier" : getModifier() },
-    
-            { "cells" : [
-                { "text" : "1" },
-                { "text" : "Bob3" },
-                { "text" : "Jacob" },
-                { "text" : "Larry" }
-            ], "modifier" : getModifier()},
-    
-            { "cells" : [
-                { "text" : "1" },
-                { "text" : "Bodfdb" },
-                { "text" : "Jacob" },
-                { "text" : "Larry" }
-            ], "modifier" : getModifier()}
-    
-        ]
+        rows : []
     }
-    
-    
+
+    for (let i = 0; i < 9 ; i ++)
+        model.rows.push({ cells : [
+            { text : i + 1 },
+            { text : 'Lorem' },
+            { text : 'Ipsum' },
+            { text : 'Something' }
+        ], modifier : getModifier() })
+
+    return model
 }
