@@ -1,0 +1,3 @@
+{
+    "items" : "<%= listModel 10 5 %>"
+}

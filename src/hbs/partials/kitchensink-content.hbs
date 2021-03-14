@@ -19,7 +19,11 @@
 {{/kitchenSinkItem}}
 
 {{#>kitchenSinkItem title="List" description="Lists are ideal for simple collections of data"}}
-    {{>list items=listItems}}
+    {{>list rows=listData.items.rows }}
+{{/kitchenSinkItem}}
+
+{{#>kitchenSinkItem title="List" description="Lists can be compacted for denser data"}}
+    {{>list rows=listData.items.rows modifier="dense" }}
 {{/kitchenSinkItem}}
 
 {{#>kitchenSinkItem title="Table" description="Use tables for more fine-tuned control of data layout"}}

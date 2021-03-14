@@ -10,7 +10,14 @@
     @include card-header;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-        
+
+    .list.dense &,
+    x-list.dense & {
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
     h1, 
     .header1 {
         margin-bottom: 0;
@@ -48,12 +55,29 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
     border-top: 1px solid var(--bootstrip-color-athensGray);
+
+    .list.dense &,
+    x-list.dense & {
+        padding-left: .5rem;
+        padding-right: .5rem;
+        padding-bottom: .25rem;
+        padding-top: .25rem;
+   
+    }
 }
 
 @mixin list-cell {
     padding-right: 1rem;
     padding-right: 15px;
     padding-left: 15px;    
+
+    .list.dense &,
+    x-list.dense & {
+        //padding-right: .5rem;
+        //padding-right: 1px;
+        //padding-left: 1px;    
+    }
+
 
     &.header {
         @include typography-smallHeader;

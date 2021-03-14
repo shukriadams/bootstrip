@@ -1,22 +1,18 @@
-<ul class="list">
+<ul class="list {{modifier}}">
     <li class="list-header">
         <h5 class="uppercase">Header</h5> 
     </li>
 
-    {{#each items}}
+    {{#each rows}}
         <li class="list-row {{#if active}}active{{/if}}">
-            <div class="list-cell">
-                {{text}}
-                <div class="quiet">
-                    This is some help
+            {{#each cells}}
+                <div class="list-cell">
+                    {{this.text}}
+                    <div class="quiet">
+                        {{this.undertext}}
+                    </div>
                 </div>
-            </div>
-            <div class="list-cell">
-                {{text}}
-            </div>
-            <div class="list-cell">
-                {{text}}
-            </div>
+            {{/each}}
         </li>
     {{/each}}
 </ul>
