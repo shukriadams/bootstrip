@@ -13,14 +13,14 @@
     transition: var(--bootstrip-transition-standard);
     color: var(--bootstrip-color-genoa);
     height: 72px;
-    padding-top: 8px;
 
     a {
+        padding-top: 8px;
         color:inherit;
     }
 
     &:hover,
-    &.active {
+    &.--active {
         background-color: var(--bootstrip-color-genoa);
         color: var(--bootstrip-color-white);
        

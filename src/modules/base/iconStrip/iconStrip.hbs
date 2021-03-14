@@ -1,6 +1,6 @@
 <x-iconStrip>
     {{#each items}}
-        <x-iconStrip-item title="{{text}}">
+        <x-iconStrip-item class="{{#if active}}--active{{/if}}" title="{{text}}">
             <a href="#">
                 <i class="icon {{iconClass}}"></i>
                 {{#if text}}

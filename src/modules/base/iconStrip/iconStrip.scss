@@ -8,6 +8,12 @@
     a {
         display: block;
         object-fit: cover;
+        height: 100%;
+    }
+
+    &.--active {
+        cursor: default;
+        pointer-events: none;
     }
 }
 
