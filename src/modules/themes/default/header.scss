@@ -20,8 +20,8 @@
     padding: 0.5rem 1rem;     
     height: 4rem;    
 
-    x-header.clamped &,
-    .header.clamped & {
+    x-header.--clamped &,
+    .header.--clamped & {
         background-color: transparent;
     }
 
