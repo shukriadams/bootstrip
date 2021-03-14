@@ -6,10 +6,10 @@
     font-weight: 400;
     line-height: 1.5;
     color: var(--color-woodsmoke);
-    background-color: var(--color-white);
+    background-color: var(--bootstrip-color-white);
     background-clip: padding-box;
     border: 1px solid var(--color-silverSand);
-    border-radius: var(--layout-radius);
+    border-radius: var(--bootstrip-layout-radius);
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
@@ -63,15 +63,15 @@ input[type=checkbox] {
     @include disabledBehaviour;    
     width: 1em;
     height: 1em;
-    border-radius: var(--layout-radius);
+    border-radius: var(--bootstrip-layout-radius);
     border: 1px solid rgba(var(--color-blackRGB),.25);
-    background-color: var(--color-white);
+    background-color: var(--bootstrip-color-white);
     margin-top: .25em;
 
     &:checked {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
-        background-color: var(--color-blueRibbon);
-        border-color: var(--color-blueRibbon);
+        background-color: var(--bootstrip-color-blueRibbon);
+        border-color: var(--bootstrip-color-blueRibbon);
     }
 }
 
@@ -84,13 +84,13 @@ select {
     font-weight: 400;
     line-height: 1.5;
     color: var(--color-woodsmoke);
-    background-color: var(--color-white);
+    background-color: var(--bootstrip-color-white);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right .75rem center;
     background-size: 16px 12px;
     border: 1px solid var(--color-silverSand);
-    border-radius: var(--layout-radius);
+    border-radius: var(--bootstrip-layout-radius);
 
     &[multiple]{
         padding-right: .75rem;

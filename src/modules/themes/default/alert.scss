@@ -2,17 +2,17 @@
     padding: 1rem 1rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
-    border-radius: var(--layout-radius);
+    border-radius: var(--bootstrip-layout-radius);
 
     &.primary {
-        color: var(--color-congressBlue);
-        background-color: var(--color-onahau);
+        color: var(--bootstrip-color-congressBlue);
+        background-color: var(--bootstrip-color-edgewater);
         border-color: var(--color-frenchPass);
     }
 
     &.success {
         color: var(--color-jewel);
-        background-color: var(--color-edgewater);
+        background-color: var(--bootstrip-color-edgewater);
         border-color: var(--color-edgewaterDark);      
     }
 
@@ -24,8 +24,8 @@
 
     &.warning {
         color: var(--color-antiqueBronze);
-        background-color: var(--color-barleyWhite);
-        border-color: var(--color-butterMilk);  
+        background-color: var(--bootstrip-color-barleyWhite);
+        border-color: var(--bootstrip-color-butterMilk);  
     }
 
     &.dark {

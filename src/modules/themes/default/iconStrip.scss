@@ -8,9 +8,9 @@
 }
 
 @mixin iconStrip-item {
-    border-radius: var(--layout-radius);
-    background-color: var(--color-white);
-    transition: var(--transition-standard);
+    border-radius: var(--bootstrip-layout-radius);
+    background-color: var(--bootstrip-color-white);
+    transition: var(--bootstrip-transition-standard);
     color: var(--color-genoa);
     height: 72px;
     padding-top: 8px;
@@ -22,11 +22,11 @@
     &:hover,
     &.active {
         background-color: var(--color-genoa);
-        color: var(--color-white);
+        color: var(--bootstrip-color-white);
        
         x-iconStrip-text, 
         .iconStrip-text {
-            color: var(--color-white);
+            color: var(--bootstrip-color-white);
         }
     }
 }

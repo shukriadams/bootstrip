@@ -3,17 +3,17 @@ x-card {
     
     &.green {
         background-color: var(--color-genoa);
-        color: var(--color-white);
+        color: var(--bootstrip-color-white);
     }
 
     &.red {
         background-color: var(--color-crownOfThorns);
-        color: var(--color-white);
+        color: var(--bootstrip-color-white);
     }
 
     &.orange {
         background-color: var(--color-corn);
-        color: var(--color-white);
+        color: var(--bootstrip-color-white);
     }
 }
 

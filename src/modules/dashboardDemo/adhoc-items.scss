@@ -1,6 +1,6 @@
 .dashboardDemo-cards {
     background-color: var(--color-athensGray);
-    padding: var(--layout-gutter);
+    padding: var(--bootstrip-layout-gutter);
 }
 
 .dashboardDemo-page {
@@ -13,7 +13,7 @@
 }
 
 .dashboardDemo-pageNavLeft {
-    background-color: var(--color-mirage);
+    background-color: var(--bootstrip-color-mirage);
     max-height: 100vh;
     min-height: 100vh;       
     position: fixed;

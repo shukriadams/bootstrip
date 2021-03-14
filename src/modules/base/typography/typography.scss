@@ -1,5 +1,5 @@
 @mixin baseHeader {
-    font-family: var(--font-headerFace);
+    font-family: var(--bootstrip-font-headerFace);
     margin-top: 0;
     margin-bottom: .5rem;
     font-weight: 500;
@@ -7,7 +7,7 @@
 }
 
 @mixin baseDisplay {
-    font-family: var(--font-headerFace);
+    font-family: var(--bootstrip-font-headerFace);
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 1rem;

@@ -8,19 +8,19 @@
     border: 1px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
-    border-radius: var(--layout-radius);
-    transition: var(--transition-standard);
-    color: var(--color-white);
-    background-color: var(--color-blueRibbon);
-    border-color: var(--color-blueRibbon);    
+    border-radius: var(--bootstrip-layout-radius);
+    transition: var(--bootstrip-transition-standard);
+    color: var(--bootstrip-color-white);
+    background-color: var(--bootstrip-color-blueRibbon);
+    border-color: var(--bootstrip-color-blueRibbon);    
 
     &:hover {
-        background-color: var(--color-congressBlue);
-        border-color: var(--color-congressBlue);
+        background-color: var(--bootstrip-color-congressBlue);
+        border-color: var(--bootstrip-color-congressBlue);
     }
 
     &.success {
-        color: var(--color-white);
+        color: var(--bootstrip-color-white);
         background-color: var(--color-genoa);
         border-color: var(--color-genoa);
 
@@ -31,7 +31,7 @@
     }
 
     &.danger {
-        color: var(--color-white);
+        color: var(--bootstrip-color-white);
         background-color: var(--color-punch);
         border-color: var(--color-punch);
 

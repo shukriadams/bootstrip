@@ -7,7 +7,7 @@
     --bs-table-hover-color: var(--color-gunPowder);
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
     // need to reapply body lineheight here, as it gets overwritten by agent default css
-    line-height: var(--layout-lineheight);
+    line-height: var(--bootstrip-layout-lineheight);
     border-color: var(--color-silverSand);
     color: var(--color-gunPowder);    
 
@@ -33,11 +33,11 @@
 
 @mixin table-row {
     &.success {
-        background-color: var(--color-edgewater);
+        background-color: var(--bootstrip-color-edgewater);
     }
 
     &.warning {
-        background-color: var(--color-barleyWhite);
+        background-color: var(--bootstrip-color-barleyWhite);
     }
     
     &.danger {

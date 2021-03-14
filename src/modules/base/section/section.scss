@@ -1,6 +1,6 @@
 // sections are to divide a page up into blocks
 @mixin section {
-    padding: var(--layout-gutter);
+    padding: var(--bootstrip-layout-gutter);
     display: block;
 }
 

@@ -8,7 +8,7 @@
 x-demo-description {
     display: block;
     padding: 1rem;
-    border-radius: var(--layout-radius);
+    border-radius: var(--bootstrip-layout-radius);
     background-color: var(--color-iron);
     border: 2px dotted var(--color-paleSky);
     margin-top: 1rem;
@@ -28,7 +28,7 @@ x-demo-item {
     h2 {
         margin: 0;
         background-color: var(--color-punch);
-        color: var(--color-white);
+        color: var(--bootstrip-color-white);
         display: inline-block;
         padding: 12px;
     }

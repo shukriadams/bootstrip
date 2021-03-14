@@ -1,7 +1,7 @@
 @mixin card {
-    background-color: var(--color-white);
+    background-color: var(--bootstrip-color-white);
     border: 1px solid rgba(var(--color-blackRGB), .125);
-    border-radius: var(--layout-radius);
+    border-radius: var(--bootstrip-layout-radius);
 }
 
 @mixin card-pad {

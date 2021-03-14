@@ -3,9 +3,9 @@
 // divides layout into 1 column. First block child will become cells, divs work fine for this
 @mixin columns {
     display: grid;
-    column-gap: var(--layout-gutter);
-    row-gap: var(--layout-gutter);
-    margin-bottom:var(--layout-gutter);
+    column-gap: var(--bootstrip-layout-gutter);
+    row-gap: var(--bootstrip-layout-gutter);
+    margin-bottom:var(--bootstrip-layout-gutter);
     
     & > * {
         // immediate children of columns should always follor grid layout rules

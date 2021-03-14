@@ -1,9 +1,9 @@
 @mixin pager-anchor {
-    color: var(--color-blueRibbon);
+    color: var(--bootstrip-color-blueRibbon);
     padding: .375rem .75rem;
-    background-color: var(--color-white);
+    background-color: var(--bootstrip-color-white);
     border: 1px solid #dee2e6;
-    transition: var(--transition-standard);
+    transition: var(--bootstrip-transition-standard);
     
     &:hover {
         z-index: 2;
@@ -12,9 +12,9 @@
     }
 
     &.active {
-        color: var(--color-white);
-        background-color: var(--color-blueRibbon);
-        border-color: var(--color-blueRibbon);
+        color: var(--bootstrip-color-white);
+        background-color: var(--bootstrip-color-blueRibbon);
+        border-color: var(--bootstrip-color-blueRibbon);
     }
 }
 

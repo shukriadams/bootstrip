@@ -23,8 +23,8 @@
 }
 
 @mixin fixedWidthHeader-logoContainer {
-    background-color: var(--color-oxfordblue);
-    color: var(--color-white);
+    background-color: var(--bootstrip-color-oxfordblue);
+    color: var(--bootstrip-color-white);
     width: 15.63rem;
     position: static;
     z-index: 5;
