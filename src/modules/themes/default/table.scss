@@ -1,24 +1,24 @@
 @mixin table {
     --bs-table-bg: transparent;
-    --bs-table-striped-color: var(--color-gunPowder);
+    --bs-table-striped-color: var(--bootstrip-color-gunPowder);
     --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-    --bs-table-active-color: var(--color-gunPowder);
+    --bs-table-active-color: var(--bootstrip-color-gunPowder);
     --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-    --bs-table-hover-color: var(--color-gunPowder);
+    --bs-table-hover-color: var(--bootstrip-color-gunPowder);
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
     // need to reapply body lineheight here, as it gets overwritten by agent default css
     line-height: var(--bootstrip-layout-lineheight);
-    border-color: var(--color-silverSand);
-    color: var(--color-gunPowder);    
+    border-color: var(--bootstrip-color-silverSand);
+    color: var(--bootstrip-color-gunPowder);    
 
     // gives header its bottom border color
     & > :not(:last-child) >:last-child > * {
-        border-bottom-color: var(--color-gunPowder);
+        border-bottom-color: var(--bootstrip-color-gunPowder);
     }
 
     & >:not(caption) > * > * {
         // default bottom color of all table cells
-        border-bottom-color: var(--color-silverSand);
+        border-bottom-color: var(--bootstrip-color-silverSand);
         padding: .5rem .5rem;
         background-color: var(--bs-table-bg);
         border-bottom-width: 1px;
@@ -41,7 +41,7 @@
     }
     
     &.danger {
-        background-color: var(--color-cherub);
+        background-color: var(--bootstrip-color-cherub);
     }
 }
 

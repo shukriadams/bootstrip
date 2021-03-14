@@ -7,31 +7,31 @@
     &.primary {
         color: var(--bootstrip-color-congressBlue);
         background-color: var(--bootstrip-color-edgewater);
-        border-color: var(--color-frenchPass);
+        border-color: var(--bootstrip-color-frenchPass);
     }
 
     &.success {
-        color: var(--color-jewel);
+        color: var(--bootstrip-color-jewel);
         background-color: var(--bootstrip-color-edgewater);
-        border-color: var(--color-edgewaterDark);      
+        border-color: var(--bootstrip-color-edgewaterDark);      
     }
 
     &.danger {
-        color: var(--color-crownOfThorns);
-        background-color: var(--color-cherub);
-        border-color: var(--color-azalea);   
+        color: var(--bootstrip-color-crownOfThorns);
+        background-color: var(--bootstrip-color-cherub);
+        border-color: var(--bootstrip-color-azalea);   
     }
 
     &.warning {
-        color: var(--color-antiqueBronze);
+        color: var(--bootstrip-color-antiqueBronze);
         background-color: var(--bootstrip-color-barleyWhite);
         border-color: var(--bootstrip-color-butterMilk);  
     }
 
     &.dark {
-        color: var(--color-woodsmoke);
-        background-color: var(--color-iron);
-        border-color: var(--color-silverSand);
+        color: var(--bootstrip-color-woodsmoke);
+        background-color: var(--bootstrip-color-iron);
+        border-color: var(--bootstrip-color-silverSand);
     }
 }
 

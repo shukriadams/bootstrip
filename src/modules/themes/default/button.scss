@@ -21,44 +21,44 @@
 
     &.success {
         color: var(--bootstrip-color-white);
-        background-color: var(--color-genoa);
-        border-color: var(--color-genoa);
+        background-color: var(--bootstrip-color-genoa);
+        border-color: var(--bootstrip-color-genoa);
 
         &:hover {
-            background-color: var(--color-jewel);
-            border-color: var(--color-jewel);
+            background-color: var(--bootstrip-color-jewel);
+            border-color: var(--bootstrip-color-jewel);
         }
     }
 
     &.danger {
         color: var(--bootstrip-color-white);
-        background-color: var(--color-punch);
-        border-color: var(--color-punch);
+        background-color: var(--bootstrip-color-punch);
+        border-color: var(--bootstrip-color-punch);
 
         &:hover {
-            background-color: var(--color-crownOfThorns);
-            border-color: var(--color-crownOfThorns);
+            background-color: var(--bootstrip-color-crownOfThorns);
+            border-color: var(--bootstrip-color-crownOfThorns);
         }
     }
 
     &.warning {
-        color: var(--color-black);
-        background-color: var(--color-amber);
-        border-color: var(--color-amber);
+        color: var(--bootstrip-color-black);
+        background-color: var(--bootstrip-color-amber);
+        border-color: var(--bootstrip-color-amber);
         
         &:hover {
-            background-color: var(--color-corn);
-            border-color: var(--color-corn);
+            background-color: var(--bootstrip-color-corn);
+            border-color: var(--bootstrip-color-corn);
         }        
     }
 
     &.dark {
-        background-color: var(--color-woodsmoke);
-        border-color: var(--color-woodsmoke);
+        background-color: var(--bootstrip-color-woodsmoke);
+        border-color: var(--bootstrip-color-woodsmoke);
         
         &:hover {
-            background-color: var(--color-gunPowder);
-            border-color: var(--color-woodsmoke);
+            background-color: var(--bootstrip-color-gunPowder);
+            border-color: var(--bootstrip-color-woodsmoke);
         }        
     }
 

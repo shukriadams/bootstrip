@@ -38,7 +38,7 @@
 }
 
 @mixin fixedWidthHeader-content {
-    background-color: var(--color-paleSky);
+    background-color: var(--bootstrip-color-paleSky);
     padding: 0.5rem 1rem;     
     position: static;
     z-index: 5;

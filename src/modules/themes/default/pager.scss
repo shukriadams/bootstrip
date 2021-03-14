@@ -7,8 +7,8 @@
     
     &:hover {
         z-index: 2;
-        background-color: var(--color-athensGray);
-        border-color: var(--color-athensGray);
+        background-color: var(--bootstrip-color-athensGray);
+        border-color: var(--bootstrip-color-athensGray);
     }
 
     &.active {

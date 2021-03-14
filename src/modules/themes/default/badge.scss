@@ -8,20 +8,20 @@
     border-radius: 50rem;
 
     &.success {
-        background-color: var(--color-genoa);
+        background-color: var(--bootstrip-color-genoa);
     }
 
     &.danger {
-        background-color: var(--color-punch);
+        background-color: var(--bootstrip-color-punch);
     }
 
     &.warning {
-        color: var(--color-black);
-        background-color: var(--color-amber);
+        color: var(--bootstrip-color-black);
+        background-color: var(--bootstrip-color-amber);
     }
 
     &.dark {
-        background-color: var(--color-woodsmoke);
+        background-color: var(--bootstrip-color-woodsmoke);
     }
 }
 

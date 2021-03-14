@@ -9,8 +9,8 @@ x-demo-description {
     display: block;
     padding: 1rem;
     border-radius: var(--bootstrip-layout-radius);
-    background-color: var(--color-iron);
-    border: 2px dotted var(--color-paleSky);
+    background-color: var(--bootstrip-color-iron);
+    border: 2px dotted var(--bootstrip-color-paleSky);
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -27,13 +27,13 @@ x-demo-item {
 .demo-kitchenSinkText {
     h2 {
         margin: 0;
-        background-color: var(--color-punch);
+        background-color: var(--bootstrip-color-punch);
         color: var(--bootstrip-color-white);
         display: inline-block;
         padding: 12px;
     }
 
     margin-bottom: 2rem;
-    border-bottom: 1px var(--color-punch) dashed;
-    color: var(--color-punch);
+    border-bottom: 1px var(--bootstrip-color-punch) dashed;
+    color: var(--bootstrip-color-punch);
 }

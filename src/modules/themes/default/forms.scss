@@ -5,10 +5,10 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--color-woodsmoke);
+    color: var(--bootstrip-color-woodsmoke);
     background-color: var(--bootstrip-color-white);
     background-clip: padding-box;
-    border: 1px solid var(--color-silverSand);
+    border: 1px solid var(--bootstrip-color-silverSand);
     border-radius: var(--bootstrip-layout-radius);
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -17,7 +17,7 @@ label {
     margin-bottom: .5rem;
 
     &[disabled] {
-        color: var(--color-silverSand);     
+        color: var(--bootstrip-color-silverSand);     
     }      
 }
 
@@ -64,7 +64,7 @@ input[type=checkbox] {
     width: 1em;
     height: 1em;
     border-radius: var(--bootstrip-layout-radius);
-    border: 1px solid rgba(var(--color-blackRGB),.25);
+    border: 1px solid rgba(var(--bootstrip-color-blackRGB),.25);
     background-color: var(--bootstrip-color-white);
     margin-top: .25em;
 
@@ -83,13 +83,13 @@ select {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--color-woodsmoke);
+    color: var(--bootstrip-color-woodsmoke);
     background-color: var(--bootstrip-color-white);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right .75rem center;
     background-size: 16px 12px;
-    border: 1px solid var(--color-silverSand);
+    border: 1px solid var(--bootstrip-color-silverSand);
     border-radius: var(--bootstrip-layout-radius);
 
     &[multiple]{

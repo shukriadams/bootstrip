@@ -1,6 +1,6 @@
 @mixin card {
     background-color: var(--bootstrip-color-white);
-    border: 1px solid rgba(var(--color-blackRGB), .125);
+    border: 1px solid rgba(var(--bootstrip-color-blackRGB), .125);
     border-radius: var(--bootstrip-layout-radius);
 }
 
@@ -21,7 +21,7 @@
     border-radius: 0.125rem 0.125rem 0 0;
     margin-bottom: 0;
     background-color: transparent;
-    border-bottom: 0 solid var(--color-silverSand);
+    border-bottom: 0 solid var(--bootstrip-color-silverSand);
 }
 
 .card {
