@@ -3,32 +3,29 @@
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: var(--bootstrip-layout-radius);
+    color: var(--bootstrip-color-congressBlue);
+    background-color: var(--bootstrip-color-frenchPass);
+    border-color: var(--bootstrip-color-frenchPass);
 
-    &.primary {
-        color: var(--bootstrip-color-congressBlue);
-        background-color: var(--bootstrip-color-edgewater);
-        border-color: var(--bootstrip-color-frenchPass);
-    }
-
-    &.success {
+    &.--success {
         color: var(--bootstrip-color-jewel);
         background-color: var(--bootstrip-color-edgewater);
         border-color: var(--bootstrip-color-edgewaterDark);      
     }
 
-    &.danger {
+    &.--danger {
         color: var(--bootstrip-color-crownOfThorns);
         background-color: var(--bootstrip-color-cherub);
         border-color: var(--bootstrip-color-azalea);   
     }
 
-    &.warning {
+    &.--warning {
         color: var(--bootstrip-color-antiqueBronze);
         background-color: var(--bootstrip-color-barleyWhite);
         border-color: var(--bootstrip-color-butterMilk);  
     }
 
-    &.dark {
+    &.--dark {
         color: var(--bootstrip-color-woodsmoke);
         background-color: var(--bootstrip-color-iron);
         border-color: var(--bootstrip-color-silverSand);
