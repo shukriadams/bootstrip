@@ -7,8 +7,10 @@
 @mixin card-pad {
     padding: 0 1rem;
 
-    x-card.stroke &,
-    .card.stroke & {
+    // stroke must be added to a card when it contains an x-card-stroke element. This is only for creating extra
+    // space against the remaining card content 
+    x-card.--stroke &,
+    .card.--stroke & {
         margin-left: var(--bootstrip-card-strokeWidth);
     }
 
@@ -21,19 +23,20 @@
     }
 }
 
+// strokes are solid colored bars along the lateral edge of a card
 @mixin card-stroke {
     width: var(--bootstrip-card-strokeWidth);
     background-color: var(--bootstrip-color-blueRibbon);
     
-    &.success {
+    &.--success {
         background-color: var(--bootstrip-color-genoa);
     }
 
-    &.danger {
+    &.--danger {
         background-color: var(--bootstrip-color-punch);
     }
 
-    &.warning {
+    &.--warning {
         background-color: var(--bootstrip-color-amber);
     }
 }

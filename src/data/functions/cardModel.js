@@ -13,15 +13,15 @@ module.exports = (content = '*', count = 1)=>{
         model.image = 'http://placehold.it/1280x720'
 
     if (content.includes('align=right'))
-        model.modifiers += 'right '
+        model.modifiers += '--right '
     
     if (content.includes('stroke')){
         model.stroke = 'warning'
-        model.modifiers += ' stroke '
+        model.modifiers += ' --stroke '
     }
 
     if (content.includes('align=center'))
-        model.modifiers += 'center '
+        model.modifiers += ' --center '
 
     for (let i = 0 ; i < count ; i ++){
         const item = { }
