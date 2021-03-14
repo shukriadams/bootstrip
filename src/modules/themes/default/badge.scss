@@ -7,20 +7,20 @@
     line-height: 1;
     border-radius: 50rem;
 
-    &.success {
+    &.--success {
         background-color: var(--bootstrip-color-genoa);
     }
 
-    &.danger {
+    &.--danger {
         background-color: var(--bootstrip-color-punch);
     }
 
-    &.warning {
+    &.--warning {
         color: var(--bootstrip-color-black);
         background-color: var(--bootstrip-color-amber);
     }
 
-    &.dark {
+    &.--dark {
         background-color: var(--bootstrip-color-woodsmoke);
     }
 }

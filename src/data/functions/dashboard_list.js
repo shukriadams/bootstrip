@@ -24,7 +24,7 @@ module.exports = (rows, cells)=>{
                     sample(['Automative', 'Hospitality', 'Media', 'Entertainment', 'Aggritech', 'Pharma'])
 
             if (cell_counter === 2)
-                cell_model.badgeType = sample(['default', 'warning', 'success', 'danger'])
+                cell_model.badgeType = sample(['--default', '--warning', '--success', '--danger'])
 
             row_model.cells.push(cell_model)
         }
