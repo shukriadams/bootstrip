@@ -22,6 +22,11 @@
     {{>list rows=listData.items.rows }}
 {{/kitchenSinkItem}}
 
+{{#>kitchenSinkItem title="List with stripes" }}
+    {{>list modifier="--striped" rows=listData.items.rows }}
+{{/kitchenSinkItem}}
+
+
 {{#>kitchenSinkItem title="List" description="Lists can be compacted for denser data"}}
     {{>list rows=listData.items.rows modifier="dense" }}
 {{/kitchenSinkItem}}

@@ -62,8 +62,15 @@
         padding-right: .5rem;
         padding-bottom: .25rem;
         padding-top: .25rem;
-   
     }
+
+    .list.--striped &,
+    x-list.--striped & {
+        &:nth-of-type(odd){
+            background-color: var(--bootstrip-color-iron);
+        }
+    }
+
 }
 
 @mixin list-cell {
