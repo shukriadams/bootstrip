@@ -14,6 +14,13 @@
     &.--center {
         text-align: center;
     }
+
+    &.--top {
+        x-card-pad,
+        .card-pad {
+            flex: unset;
+        }
+    }
 }
 
 @mixin card-stroke {
