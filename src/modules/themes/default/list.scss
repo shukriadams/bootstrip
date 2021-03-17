@@ -8,8 +8,8 @@
 
 @mixin list-header {
     @include card-header;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
     .list.--dense &,
     x-list.--dense & {
@@ -75,8 +75,7 @@
 
 @mixin list-cell {
     padding-right: 1rem;
-    padding-right: 15px;
-    padding-left: 15px;    
+    padding-right: 16px;
 
     &.--header {
         @include typography-smallHeader;
