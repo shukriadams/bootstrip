@@ -1,0 +1,17 @@
+@mixin cover {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+x-cover {
+    @include cover;
+}
+
+.cover {
+    @include cover;
+}
