@@ -2,6 +2,7 @@
     display: flex;
     padding-left: 0;
     list-style: none;
+    flex-wrap: wrap; // allow pager to wrap to next line if parent isn't large enough for single row
 }
 
 @mixin pager-anchor {
