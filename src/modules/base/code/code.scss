@@ -1,4 +1,5 @@
 .code {
     display: block;
     white-space: pre-wrap;
+    word-break: break-all; // required for linewrapping on line that overflow
 }
