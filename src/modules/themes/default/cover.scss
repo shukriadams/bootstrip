@@ -1,0 +1,15 @@
+@mixin cover {
+    height: 200px;
+    &.--rounded {
+        border-radius: var(--bootstrip-layout-radius);
+    }
+}
+
+x-cover {
+    @include cover;
+}
+
+.cover {
+    @include cover;
+}
+

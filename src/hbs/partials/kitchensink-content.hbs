@@ -14,6 +14,10 @@
     {{>image}}
 {{/kitchenSinkItem}}
 
+{{#>kitchenSinkItem title="Cover"}}
+    {{>cover}}
+{{/kitchenSinkItem}}
+
 {{#>kitchenSinkItem title="Figure"}}
     {{>figure caption="my caption" src="http://placehold.it/1280x720"}}
 {{/kitchenSinkItem}}
@@ -24,6 +28,10 @@
 
 {{#>kitchenSinkItem title="List with stripes" }}
     {{>list modifier="--striped" rows=listData.items.rows }}
+{{/kitchenSinkItem}}
+
+{{#>kitchenSinkItem title="List with no width constrants" }}
+    {{>list modifier="--freewidth" rows=listData.items.rows }}
 {{/kitchenSinkItem}}
 
 

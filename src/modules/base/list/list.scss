@@ -5,7 +5,16 @@
     display: grid; // grid allows column+cell layout to preserve layout with greater ease
     overflow-x: auto; // allow horizontal scrolling on overflow, this will happen when list contains many columns
     list-style: none;
-    padding-left: 0;    
+    padding-left: 0;
+
+    // remove even-width constrant from cells
+    &.--freewidth {
+        x-list-cell,
+        .list-cell {
+            flex-basis: unset;
+            flex-grow: unset;
+        }
+    }
 }
 
 @mixin list-row {

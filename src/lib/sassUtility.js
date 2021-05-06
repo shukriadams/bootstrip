@@ -2,7 +2,6 @@ let chokidar = require('chokidar'),
     fs = require('fs-extra'),
     fileconcat = require('fileconcat'),
     path = require('path'),
-    sass = require('node-sass'),
     process = require('process'),
     cwd = process.cwd(),
     exec = require('madscience-node-exec'),
@@ -41,7 +40,7 @@ module.exports = {
     },
 
     async renderAll(){
-        await runner({
+        await runner.renderAll({
             scssPath : './modules/**/*.scss',
             cssOutFolder : path.join(cwd, '.tmp')
         })
@@ -114,29 +113,8 @@ module.exports = {
      * Compiles a Sass file to Css. CSS is written to ./tmp/css folder.
      */
     async compileSassFile(file){
-        return new Promise((resolve, reject)=>{
-
-            try {
-                sass.render({
-                    file: file,
-                    sourceComments: true
-                }, (err, result)=>{
-                    if (err){
-                        console.log(err)
-                        return resolve(err)
-                    }
-
-                    const outfile = this.mapSassToCss(file)
-                    fs.ensureDirSync(path.dirname(outfile))
-                    fs.writeFileSync(outfile, result.css)
-                    console.log(`compiled ${outfile}`)
-                    resolve()
-            
-                })
-            }catch(ex){
-                reject(ex)
-            }
-        })
+        const outfile = this.mapSassToCss(file)
+        await runner.renderSingle(file, outfile)
     }
 
 }

@@ -2,7 +2,7 @@
 
 @mixin button {
     @include focusBehaviour;
-    margin: .25rem .125rem;
+    margin: .25rem 0;
     font-weight: 400;
     line-height: 1.5;
     border: 1px solid transparent;
