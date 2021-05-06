@@ -2,7 +2,7 @@
 set -e 
 
 # write current tag+commit hash to data file so this can be embedded into headers
-writeHash.sh
+sh ./writeHash.sh
 
 # build the stuff
 docker run -v $(pwd):/tmp/bootstrip shukriadams/node12build:0.0.2 sh -c "cd /tmp/bootstrip/src && yarn && npm run build"
