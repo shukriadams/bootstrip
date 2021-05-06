@@ -2059,14 +2059,16 @@ node-releases@^1.1.70:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
   integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
-"node-sass-runner@https://github.com/shukriadams/node-sass-runner.git#0.0.5":
-  version "0.0.2"
-  resolved "https://github.com/shukriadams/node-sass-runner.git#4cea872a3b5244c64ec856112dce3c84ab52d910"
+"node-sass-runner@https://github.com/shukriadams/node-sass-runner.git#1.0.0":
+  version "1.0.0"
+  resolved "https://github.com/shukriadams/node-sass-runner.git#ca11235615b2a53aa4467e8fcd0f6168d522fa6e"
   dependencies:
+    autoprefixer "10.2.5"
     fs-extra "8.0.1"
     glob "5.0.15"
     mkdirp "0.5.1"
     node-sass "4.12.0"
+    postcss "8.2.8"
 
 node-sass@4.12.0:
   version "4.12.0"
