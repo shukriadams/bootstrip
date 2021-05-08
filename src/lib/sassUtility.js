@@ -41,11 +41,12 @@ module.exports = {
 
     async renderAll(){
         await runner.renderAll({
-            scssPath : './modules/**/*.scss',
-            cssOutFolder : path.join(cwd, '.tmp')
+            scss : './modules/**/*.scss',
+            css : path.join(cwd, '.tmp')
         })
-        
+
         await this.concatenate()
+
     },
 
 
