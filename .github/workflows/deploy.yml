@@ -19,4 +19,4 @@ jobs:
             PASSWORD: ${{ secrets.PASSWORD }}
             CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }} 
             CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
-            CLOUDFLARE_APP: ${{ secrets.CLOUDFLARE_APP }}
+            CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
