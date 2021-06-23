@@ -3,7 +3,7 @@
     Logo box contains an icon and text
 }}
 
-<x-header class="{{#if sticky}}--sticky{{/if}} {{#if clamped}}--clamped{{/if}}">
+<x-header class="{{#if sticky}}--sticky{{/if}} {{#if clamped}}--clamped{{/if}} {{#if collapse}}--collapse{{/if}}">
     {{#if clamped}}
         <x-clamp>
     {{/if}}
@@ -28,15 +28,19 @@
                 {{#eq type "field"}}
                     <x-header-contentItem>
                         <form>
-                            <input type="text" id="myemail" placeholder="{{../text}}">
+                            <input class="" type="text" id="myemail" placeholder="{{../text}}">
                             <i class="icon icon-search"></i>
                         </form>
                     </x-header-contentItem>
                 {{/eq}}
-
             {{/each}}
-
         </x-header-content>    
+
+        {{#if items}}
+            <x-header-toggle>
+                <i class="icon icon-menu"></i>
+            </x-header-toggle
+        {{/if}}
         
     {{#if clamped}}
         </x-clamp>
