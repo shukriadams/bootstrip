@@ -19,10 +19,23 @@
 
         <x-header-content>
             {{#each items}}
-                <x-header-contentItem>
-                    {{text}}
-                </x-header-contentItem>
+                {{#eq type "link"}}
+                    <x-header-contentItem>
+                        <a href="#">{{../text}}</a>
+                    </x-header-contentItem>
+                {{/eq}}
+
+                {{#eq type "field"}}
+                    <x-header-contentItem>
+                        <form>
+                            <input type="text" id="myemail" placeholder="{{../text}}">
+                            <i class="icon icon-search"></i>
+                        </form>
+                    </x-header-contentItem>
+                {{/eq}}
+
             {{/each}}
+
         </x-header-content>    
         
     {{#if clamped}}

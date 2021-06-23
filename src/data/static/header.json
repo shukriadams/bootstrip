@@ -1,0 +1,6 @@
+{
+    "items" : [
+        { "type" : "field", "text" : "search" },
+        { "type" : "link", "text" : "Link1" }
+    ]
+}

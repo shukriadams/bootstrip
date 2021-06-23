@@ -1,5 +1,10 @@
 @mixin header {
     background-color: var(--bootstrip-color-oxfordblue);
+
+    // from elements inside header must not bring their spacing with them
+    form {
+        margin-bottom: 0;
+    }
 }
 
 @mixin header-logoContainer {
@@ -23,7 +28,20 @@
     .header.--clamped & {
         background-color: transparent;
     }
+}
 
+@mixin header-contentItem {
+    .icon{
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        right: var(--bootstrip-layout-gutter);
+        cursor: pointer;
+    }
+
+    a {
+        color: var(--bootstrip-color-white);
+    }
 }
 
 @mixin header-logo {
@@ -60,4 +78,12 @@ x-header-logo {
 
 x-header-logoContainer {
     @include header-logoContainer;
+}
+
+.header-contentItem {
+    @include header-contentItem;
+}
+
+x-header-contentItem {
+    @include header-contentItem;
 }

@@ -45,6 +45,7 @@
     z-index: 5;
     flex-basis: 0;
     flex-grow: 1;
+    flex-direction: row-reverse;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -54,8 +55,6 @@
     margin-left: 3rem;
     position: relative;
 }
-
-
 
 .header {
     @include header;
