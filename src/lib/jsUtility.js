@@ -39,6 +39,7 @@ module.exports = {
     async bundle(){
         const fsUtils = require('madscience-fsUtils'),
             bundle = await fsUtils.bundle('./modules/base/**/*.js', './web/js/bootstrip.js')
+            
         console.log('Bundled ', bundle)
     }
 }

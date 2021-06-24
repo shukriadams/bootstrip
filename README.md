@@ -4,10 +4,9 @@
 
 A frontend component framework, based on a heavily stripped-down version of Bootstrap 5, with a strong emphasis on minimal markup.
 
-## Credits
+## Build
 
-- [Bootstrap 5 (CSS/HTML)](https://github.com/twbs/bootstrap)
-- [Material Design (Icons)](https://material.io) 
+    - npm run build
 
 ## Run locally
 
@@ -22,3 +21,7 @@ A frontend component framework, based on a heavily stripped-down version of Boot
 
     - view in browser @ http://localhost:8020
 
+## Credits
+
+- [Bootstrap 5 (CSS/HTML)](https://github.com/twbs/bootstrap)
+- [Material Design (Icons)](https://material.io) 
