@@ -28,7 +28,7 @@ module.exports = {
                 await this.bundle()
             })
 
-        await this.bundle()
+        await this.bundleAll()
     },
 
     /**
@@ -36,11 +36,19 @@ module.exports = {
      * find : glob string
      * output : path for output file
      */
-    async bundle(){
-        const fsUtils = require('madscience-fsUtils')
+    async bundleAll(){
+        const webBuildUtils = require('madscience-webbuildutils'),
+            headerUtil = require('./headerUtil'),
+            header = await headerUtil.generateHeader()
+
         await fs.ensureDir('./web/js')
-        const bundle = await fsUtils.bundle('./modules/base/**/*.js', './web/js/bootstrip.js')
-            
-        console.log('Bundled ', bundle)
+
+        const bundledFiles = await webBuildUtils.bundle('./modules/base/**/*.js', './web/js/bootstrip.js')
+        await webBuildUtils.minifyJS(path.join(cwd, 'web/js/bootstrip.js'), path.join(cwd, 'web/js/bootstrip.min.js'))
+        await webBuildUtils.bannerize(path.join(cwd, 'web/js/bootstrip.js'), header)
+        await webBuildUtils.bannerize(path.join(cwd, 'web/js/bootstrip.min.js'), header)
+
+        console.log('Bundled ', bundledFiles)
     }
+
 }

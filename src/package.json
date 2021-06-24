@@ -12,13 +12,13 @@
         "fs-extra": "6.0.1",
         "webfonts-generator": "0.4.0",
         "lodash.sample": "4.2.1",
-        "fileconcat": "2.0.1",
         "chokidar": "2.1.5",
         "express": "4.16.3",
         "handlebars-layouts": "3.1.4",
+        "madscience-webbuildutils": "https://github.com/Mad-Science-Incorporated/webBuildUtils.git#0.0.1",
         "madscience-fsUtils": "https://github.com/shukriadams/node-fsUtils.git#0.0.12",
         "madscience-node-exec": "https://github.com/shukriadams/node-exec.git#0.0.7",
-        "node-sass-runner": "https://github.com/shukriadams/node-sass-runner.git#1.0.0",
+        "node-sass-runner": "https://github.com/shukriadams/node-sass-runner.git#1.0.1",
         "madscience-handlebarsloader": "https://github.com/shukriadams/madscience-handlebarsloader.git#0.0.1",
         "spectr": "https://github.com/shukriadams/spectr.git#0.0.6"
     }

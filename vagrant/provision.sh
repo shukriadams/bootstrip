@@ -7,7 +7,7 @@ sudo apt install docker-compose -y
 sudo usermod -aG docker vagrant
 
 sudo apt-get install git -y
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
 sudo npm install yarn -g

@@ -9,6 +9,7 @@
     await handlebarsUtility.renderAll()
     await sassUtility.renderAll()
     await iconsUtility.renderAll()
-    await jsUtility.bundle()
+    await jsUtility.bundleAll()
     await fs.copy('./static', './web')
+    
 })()
