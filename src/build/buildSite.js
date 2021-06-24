@@ -5,6 +5,7 @@
         iconsUtility = require('./../lib/iconsUtility'),
         jsUtility = require('./../lib/jsUtility')
 
+    await fs.remove('./web')
     await handlebarsUtility.renderAll()
     await sassUtility.renderAll()
     await iconsUtility.renderAll()
