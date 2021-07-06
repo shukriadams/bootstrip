@@ -1,4 +1,4 @@
-
+@import './../sass_variables.scss';
 
 @mixin header {
     flex-wrap: nowrap;
@@ -45,46 +45,59 @@
     z-index: 5;
     flex-basis: 0;
     flex-grow: 1;
+    flex-direction: row-reverse;
     max-width: 100%;
     display: flex;
     align-items: center;
+
+    @media #{$mediaQuery-belowSmall} {
+        position: absolute;
+        display: none;
+        left: 0;
+        right: 0;        
+
+        x-header.--open &,
+        .header.--open & {
+            display: block;
+        }
+    }
+}
+
+@mixin header-toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+
+    @media #{$mediaQuery-belowSmall} {
+        display: block;
+    }
 }
 
 @mixin header-contentItem {
-    margin-left: 3rem;
     position: relative;
 }
 
-
-
+x-header,
 .header {
     @include header;
 }
 
+x-header-logoContainer,
 .header-logoContainer {
     @include header-logoContainer;
 }
 
+x-header-content,
 .header-content {
     @include header-content;
 }
 
+x-header-contentItem,
 .header-contentItem {
     @include header-contentItem;
 }
 
-x-header {
-    @include header;
-}
-
-x-header-logoContainer {
-    @include header-logoContainer;
-}
-
-x-header-content {
-    @include header-content;
-}
-
-x-header-contentItem {
-    @include header-contentItem;
+x-header-toggle,
+.header-toggle {
+    @include header-toggle;
 }

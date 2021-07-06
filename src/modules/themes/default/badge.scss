@@ -6,6 +6,9 @@
     font-weight: 700;
     line-height: 1;
     border-radius: 50rem;
+    // bottom and right marging required if badges rendered on wrapping lines, keeps them apart
+    margin-bottom: 4px;
+    margin-right: 4px;
 
     &.--success {
         background-color: var(--bootstrip-color-genoa);

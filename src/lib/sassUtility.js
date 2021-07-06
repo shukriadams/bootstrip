@@ -1,10 +1,8 @@
 let chokidar = require('chokidar'),
     fs = require('fs-extra'),
-    fileconcat = require('fileconcat'),
     path = require('path'),
     process = require('process'),
     cwd = process.cwd(),
-    exec = require('madscience-node-exec'),
     runner = require('node-sass-runner'),
     _triggerFile = null
 
@@ -33,32 +31,37 @@ module.exports = {
             .on('unlink', async file =>{
                 const outfile = this.mapSassToCss(file)
                 await fs.remove(outfile)
-                await this.concatenate()
+                await this.bundleAll()
             })
 
         await this.renderAll()
     },
 
     async renderAll(){
+        const webBuildUtils = require('madscience-webbuildutils'),
+            headerUtil = require('./headerUtil')
+
         await runner.renderAll({
-            scssPath : './modules/**/*.scss',
-            cssOutFolder : path.join(cwd, '.tmp')
-        })
-        
-        await this.concatenate()
-    },
-
-
-    async concatFiles(infiles, outFile){
-        return new Promise((resolve, reject)=>{
-            try {
-                fileconcat(infiles, outFile).then(() => {
-                    resolve()
-                }) 
-            } catch(ex){
-                reject(ex)
+            scss : './modules/**/*.scss',
+            css : path.join(cwd, '.tmp'),
+            sassOptions: {
+                sourceComments : false
             }
         })
+
+        await this.bundleAll()
+
+        webBuildUtils.minifyCSS(path.join(cwd, 'web/css/bootstrip.css'), path.join(cwd, 'web/css/bootstrip.min.css'))
+        webBuildUtils.minifyCSS(path.join(cwd, 'web/css/bootstrip-theme-default.css'), path.join(cwd, 'web/css/bootstrip-theme-default.min.css'))
+        webBuildUtils.minifyCSS(path.join(cwd, 'web/css/bootstrip-theme-darkmoon.css'), path.join(cwd, 'web/css/bootstrip-theme-darkmoon.min.css'))
+
+        const banner = await headerUtil.generateHeader()
+        webBuildUtils.bannerize(path.join(cwd, 'web/css/bootstrip.css'), banner)
+        webBuildUtils.bannerize(path.join(cwd, 'web/css/bootstrip.min.css'), banner)
+        webBuildUtils.bannerize(path.join(cwd, 'web/css/bootstrip-theme-default.css'), banner)
+        webBuildUtils.bannerize(path.join(cwd, 'web/css/bootstrip-theme-default.min.css'), banner)
+        webBuildUtils.bannerize(path.join(cwd, 'web/css/bootstrip-theme-darkmoon.css'), banner)
+        webBuildUtils.bannerize(path.join(cwd, 'web/css/bootstrip-theme-darkmoon.min.css'), banner)
     },
 
 
@@ -73,24 +76,22 @@ module.exports = {
             path.basename(file).substr(0, path.basename(file).length - 5) + '.css') // remove .scss extension
     },
 
-    async concatenate(){
-        const hash = (await exec.sh({ cmd : 'git rev-parse --short HEAD' })).result,
-            tag = (await exec.sh({ cmd : 'git describe --abbrev=0 --tags' })).result,
-            header = `/* tag: ${tag}     hash: ${hash} */`
 
+    /**
+     * 
+     */
+    async bundleAll(){
+        const webBuildUtils = require('madscience-webbuildutils')
         await fs.ensureDir(path.join(cwd, 'web/css'))
-        await fs.outputFile(path.join(cwd,'.tmp/modules/base/_header.css'), header)
-        await fs.outputFile(path.join(cwd,'.tmp/modules/themes/default/_header.css'), header)
-        await fs.outputFile(path.join(cwd,'.tmp/modules/themes/darkmoon/_header.css'), header)
-
-        await this.concatFiles([path.join(cwd, '.tmp/modules/base/**/*.css')], path.join(cwd, 'web/css/bootstrip.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/default/**/*.css')], path.join(cwd, 'web/css/bootstrip-theme-default.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/themes/darkmoon/**/*.css')], path.join(cwd, 'web/css/bootstrip-theme-darkmoon.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/demo/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboard-common/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard-common.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboard-default/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard-default.css'))
-        await this.concatFiles([path.join(cwd, '.tmp/modules/dashboard-darkmoon/**/*.css')], path.join(cwd, 'web/css/bootstrip-demo-dashboard-darkmoon.css'))
+        await webBuildUtils.bundle(path.join(cwd, '.tmp/modules/base/**/*.css'), path.join(cwd, 'web/css/bootstrip.css'))
+        await webBuildUtils.bundle(path.join(cwd, '.tmp/modules/themes/default/**/*.css'), path.join(cwd, 'web/css/bootstrip-theme-default.css'))
+        await webBuildUtils.bundle(path.join(cwd, '.tmp/modules/themes/darkmoon/**/*.css'), path.join(cwd, 'web/css/bootstrip-theme-darkmoon.css'))
+        await webBuildUtils.bundle(path.join(cwd, '.tmp/modules/demo/**/*.css'), path.join(cwd, 'web/css/bootstrip-demo.css'))
+        await webBuildUtils.bundle(path.join(cwd, '.tmp/modules/dashboard-common/**/*.css'), path.join(cwd, 'web/css/bootstrip-demo-dashboard-common.css'))
+        await webBuildUtils.bundle(path.join(cwd, '.tmp/modules/dashboard-default/**/*.css'), path.join(cwd, 'web/css/bootstrip-demo-dashboard-default.css'))
+        await webBuildUtils.bundle(path.join(cwd, '.tmp/modules/dashboard-darkmoon/**/*.css'), path.join(cwd, 'web/css/bootstrip-demo-dashboard-darkmoon.css'))
     },
+
 
     /** 
      * Called by SassWatcher when a sass file is added or changed. Compiles the sass that triggered
@@ -104,8 +105,8 @@ module.exports = {
         await this.compileSassFile(file)
         
         if (_triggerFile === file){
-            await this.concatenate()
-            console.log(`concatenated css after last change to ${file}`)
+            await this.bundleAll()
+            console.log(`bundled css after last change to ${file}`)
         }
     },
 
