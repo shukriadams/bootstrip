@@ -9,10 +9,6 @@
     position: relative;
     display: block;
     text-decoration: none;
-
-    &.--active {
-        z-index: 3;
-    }
 }
 
 .pager {
