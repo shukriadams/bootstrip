@@ -7,6 +7,11 @@
     background-clip: border-box;
     overflow:hidden;
 
+    /* images inside a card should never exceed width of card, as this breaks concept of the card as a container */
+    img {
+        max-width: 100%;
+    }
+    
     &.--right {
         text-align: right;
     }
