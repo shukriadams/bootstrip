@@ -5,8 +5,8 @@
     "scripts": {
         "start": "node index",
         "icons": "node build/buildIcons",
-        "build" : "node build/buildSite",
-        "debug": "node --inspect-brk=0.0.0.0:8021 index"
+        "build": "node build/buildSite",
+        "break": "node --inspect-brk=0.0.0.0:8021 index"
     },
     "dependencies": {
         "fs-extra": "6.0.1",
@@ -18,7 +18,7 @@
         "madscience-webbuildutils": "https://github.com/Mad-Science-Incorporated/webBuildUtils.git#0.0.1",
         "madscience-fsUtils": "https://github.com/shukriadams/node-fsUtils.git#0.0.12",
         "madscience-node-exec": "https://github.com/shukriadams/node-exec.git#0.0.7",
-        "node-sass-runner": "https://github.com/shukriadams/node-sass-runner.git#1.0.1",
+        "node-sass-runner": "https://github.com/shukriadams/node-sass-runner.git#1.0.2",
         "madscience-handlebarsloader": "https://github.com/shukriadams/madscience-handlebarsloader.git#0.0.1",
         "spectr": "https://github.com/shukriadams/spectr.git#0.0.6"
     }
