@@ -5,14 +5,14 @@
 
 @mixin footer {
     background-color: var(--bootstrip-color-oxfordblue);
-    height: var(--bootstrip-module-footer-height);
+    min-height: var(--bootstrip-module-footer-height);
+    color: var(--bootstrip-color-ghost);
     
     a {
-        color: var(--bootstrip-color-iron);
+        color: var(--bootstrip-color-white);
 
         &:hover {
-            color: var(--bootstrip-color-white);
-            
+            color: var(--bootstrip-color-iron);
         }
     }
 }
