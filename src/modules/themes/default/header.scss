@@ -1,5 +1,11 @@
 @import './../../base/sass_variables.scss';
 
+// expose properties
+:root {
+    --bootstrip-module-header-height: 4rem;
+    --bootstrip-module-header-logoWidth: 11rem;
+}
+    
 @mixin header {
     background-color: var(--bootstrip-color-oxfordblue);
 
@@ -12,7 +18,9 @@
 @mixin header-logoContainer {
     color: var(--bootstrip-color-white);
     font-family: var(--bootstrip-font-logoFace);
-    width: 11rem;
+    padding: 0.5rem 1rem; 
+    height: var(--bootstrip-module-header-height);
+    width: var(--bootstrip-module-header-logoWidth);
 
     i {
         font-size: 34px;
@@ -24,7 +32,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding: 0.5rem 1rem;
-    height: 4rem;
+    height: var(--bootstrip-module-header-height);
 
     x-header.--clamped &,
     .header.--clamped & {

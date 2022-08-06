@@ -9,7 +9,7 @@
             "request": "attach",
             "name": "Vagrant debug",
             "port": 8021,
-            "address": "localhost",
+            "address": "172.29.55.221",
             "localRoot": "${workspaceFolder}",
             "remoteRoot": "/vagrant",
             "smartStep": true,

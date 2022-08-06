@@ -8,6 +8,8 @@ A frontend component framework, based on a heavily stripped-down version of Boot
 
     - npm run build
 
+Output is in src/web
+
 ## Run locally
 
     - clone this repo

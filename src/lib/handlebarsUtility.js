@@ -67,9 +67,6 @@ module.exports = {
     },
 
     async renderAll (){
-    
-        Spectr.engines.handlebars({ Handlebars })
-
         Handlebars.registerHelper(layouts(Handlebars))
 
         Handlebars.registerHelper('stringify', data =>{
@@ -96,6 +93,9 @@ module.exports = {
         })
 
         const spectr = new Spectr.Spectr({
+            engine : new Spectr.engines.handlebars({
+                Handlebars
+            }),
             templates : {
                 views :[ path.join(cwd, 'modules/**/*.hbs'), path.join(cwd, 'hbs/partials/**/*.hbs') ],
                 pages : path.join(cwd, 'hbs/pages/**/*.hbs')
@@ -107,6 +107,7 @@ module.exports = {
             }
         })
 
+        
         spectr.renderAllRoutes({
             file : function(err, output){
                 if (err ||output.content === null)
@@ -121,10 +122,10 @@ module.exports = {
                 })
             },
             done : function(){
-                console.log('rendered')
+                console.log('rendering done')
             }
         })
-
+        
 
     }
 }

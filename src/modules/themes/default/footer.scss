@@ -1,0 +1,23 @@
+// expose properties
+:root {
+    --bootstrip-module-footer-height: 8rem;
+}
+
+@mixin footer {
+    background-color: var(--bootstrip-color-oxfordblue);
+    height: var(--bootstrip-module-footer-height);
+    
+    a {
+        color: var(--bootstrip-color-iron);
+
+        &:hover {
+            color: var(--bootstrip-color-white);
+            
+        }
+    }
+}
+
+x-footer,
+.footer {
+    @include footer;
+}

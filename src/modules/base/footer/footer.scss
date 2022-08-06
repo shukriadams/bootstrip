@@ -1,0 +1,13 @@
+@mixin footer {
+    flex-wrap: nowrap;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+x-footer,
+.footer {
+    @include footer;
+}

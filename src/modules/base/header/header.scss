@@ -28,16 +28,12 @@
 }
 
 @mixin header-logoContainer {
-    width: 15.63rem;
     position: static;
     z-index: 5;
     display: -ms-flexbox;
     display: flex;
     align-items: center;
-    width: 8rem;
     flex: 0 0 auto;
-    padding: 0.5rem 1rem; 
-    height: 4rem;    
 }
 
 @mixin header-content {
