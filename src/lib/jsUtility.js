@@ -19,16 +19,16 @@ module.exports = {
 
         watcher
             .on('add', async file => {
-                await this.bundle()
+                await this.bundleAll(false)
             })
             .on('change', async file =>{
-                await this.bundle()
+                await this.bundleAll(false)
             })
             .on('unlink', async file =>{
-                await this.bundle()
+                await this.bundleAll(false)
             })
 
-        await this.bundleAll()
+        await this.bundleAll(false)
     },
 
     /**
@@ -36,7 +36,7 @@ module.exports = {
      * find : glob string
      * output : path for output file
      */
-    async bundleAll(){
+    async bundleAll(minify = true){
         const webBuildUtils = require('madscience-webbuildutils'),
             headerUtil = require('./headerUtil'),
             header = await headerUtil.generateHeader()
@@ -44,11 +44,14 @@ module.exports = {
         await fs.ensureDir('./web/js')
 
         const bundledFiles = await webBuildUtils.bundle('./modules/base/**/*.js', './web/js/bootstrip.js')
-        await webBuildUtils.minifyJS(path.join(cwd, 'web/js/bootstrip.js'), path.join(cwd, 'web/js/bootstrip.min.js'))
-        await webBuildUtils.bannerize(path.join(cwd, 'web/js/bootstrip.js'), header)
-        await webBuildUtils.bannerize(path.join(cwd, 'web/js/bootstrip.min.js'), header)
-
         console.log('Bundled ', bundledFiles)
-    }
+        if (minify){
+            await webBuildUtils.minifyJS(path.join(cwd, 'web/js/bootstrip.js'), path.join(cwd, 'web/js/bootstrip.min.js'))
+            console.log('Minified')
 
+            await webBuildUtils.bannerize(path.join(cwd, 'web/js/bootstrip.js'), header)
+            await webBuildUtils.bannerize(path.join(cwd, 'web/js/bootstrip.min.js'), header)
+            console.log('Bannerized')
+        }
+    }
 }
