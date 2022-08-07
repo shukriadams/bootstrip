@@ -31,14 +31,26 @@ class CompactSelect{
     }
     
     setSelected(optionElement){
+        // set properties on custom UI elements first
         for (let option of this.element.querySelectorAll('x-compactSelect-menuItem'))
             if (option !== optionElement)
                 option.classList.remove('--selected')
 
         optionElement.classList.add('--selected')
-        this.select.value = optionElement.getAttribute('data-compactSelectValue')
+
+        // update the underlying, hidden select menu
+        const incomingValue = optionElement.getAttribute('data-compactSelectValue')
+        for (let i = 0 ; i < this.select.options.length; i ++)
+            if (this.select.options[i].value === incomingValue){
+                this.select.selectedIndex = i
+                // force trigger a change event once value has been updated
+                this.select.dispatchEvent(new CustomEvent('change', {}))
+                break
+            }
+
         this.close()
     }
+    
     
     getValue(){
         return this.select.value
