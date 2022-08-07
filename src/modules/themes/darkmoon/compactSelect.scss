@@ -1,0 +1,8 @@
+.compactSelect-triggerIcon {
+    color: var(--bootstrip-color-white);
+    background-color: var(--bootstrip-color-manatee);
+    
+    &:hover {
+        border-color: var(--bootstrip-color-athensGray);
+    }
+}

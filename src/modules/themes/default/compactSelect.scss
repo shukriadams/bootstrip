@@ -1,0 +1,53 @@
+@mixin compactSelect {
+    width: 26px;    
+}
+
+x-compactSelect,
+.compactSelect {
+    @include compactSelect;
+}
+
+.compactSelect-triggerIcon {
+    border: solid 1px var(--bootstrip-color-paleSky);
+    border-radius: 4px;
+    padding: 4px;
+    
+    &:hover {
+        border-color: var(--bootstrip-color-mirage);
+    }
+}
+
+@mixin compactSelectMenu {
+    width: 182px;
+    padding: 2px;
+    background: var(--bootstrip-color-athensGray);
+    border-radius: 4px;
+    top: calc(100% + 8px); // full height of container control, so floating menu appears exactly at bottom of it
+}
+
+@mixin compactSelectMenuItem {
+    padding: 4px 16px;
+    width: 100%;
+    border-radius: 2px;
+    color:var(--bootstrip-color-black);
+    background-color: var(--bootstrip-color-white);
+
+    &.--selected {
+        color: var(--bootstrip-color-white);
+        background-color: var(--bootstrip-color-paleSky);
+    }
+
+    &:hover {
+        color: var(--bootstrip-color-white);
+        background-color: var(--bootstrip-color-paleSky);
+    }
+}
+
+x-compactSelect-menuItem,
+.compactSelect-menuItem {
+    @include compactSelectMenuItem();
+}
+
+x-compactSelect-menu {
+    @include compactSelectMenu();
+}

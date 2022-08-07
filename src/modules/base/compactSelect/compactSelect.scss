@@ -1,0 +1,66 @@
+@mixin compactSelect {
+    position: relative;
+
+    select {
+        display: none;
+    }
+
+    .compactSelect-icon{
+        display: none;
+    }
+
+    x-compactselect-placeholder {
+        display: block;
+    }
+
+    &.--break {
+        .compactSelect-icon{
+            display: block;
+        }
+
+        x-compactselect-placeholder {
+            display: none;
+        }
+    }
+}
+
+@mixin compactSelectMenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; // full height of container control, so floating menu appears exactly at bottom of it
+    
+    x-compactSelect.--visible & {
+        display: block;
+    }
+}
+
+@mixin compactSelectMenuItem {
+    display: block;
+
+    &.--value{
+        cursor: pointer;
+    }
+}
+
+.compactSelect-triggerIcon {
+    cursor: pointer;
+    &:hover {
+
+    }
+}
+
+x-compactSelect,
+.compactSelect {
+    @include compactSelect;
+}
+
+x-compactSelect-menu {
+    @include compactSelectMenu();
+}
+
+x-compactSelect-menuItem,
+.compactSelect-menuItem {
+    @include compactSelectMenuItem();
+}
+

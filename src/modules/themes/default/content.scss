@@ -2,10 +2,8 @@
     margin-bottom: 1rem;
 }
 
+x-content,
 .content {
     @include content;
 }
 
-x-content {
-    @include content;
-}
