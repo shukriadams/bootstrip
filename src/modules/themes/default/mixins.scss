@@ -9,6 +9,7 @@
         background-color: var(--bootstrip-color-athensGray);
         border-color: var(--bootstrip-color-athensGray);
         color: var(--bootstrip-color-paleSky);
+        pointer-events: none;
         &:hover {
             background-color: var(--bootstrip-color-athensGray);
             border-color: var(--bootstrip-color-athensGray);
