@@ -26,3 +26,21 @@ Causes all children to align horizontally
     top: 50%;
     transform: translateY(-50%);
 }
+
+/**
+ * Simplified class to align an element vertically and horizontally centered. Can be used on a single element. 
+ */
+@mixin centered {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+x-centered {
+    @include centered;
+}
+
+.centered {
+    @include centered;
+}
