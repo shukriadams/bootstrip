@@ -12,6 +12,14 @@
         display : grid;
     }
 
+    &.--one-two {
+        grid-template-columns: 1fr 2fr;
+
+        @media #{$mediaQuery-belowSmall} {
+            grid-template-columns: 1fr;
+        }
+    }
+    
     &.--two {
         grid-template-columns: 1fr 1fr;
 
@@ -20,6 +28,14 @@
         }
     }
 
+    &.--two-one {
+        grid-template-columns: 2fr 1fr;
+
+        @media #{$mediaQuery-belowSmall} {
+            grid-template-columns: 1fr;
+        }
+    }
+    
     &.--three {
         grid-template-columns: 1fr 1fr 1fr;
     
@@ -28,6 +44,22 @@
         }  
     }
 
+    &.--three-one {
+        grid-template-columns: 3fr 1fr;
+    
+        @media #{$mediaQuery-belowMedium} {
+            grid-template-columns: 1fr ;
+        }  
+    }
+
+    &.--one-three {
+        grid-template-columns: 1fr 3fr;
+    
+        @media #{$mediaQuery-belowMedium} {
+            grid-template-columns: 1fr ;
+        }  
+    }
+   
     &.--four {
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
