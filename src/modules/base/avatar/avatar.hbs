@@ -1,5 +1,9 @@
 <x-avatar class="{{#if rounding}}--{{rounding}}{{/if}} {{#if disabled}}--disabled{{/if}}"">
     <a href="#">
-        <img class="image" src="https://via.placeholder.com/400x400" />
+        {{#if src}}
+            <img src="https://via.placeholder.com/400x400" />
+        {{else}}
+            <x-avatarInitials>{{initials}}</x-avatarInitials>
+        {{/if}}
     </a>
 </x-avatar>
