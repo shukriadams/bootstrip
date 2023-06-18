@@ -1,5 +1,10 @@
 @import './../sass_variables.scss';
 
+// use this instead of a generic div so column structure is clearly identifiabl
+@mixin column{
+    display: block;
+}
+
 // divides layout into 1 column. First block child will become cells, divs work fine for this
 @mixin columns {
     display: grid;
@@ -76,3 +81,10 @@ x-columns {
     @include columns;
 }
 
+.column {
+    @include column;
+}
+
+x-column {
+    @include column;
+}
