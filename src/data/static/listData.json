@@ -1,3 +1,4 @@
 {
+    "_comment" : "see ./functions/listModel.js",
     "items" : "<%= listModel 10 5 %>"
 }

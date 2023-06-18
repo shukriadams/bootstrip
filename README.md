@@ -6,6 +6,7 @@ A frontend component framework, based on a heavily stripped-down version of Boot
 
 ## Build
 
+    - npm run icons
     - npm run build
 
 Output is in src/web
