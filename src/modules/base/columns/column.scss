@@ -39,7 +39,7 @@
     &.--three {
         grid-template-columns: 1fr 1fr 1fr;
     
-        @media #{$mediaQuery-belowMedium} {
+        @media #{$mediaQuery-belowSmall} {
             grid-template-columns: 1fr ;
         }  
     }
@@ -47,7 +47,7 @@
     &.--three-one {
         grid-template-columns: 3fr 1fr;
     
-        @media #{$mediaQuery-belowMedium} {
+        @media #{$mediaQuery-belowSmall} {
             grid-template-columns: 1fr ;
         }  
     }
@@ -55,7 +55,7 @@
     &.--one-three {
         grid-template-columns: 1fr 3fr;
     
-        @media #{$mediaQuery-belowMedium} {
+        @media #{$mediaQuery-belowSmall} {
             grid-template-columns: 1fr ;
         }  
     }
@@ -63,7 +63,7 @@
     &.--four {
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
-        @media #{$mediaQuery-belowMedium} {
+        @media #{$mediaQuery-belowSmall} {
             grid-template-columns: 1fr 1fr;
         }
     
