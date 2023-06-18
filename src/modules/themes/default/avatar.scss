@@ -1,0 +1,21 @@
+@mixin avatar {
+    a {
+        display: block;
+    }
+    
+    &.--disabled {
+        opacity:50%;
+    }
+
+    &.--rounded {
+        border-radius: 10px;
+    }
+}
+
+.avatar {
+    @include avatar;
+}
+
+x-avatar {
+    @include avatar;
+}

@@ -1,5 +1,7 @@
-const sample = require('lodash.sample')
-
+const sample = require('lodash.sample'),
+    Chance = require('chance'),
+    chance = new Chance()
+    
 module.exports = (rowCount = '3', cellCount = '3')=>{
     rowCount = parseInt(rowCount)
     cellCount = parseInt(cellCount)
@@ -16,14 +18,11 @@ module.exports = (rowCount = '3', cellCount = '3')=>{
 
         model.rows.push(row)
 
-        for (let j = 0 ; j < cellCount ; j ++){
-            const hasContent = sample([true, true])
-
+        for (let j = 0 ; j < cellCount ; j ++)
             row.cells.push ({
-                text : hasContent ? 'Lorem' : '',
-                undertext : hasContent ? 'Ipsum' : '',
+                text : chance.sentence({ words: sample([1, 5]) }),
+                undertext : chance.paragraph({ sentences : sample([0, 5]) })
             })
-        }
     }
 
     return model

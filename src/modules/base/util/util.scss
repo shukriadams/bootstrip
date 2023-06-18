@@ -6,12 +6,11 @@
 }
 
 /*
-Causes all children to align horizontally
+Causes all children to align horizontally, with top alignment
 */
 .flowHorizontal {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     height: 100%; // need to take up entire parent to ensure proper child height / wrapping
 
     > * {

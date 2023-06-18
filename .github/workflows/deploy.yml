@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
         node:
-          image: shukriadams/node12build:0.0.2
+          image: shukriadams/node12build:0.0.4
     steps:
       - uses: actions/checkout@v1
       - name: builds and copies static assets to remote Nginx folder
