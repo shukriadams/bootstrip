@@ -8,7 +8,9 @@ module.exports = {
         fs.ensureDirSync(workPath)
 
         // start watching sass files
-        const watcher = chokidar.watch([path.join('./hbs/**/*.hbs'), path.join('./modules/**/*.hbs'), path.join('./data/**/*')], {
+        const watcher = chokidar.watch([
+                path.join('./hbs/**/*.hbs'), path.join('./modules/**/*.hbs'), path.join('./data/**/*')
+            ], {
             persistent: true,
             usePolling: true, 
             ignoreInitial: true
