@@ -1,0 +1,16 @@
+@mixin avatarList {
+    display: inline-block;
+    x-avatar, .avatar {
+        position: relative;
+        left: calc((var(--avatarList-index) * -15px));
+        z-index: calc(var(--avatarList-index));
+    }
+}
+
+.avatarList {
+    @include avatarList;
+}
+
+x-avatarList {
+    @include avatarList;
+}

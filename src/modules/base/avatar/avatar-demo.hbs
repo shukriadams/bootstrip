@@ -1,0 +1,30 @@
+<x-demo-description>
+    <ul>
+        <li>Avatars are images of entities like people.</li>
+        <li>They have a fixed maximum size.</li>
+        <li>They can acts as hyperlinks.</li>
+        <li>They have three built-in rounding modes : none, rounded, and round. Visual style is set by theme.</li>
+        <li>They can be rendered in disabled state, wherein they ignore clicks. Disabled visual state is set by theme.</li>
+        <li>They can be grouped into lists. See the AvatarList module for more.</li>
+    </ul>
+</x-demo-description>
+
+<div>
+    Round :
+</div>
+{{>avatar rounding="round"}}
+
+<div>
+    Rounded :
+</div>
+{{>avatar rounding="rounded"}}
+
+<div>
+    None (default) :
+</div>
+{{>avatar}}
+
+<div>
+    Disabled :
+</div>
+{{>avatar disabled=true}}

@@ -1,0 +1,24 @@
+@mixin avatar {
+    display: inline-block;
+    overflow:hidden;
+    
+    &.--disabled {
+        pointer-events: none;
+    }
+    
+    &.--round {
+        border-radius: 50%;
+    }
+
+    img {
+        max-height: 40px;
+    }
+}
+
+.avatar {
+    @include avatar;
+}
+
+x-avatar {
+    @include avatar;
+}

@@ -1,0 +1,17 @@
+@mixin avatarList {
+    x-avatar, .avatar {
+        border: 1px dashed transparent;
+    }
+
+    x-avatar:hover, .avatar:hover {
+        border: 1px dashed var(--bootstrip-color-punch);
+    }
+}
+
+.avatarList {
+    @include avatarList;
+}
+
+x-avatarList {
+    @include avatarList;
+}
