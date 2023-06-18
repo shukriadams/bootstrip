@@ -12,10 +12,31 @@
     }
 }
 
+@mixin avatarInitials {
+    color: var(--bootstrip-color-white);
+    background-color: var(--bootstrip-color-manatee);
+    height: 40px;
+    width: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 38px;
+}
+
 .avatar {
     @include avatar;
 }
 
 x-avatar {
     @include avatar;
+}
+
+.avatarInitials {
+    @include avatarInitials;
+}
+
+x-avatarInitials {
+    @include avatarInitials;
 }
