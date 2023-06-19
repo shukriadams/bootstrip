@@ -1,8 +1,8 @@
 # Bootstrip
 
-## View at https://bootstrip.shukriadams.com
+Bootstrip is a frontend component framework, based on a stripped-down version of Bootstrap 5. It emphasises minimal markup, code reuse, and developer-friendliness. It has BEM-like selectors. All components are written in Sass and Handlebars, and broken up to be easy to implement and refactor.
 
-A frontend component framework, based on a heavily stripped-down version of Bootstrap 5, with a strong emphasis on minimal markup.
+## View at https://bootstrip.shukriadams.com
 
 ## Build
 
