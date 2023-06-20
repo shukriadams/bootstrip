@@ -1,6 +1,6 @@
 @mixin list {
     background-color: var(--bootstrip-color-outerSpace);
-    border: 1px solid var(--bootstrip-color-codeGray);
+    border: 1px solid var(--bootstrip-color-shark);
 }
 
 @mixin list-row {
@@ -8,7 +8,7 @@
     // an obvious double line
     border-top: none;
     &:not(:first-of-type){
-        border-top: 1px solid var(--bootstrip-color-codeGray);
+        border-top: 1px solid var(--bootstrip-color-shark);
     }
 
     .list.--striped &,
