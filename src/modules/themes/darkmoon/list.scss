@@ -17,6 +17,10 @@
             background-color: var(--bootstrip-color-outerSpaceDark);
         }
     }
+
+    &.--header {
+        background-color: var(--bootstrip-color-oxfordblue);
+    }
 }
 
 .list {
