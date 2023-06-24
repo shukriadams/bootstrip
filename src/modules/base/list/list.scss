@@ -29,9 +29,8 @@
     flex-grow: 1;
     max-width: 100%;
     position: relative;
+    word-break: break-all;
 }
-
-
 
 .list {
     @include list;
