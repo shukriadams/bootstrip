@@ -20,8 +20,8 @@ module.exports = (rowCount = '3', cellCount = '3')=>{
 
         for (let j = 0 ; j < cellCount ; j ++)
             row.cells.push ({
-                text : chance.sentence({ words: sample([1, 5]) }),
-                undertext : chance.paragraph({ sentences : sample([0, 5]) })
+                text : chance.sentence({ words: sample([1, 2]) }),
+                undertext : chance.paragraph({ sentences : sample([0, 3]) })
             })
     }
 
