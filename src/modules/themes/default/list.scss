@@ -70,16 +70,15 @@
             background-color: var(--bootstrip-color-iron);
         }
     }
-
+    
+    &.--header {
+        @include typography-smallHeader;
+    }
 }
 
 @mixin list-cell {
     padding-right: 1rem;
     padding-right: 16px;
-
-    &.--header {
-        @include typography-smallHeader;
-    }
 }
 
 .list {
