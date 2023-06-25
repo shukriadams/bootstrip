@@ -1,6 +1,6 @@
 {{#extend "_layout"}}
     {{#content "body"}}
-        {{>header sticky=true clamped=true title="Bootstrip"}}
+        {{>header sticky=true clamped=true title="Bootstrip" items=header.hostPageItems }}
         {{{block "_layoutClampedHeader.body"}}}
     {{/content}}
 {{/extend}}

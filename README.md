@@ -4,6 +4,16 @@
 
 A frontend component framework, based on a heavily stripped-down version of Bootstrap 5, with a strong emphasis on minimal markup.
 
+## Install
+
+- clone this repo
+- install
+
+        yarn --no-bin-links
+
+  or
+        npm install
+
 ## Build
 
     - npm run icons
@@ -11,18 +21,13 @@ A frontend component framework, based on a heavily stripped-down version of Boot
 
 Output is in src/web
 
-## Run locally
+## View
 
-    - clone this repo
-    - install
+To start a dev server (with live rebuilding)
 
-            yarn --no-bin-links
+    npm start
 
-    - start
-
-            npm start
-
-    - view in browser @ http://localhost:8020
+View in browser @ http://localhost:8020
 
 ## Credits
 
