@@ -55,3 +55,7 @@ x-list-row {
 x-list-cell {
     @include list-cell;
 }
+
+x-list-rowLayout {
+    // placeholder only, has no flex behavior, as all internal layout will be handled by some other system. That makes this a purely visual row
+}

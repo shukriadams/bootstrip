@@ -89,6 +89,7 @@
     @include list-header;
 }
 
+.list-rowLayout,
 .list-row {
     @include list-row;
 }
@@ -105,6 +106,7 @@ x-list-header {
     @include list-header;
 }
 
+x-list-rowLayout,
 x-list-row {
     @include list-row;
 }

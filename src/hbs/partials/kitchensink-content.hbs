@@ -58,9 +58,37 @@
     {{>list modifier="--freewidth" rows=listData.items.rows }}
 {{/kitchenSinkItem}}
 
-
-{{#>kitchenSinkItem title="List" description="Lists can be compacted for denser data"}}
+{{#>kitchenSinkItem title="Dense List" description="Lists can be compacted for denser data"}}
     {{>list rows=listData.items.rows modifier="dense" }}
+{{/kitchenSinkItem}}
+
+{{#>kitchenSinkItem title="List with complex content" description="Lists can contain complex content with their own layout system"}}
+    <x-list>
+        <x-list-rowLayout>
+            <x-columns class="--one-two">
+                <div>Column 1/2</div>
+                <div>Column 2/2</div>
+            </x-columns>
+            <x-columns class="--four">
+                <div>Column 1/4</div>
+                <div>Column 2/4</div>
+                <div>Column 3/4</div>
+                <div>Column 4/4</div>
+            </x-colunms>
+        </x-list-rowLayout>
+        <x-list-rowLayout>
+            <x-columns class="--one-two">
+                <div>Column 1/2</div>
+                <div>Column 2/2</div>
+            </x-columns>
+            <x-columns class="--four">
+                <div>Column 1/4</div>
+                <div>Column 2/4</div>
+                <div>Column 3/4</div>
+                <div>Column 4/4</div>
+            </x-colunms>
+        </x-list-rowLayout>        
+    </x-list>    
 {{/kitchenSinkItem}}
 
 {{#>kitchenSinkItem title="Table" description="Use tables for more fine-tuned control of data layout"}}

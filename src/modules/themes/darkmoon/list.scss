@@ -31,10 +31,12 @@ x-list {
     @include list;
 }
 
+.list-rowLayout,
 .list-row {
     @include list-row;
 }
 
+x-list-rowLayout,
 x-list-row {
     @include list-row;
 }
