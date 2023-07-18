@@ -12,6 +12,7 @@ module.exports = {
                     'svgs/back.svg',
                     'svgs/check.svg',
                     'svgs/close.svg',
+                    'svgs/github.svg',
                     'svgs/heart.svg',
                     'svgs/right.svg',
                     'svgs/menu.svg',

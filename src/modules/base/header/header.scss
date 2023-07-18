@@ -71,6 +71,22 @@
 
 @mixin header-contentItem {
     position: relative;
+    white-space: nowrap; // ensures that icons + text in header elements don't wrap on long content
+}
+
+@mixin header-contentItemIconOrText {
+    display: inline-block;    
+    position: relative;
+}
+
+x-header-contentItemIcon, 
+.header-contentItemIcon {
+    @include header-contentItemIconOrText;
+}
+
+x-header-contentItemText, 
+.header-contentItemText {
+    @include header-contentItemIconOrText;
 }
 
 x-header,

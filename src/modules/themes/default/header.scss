@@ -36,7 +36,9 @@
 
     x-header.--clamped &,
     .header.--clamped & {
-        background-color: transparent;
+        @media #{$mediaQuery-aboveSmall} {
+            background-color: transparent;
+        }
     }
 
     @media #{$mediaQuery-belowSmall} {
@@ -60,13 +62,19 @@
         height: 50px;
     }
 
+    // icons should be vertically centered in any parent container they occur in
     .icon {
-        transform: translateY(-50%);
-        position: absolute;
-        top: 50%;
-        right: 8px;
-        cursor: pointer;
-        font-size:28px;
+        font-size: 28px;
+    }
+
+    &.--search {
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+            cursor: pointer;
+        }
     }
 
     a {
@@ -74,7 +82,6 @@
         @media #{$mediaQuery-belowSmall} {
             font-size: 26px;
             bottom: -10px;
-            position: relative;
         }
 
     }
@@ -88,6 +95,30 @@
     color: var(--bootstrip-color-white);
     font-size: 38px;
     right: 8px;
+}
+
+@mixin header-contentItemText {
+    
+    @media #{$mediaQuery-belowSmall} {
+        top: 10px;
+    }
+}
+
+@mixin header-contentItemIcon {
+    @media #{$mediaQuery-belowSmall} {
+        top: 10px;
+    }
+}
+
+
+x-header-contentItemText, 
+.header-contentItemText {
+    @include header-contentItemText;
+}
+
+x-header-contentItemIcon, 
+.header-contentItemIcon {
+    @include header-contentItemIcon;
 }
 
 x-header,

@@ -1,8 +1,11 @@
 {
-    "items" : [
-        { "type" : "field", "text" : "search" },
-        { "type" : "link", "text" : "Link1" },
-        { "type" : "link", "text" : "Link2" }
-
+    "exampleItems" : [
+        { "type" : "field", "text" : "search", "href" : "#" },
+        { "type" : "link", "text" : "Link1", "href" : "#" },
+        { "type" : "link", "text" : "Link2", "href" : "#" }
+    ],
+    "hostPageItems" : [
+        { "type" : "link", "icon" : "github", "text": "Source", "href" : "https://github.com/shukriadams/bootstrip" }
     ]
+
 }

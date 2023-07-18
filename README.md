@@ -4,6 +4,16 @@ Bootstrip is a frontend component framework, based on a stripped-down version of
 
 ## View at https://bootstrip.shukriadams.com
 
+## Install
+
+- clone this repo
+- install
+
+        yarn --no-bin-links
+
+  or
+        npm install
+
 ## Build
 
     - npm run icons
@@ -11,18 +21,13 @@ Bootstrip is a frontend component framework, based on a stripped-down version of
 
 Output is in src/web
 
-## Run locally
+## View
 
-    - clone this repo
-    - install
+To start a dev server (with live rebuilding)
 
-            yarn --no-bin-links
+    npm start
 
-    - start
-
-            npm start
-
-    - view in browser @ http://localhost:8020
+View in browser @ http://localhost:8020
 
 ## Credits
 

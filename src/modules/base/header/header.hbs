@@ -21,12 +21,23 @@
             {{#each items}}
                 {{#eq type "link"}}
                     <x-header-contentItem>
-                        <a href="#">{{../text}}</a>
+                        <a href="{{../href}}">
+                            {{#if ../text}}
+                                <x-header-contentItemText>
+                                    {{../text}}
+                                </x-header-contentItemText>
+                            {{/if}}
+                            {{#if ../icon}}
+                                <x-header-contentItemIcon>
+                                    <i class="icon icon-{{../icon}}"></i>
+                                </x-header-contentItemIcon>
+                            {{/if}}
+                        </a>
                     </x-header-contentItem>
                 {{/eq}}
 
                 {{#eq type "field"}}
-                    <x-header-contentItem>
+                    <x-header-contentItem class="--search">
                         <form>
                             <input class="" type="text" id="myemail" placeholder="{{../text}}">
                             <i class="icon icon-search"></i>
